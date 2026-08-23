@@ -1,0 +1,345 @@
+{
+  "protocol": "flame3_ablation_2x2_completion_audit",
+  "status": "complete",
+  "created_on": "2026-08-22",
+  "historical_summary_sha256": "ba1517455fb11acf5cccc869d1ce98617a014ba535693c20adb9c7370825e735",
+  "historical_window": [
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "best_checkpoint_evaluation": {
+    "status": "complete",
+    "best_eval_sha256": "f6f738d5d1092e9b6a06ca81becb15beac52d7ee84cd7abb48e7095c462f7fb7",
+    "run_count": 12
+  },
+  "B_formal_runs": {
+    "status": "complete",
+    "seeds": {
+      "200": {
+        "metrics_sha256": "44ea1d993343c936b309d89e53da561771d74a7a5f1eabc10ff196613104985f",
+        "run_summary_sha256": "6ddf76efc78855f218c01cec44db63e7147d5b16aabc7f2a75290514dedc86e5",
+        "environment_sha256": "009357dfb3df39f88de01508b454b3ba2cfc307052948c5a0fc66e0e9aee4b12",
+        "resolved_config_sha256": "b7c7823b88d175d2e66dbc6347ef7e405f4aa86b176f8990f20d92683bf59c8c",
+        "best_s_checkpoint": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_ablation_B_machine_supervision_clip\\flame3_ablation_B_machine_supervision_clip_30e_seed200\\best_S.pth",
+        "best_validation_selection_metric": 0.5142667123101924,
+        "gradient_epoch26_30": {
+          "gradient_preclip_total_norm_mean": {
+            "values": [
+              1.8609372436023148,
+              1.5702248953404974,
+              2.241669266927438,
+              1.7869240670907693,
+              1.7866210917957495
+            ],
+            "mean": 1.8492753129513537,
+            "max": 2.241669266927438
+          },
+          "gradient_preclip_total_norm_max": {
+            "values": [
+              9.483323097229004,
+              12.061013221740723,
+              37.04267120361328,
+              27.51824188232422,
+              10.137447357177734
+            ],
+            "mean": 19.24853935241699,
+            "max": 37.04267120361328
+          },
+          "gradient_clip_applied_batches": {
+            "values": [
+              2.0,
+              1.0,
+              3.0,
+              1.0,
+              3.0
+            ],
+            "mean": 2.0,
+            "max": 3.0
+          },
+          "gradient_clip_applied_ratio": {
+            "values": [
+              0.03278688524590164,
+              0.01639344262295082,
+              0.04918032786885246,
+              0.01639344262295082,
+              0.04918032786885246
+            ],
+            "mean": 0.03278688524590164,
+            "max": 0.04918032786885246
+          }
+        }
+      },
+      "201": {
+        "metrics_sha256": "69cc73b06b4c22518e7efef3bc5b3cac724ce3218ba29665579d532ee5a9856e",
+        "run_summary_sha256": "cc5dce7380b03a95ecc6d565f2bfb7b185c755ce815a2c8293e0123941570161",
+        "environment_sha256": "4c91617ff5e85f72371b6b666a70567e456bf597dbc39367b5a05f879e06e28a",
+        "resolved_config_sha256": "7b12434d2528435466885631e2b7177230efd8178c26b7de4f7ea299f5eedd3b",
+        "best_s_checkpoint": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_ablation_B_machine_supervision_clip\\flame3_ablation_B_machine_supervision_clip_30e_seed201\\best_S.pth",
+        "best_validation_selection_metric": 0.5459313574714283,
+        "gradient_epoch26_30": {
+          "gradient_preclip_total_norm_mean": {
+            "values": [
+              2.1991958452052756,
+              1.9763071507704062,
+              2.1553935134997135,
+              3.2832090883958536,
+              1.8455631508201849
+            ],
+            "mean": 2.291933749738287,
+            "max": 3.2832090883958536
+          },
+          "gradient_preclip_total_norm_max": {
+            "values": [
+              7.7783002853393555,
+              6.850269794464111,
+              10.575963973999023,
+              47.6519775390625,
+              11.12912654876709
+            ],
+            "mean": 16.797127628326415,
+            "max": 47.6519775390625
+          },
+          "gradient_clip_applied_batches": {
+            "values": [
+              5.0,
+              3.0,
+              3.0,
+              4.0,
+              1.0
+            ],
+            "mean": 3.2,
+            "max": 5.0
+          },
+          "gradient_clip_applied_ratio": {
+            "values": [
+              0.08196721311475409,
+              0.04918032786885246,
+              0.04918032786885246,
+              0.06557377049180328,
+              0.01639344262295082
+            ],
+            "mean": 0.05245901639344262,
+            "max": 0.08196721311475409
+          }
+        }
+      },
+      "202": {
+        "metrics_sha256": "180be707049046c02017a860c3df77d92d1b4ac08c596dc022c5055afc6381d5",
+        "run_summary_sha256": "1868d7bb39d878da890d05e77939ac71992141d0b531a03ce437668a5b2a61f5",
+        "environment_sha256": "e48426fccfca1ac5d5e4fca203c2b5225c669205ad3a3cc0e640d8a6453b068c",
+        "resolved_config_sha256": "249aba6398faefb037689c324af4000c99e0c2f9fa30678710190b7df4ece42a",
+        "best_s_checkpoint": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_ablation_B_machine_supervision_clip\\flame3_ablation_B_machine_supervision_clip_30e_seed202\\best_S.pth",
+        "best_validation_selection_metric": 0.5628868680739828,
+        "gradient_epoch26_30": {
+          "gradient_preclip_total_norm_mean": {
+            "values": [
+              2.2346346466267697,
+              1.6988452624102108,
+              1.6764587085755145,
+              1.5744302927470597,
+              1.8666648503209724
+            ],
+            "mean": 1.8102067521361054,
+            "max": 2.2346346466267697
+          },
+          "gradient_preclip_total_norm_max": {
+            "values": [
+              16.891372680664062,
+              20.702009201049805,
+              8.372035026550293,
+              11.060127258300781,
+              17.27583122253418
+            ],
+            "mean": 14.860275077819825,
+            "max": 20.702009201049805
+          },
+          "gradient_clip_applied_batches": {
+            "values": [
+              4.0,
+              2.0,
+              2.0,
+              1.0,
+              4.0
+            ],
+            "mean": 2.6,
+            "max": 4.0
+          },
+          "gradient_clip_applied_ratio": {
+            "values": [
+              0.06557377049180328,
+              0.03278688524590164,
+              0.03278688524590164,
+              0.01639344262295082,
+              0.06557377049180328
+            ],
+            "mean": 0.042622950819672135,
+            "max": 0.06557377049180328
+          }
+        }
+      }
+    },
+    "epoch_count_per_seed": 30,
+    "manual47_per_image_metrics_every_epoch": true,
+    "no_fire_image_level_statistics_every_epoch": true,
+    "resolved_configs_equal_except_seed": true
+  },
+  "B_formal_launcher": {
+    "status": "complete",
+    "status_sha256": "a728a8fc1325fb7302c3f3ee5b5298cf2911c8d905ce291cd27797a4ec67ba1e",
+    "run_order": [
+      "flame3_ablation_B_machine_supervision_clip_30e_seed200",
+      "flame3_ablation_B_machine_supervision_clip_30e_seed201",
+      "flame3_ablation_B_machine_supervision_clip_30e_seed202"
+    ],
+    "sequential_not_concurrent": true
+  },
+  "B_remote_checkpoints": {
+    "status": "complete",
+    "inventory_sha256": "c0f8b69a3c70c5db6beb01c71c7698f3897393f1bdce9bc4eb58e4ea9f5f4c20",
+    "seeds": {
+      "200": {
+        "best.pth": 62108850,
+        "best_S.pth": 62108850,
+        "best_lowest_no_fire_joint_fp.pth": 62130178,
+        "last.pth": 62071810
+      },
+      "201": {
+        "best.pth": 62108722,
+        "best_S.pth": 62108722,
+        "best_lowest_no_fire_joint_fp.pth": 62129986,
+        "last.pth": 62071682
+      },
+      "202": {
+        "best.pth": 62108658,
+        "best_S.pth": 62108658,
+        "best_lowest_no_fire_joint_fp.pth": 62130050,
+        "last.pth": 62071618
+      }
+    }
+  },
+  "preflight": {
+    "status": "complete",
+    "preflight_sha256": "d7754e4cd7a76b69cc91fd00073fe883de5e48e42a9d00d5c4a7d1d0517c6fae",
+    "config_diff_keys": [
+      "EXPERIMENT_GROUP",
+      "GRADIENT_CLIP_MAX_NORM",
+      "GRADIENT_CLIP_NORM_TYPE",
+      "METRIC_PROTOCOL",
+      "PROJECTNAME",
+      "SESSIONAME"
+    ],
+    "unexpected_config_drift": false,
+    "gradient_clip_function_ast_equal_to_v11": true,
+    "gradient_clip_call_order": [
+      "backward",
+      "unscale_and_clip",
+      "optimizer_step"
+    ],
+    "machine_only_training": {
+      "train_rows": 493,
+      "dense_supervision_rows": 0
+    },
+    "train_csv_sha256": "1dd62feef9178c59b7d4d3c4e123d1e30b2113cb2070b39bcfeed41d7f725826",
+    "val_csv_sha256": "c3899b01604b9c3d62cf7f6be4370d12b6f794151017bbcad27057851830b0e1",
+    "manual_val47_manifest_sha256": "f635562dc07d3a8c7c8426812627dd2728c65f5cf54a468fcd6ab908d768d643",
+    "manual_val47_used_for_training_loss": false,
+    "test_set_read": false,
+    "test_blind_annotations_read": false
+  },
+  "report_sha256": "111966d40492819dc56f8c8df54f09fd72088f87727d24fdf8c71fc0f5a24278",
+  "test_data_read": false,
+  "test_metrics_read": false,
+  "training_performed_by_finalizer": false,
+  "predictions_saved_by_best_eval": false,
+  "method_identity_changed": false,
+  "requirements": {
+    "B_minus_A_only_scientific_variable_is_global_L2_clip5": {
+      "status": "proved",
+      "evidence": "preflight config diff and AST equality"
+    },
+    "machine_partial_label_supervision_only": {
+      "status": "proved",
+      "train_rows": 493,
+      "dense_supervision_rows": 0
+    },
+    "frozen_split_and_label_identity": {
+      "status": "proved",
+      "train_csv_sha256": "1dd62feef9178c59b7d4d3c4e123d1e30b2113cb2070b39bcfeed41d7f725826",
+      "val_csv_sha256": "c3899b01604b9c3d62cf7f6be4370d12b6f794151017bbcad27057851830b0e1",
+      "manual_val47_manifest_sha256": "f635562dc07d3a8c7c8426812627dd2728c65f5cf54a468fcd6ab908d768d643"
+    },
+    "model_loss_sampling_augmentation_protocol_frozen": {
+      "status": "proved",
+      "evidence": "resolved configs equal across B seeds and no unexpected A-to-B drift"
+    },
+    "seeds_200_201_202_30_epochs_sequential_on_4090": {
+      "status": "proved",
+      "run_order": [
+        "flame3_ablation_B_machine_supervision_clip_30e_seed200",
+        "flame3_ablation_B_machine_supervision_clip_30e_seed201",
+        "flame3_ablation_B_machine_supervision_clip_30e_seed202"
+      ],
+      "epoch_count_per_seed": 30
+    },
+    "manual_three_class_and_confusion_metrics_recorded_each_epoch": {
+      "status": "proved",
+      "per_image_count": 47,
+      "per_image_every_epoch": true
+    },
+    "machine_val134_and_no_fire_endpoints_recorded_each_epoch": {
+      "status": "proved",
+      "no_fire_image_level_statistics_every_epoch": true
+    },
+    "gradient_clipping_statistics_recorded": {
+      "status": "proved",
+      "seeds": [
+        "200",
+        "201",
+        "202"
+      ]
+    },
+    "best_S_and_last_checkpoints_exist": {
+      "status": "proved",
+      "inventory_sha256": "c0f8b69a3c70c5db6beb01c71c7698f3897393f1bdce9bc4eb58e4ea9f5f4c20"
+    },
+    "epoch26_30_pairwise_attribution_reported": {
+      "status": "proved",
+      "pairwise": [
+        "B_minus_A",
+        "C_minus_A",
+        "D_minus_C",
+        "D_minus_B"
+      ],
+      "historical_window": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    "uniform_best_checkpoint_manual_endpoint_reported": {
+      "status": "proved",
+      "run_count": 12,
+      "pairwise": [
+        "B_minus_A",
+        "C_minus_A",
+        "D_minus_C",
+        "D_minus_B"
+      ]
+    },
+    "test107_sealed": {
+      "status": "proved",
+      "test_images_read": false,
+      "test_labels_read": false,
+      "test_metrics_read": false
+    },
+    "v1_1_method_identity_unchanged": {
+      "status": "proved",
+      "changed": false
+    }
+  }
+}

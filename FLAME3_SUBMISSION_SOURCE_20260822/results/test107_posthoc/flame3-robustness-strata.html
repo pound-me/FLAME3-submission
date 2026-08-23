@@ -1,0 +1,80 @@
+﻿<div id="flame3-robustness-strata">
+  <style>
+    #flame3-robustness-strata{color:var(--foreground);display:grid;gap:28px;width:100%}
+    #flame3-robustness-strata .section{display:grid;gap:12px}
+    #flame3-robustness-strata .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 22px}
+    #flame3-robustness-strata .plot{min-width:0}
+    #flame3-robustness-strata .plot-label{font-weight:500;margin-bottom:4px}
+    #flame3-robustness-strata .legend{display:flex;flex-wrap:wrap;gap:14px;color:var(--muted-foreground)}
+    #flame3-robustness-strata .legend span{align-items:center;display:inline-flex;gap:6px}
+    #flame3-robustness-strata .swatch{border-radius:999px;height:3px;width:18px}
+    #flame3-robustness-strata .base-swatch{background:var(--viz-series-2)}
+    #flame3-robustness-strata .v11-swatch{background:var(--viz-series-1)}
+    #flame3-robustness-strata .chart{display:block;overflow:visible;width:100%}
+    #flame3-robustness-strata .axis,#flame3-robustness-strata .gridline{color:var(--border);fill:none;stroke:currentColor;stroke-width:1}
+    #flame3-robustness-strata .gridline{opacity:.7}
+    #flame3-robustness-strata .zero{color:var(--muted-foreground);stroke-width:1.5}
+    #flame3-robustness-strata .curve{color:var(--viz-series-1);fill:none;stroke:currentColor;stroke-width:2.5}
+    #flame3-robustness-strata .point{color:var(--viz-series-1);fill:var(--background);stroke:currentColor;stroke-width:2.5}
+    #flame3-robustness-strata .base-bar{color:var(--viz-series-2);fill:currentColor}
+    #flame3-robustness-strata .v11-bar{color:var(--viz-series-1);fill:currentColor}
+    #flame3-robustness-strata .tick,#flame3-robustness-strata .value{fill:var(--muted-foreground);font-size:11px;font-weight:400}
+    #flame3-robustness-strata .value{fill:var(--foreground)}
+    #flame3-robustness-strata .note{color:var(--muted-foreground)}
+    @media(max-width:560px){#flame3-robustness-strata .grid{grid-template-columns:1fr}}
+  </style>
+  <section class="section" aria-labelledby="flame3-perturbation-heading">
+    <h3 id="flame3-perturbation-heading">Post-hoc perturbation: v1.1 Delta S from clean</h3>
+    <div class="grid" id="flame3-perturbation-grid"></div>
+    <div class="text-small note">Common vertical scale: -0.28 to +0.06. Clean is Delta S = 0.</div>
+  </section>
+  <section class="section" aria-labelledby="flame3-strata-heading">
+    <div class="viz-row">
+      <h3 id="flame3-strata-heading">Clean test strata: equal Fire/Smoke score S</h3>
+      <div class="legend text-small" aria-label="Series legend">
+        <span><i class="swatch base-swatch" aria-hidden="true"></i>Baseline</span>
+        <span><i class="swatch v11-swatch" aria-hidden="true"></i>v1.1</span>
+      </div>
+    </div>
+    <div class="grid" id="flame3-strata-grid"></div>
+  </section>
+  <script>
+    (()=>{
+      const root=document.getElementById('flame3-robustness-strata'),pGrid=root.querySelector('#flame3-perturbation-grid'),sGrid=root.querySelector('#flame3-strata-grid'),ns='http://www.w3.org/2000/svg';
+      const perturbations=[
+        ['Thermal noise sigma',['0','0.02','0.05','0.10'],[0,-.038214,-.125225,-.255128]],
+        ['Thermal blur sigma',['0','1','2','4'],[0,.008820,.026829,.051742]],
+        ['Thermal shift px',['0','1','2','4'],[0,-.000605,-.003010,-.013246]],
+        ['RGB brightness x',['0.8','0.9','1.0','1.1','1.2'],[-.046703,-.023011,0,.018303,.032374]],
+        ['RGB color temperature delta',['-0.2','-0.1','0','+0.1','+0.2'],[-.087115,-.023940,0,-.016789,-.103289]],
+        ['Single-modality failure',['thermal zero','RGB zero'],[-.096347,-.250921],true]
+      ];
+      const strata=[
+        ['Time position',['early','late'],[.351504,.353357],[.457307,.465239]],
+        ['Smoke coverage',['low','mid','high'],[.320369,.368794,.373975],[.489932,.468072,.443924]],
+        ['Fire/Heat size',['low','mid','high'],[.297090,.358939,.375755],[.396193,.464811,.493807]],
+        ['Image brightness',['low','mid','high'],[.399139,.338241,.340698],[.527170,.480185,.417635]]
+      ];
+      const el=(name,attrs={})=>{const node=document.createElementNS(ns,name);Object.entries(attrs).forEach(([k,v])=>node.setAttribute(k,v));return node};
+      const line=(svg,x1,y1,x2,y2,c)=>svg.appendChild(el('line',{x1,y1,x2,y2,class:c}));
+      const text=(svg,x,y,v,c,a='middle')=>{const node=el('text',{x,y,class:c,'text-anchor':a});node.textContent=v;svg.appendChild(node)};
+      const signed=v=>Math.abs(v)<.0005?'0.000':`${v>0?'+':''}${v.toFixed(3)}`;
+      const svgBase=(label,desc)=>{const svg=el('svg',{class:'chart',viewBox:'0 0 340 205',role:'img','aria-label':label}),t=el('title'),d=el('desc');t.textContent=label;d.textContent=desc;svg.append(t,d);return svg};
+      const wrapPlot=(grid,title,svg)=>{const wrap=document.createElement('div'),label=document.createElement('div');wrap.className='plot';label.className='plot-label';label.textContent=title;wrap.append(label,svg);grid.appendChild(wrap)};
+      perturbations.forEach(([title,labels,values,bars])=>{
+        const svg=svgBase(`${title}, change in S`,labels.map((d,i)=>`${d}: ${signed(values[i])}`).join(', ')),L=48,R=324,T=16,B=166,min=-.28,max=.06,y=v=>T+(max-v)/(max-min)*(B-T),x=i=>L+i*(R-L)/Math.max(labels.length-1,1);
+        [-.25,-.15,-.05,0,.05].forEach(v=>{line(svg,L,y(v),R,y(v),v===0?'gridline zero':'gridline');text(svg,L-7,y(v)+4,v===0?'0':v.toFixed(2),'tick','end')});line(svg,L,T,L,B,'axis');line(svg,L,B,R,B,'axis');
+        if(bars){values.forEach((v,i)=>{const cx=L+(i+.5)*(R-L)/values.length;svg.appendChild(el('rect',{x:cx-23,y:Math.min(y(0),y(v)),width:46,height:Math.abs(y(v)-y(0)),class:'v11-bar'}));text(svg,cx,y(v)-6,signed(v),'value');text(svg,cx,B+17,labels[i],'tick')})}
+        else{svg.appendChild(el('polyline',{points:values.map((v,i)=>`${x(i)},${y(v)}`).join(' '),class:'curve'}));values.forEach((v,i)=>{svg.appendChild(el('circle',{cx:x(i),cy:y(v),r:4,class:'point'}));text(svg,x(i),v>.035?y(v)+16:y(v)-7,signed(v),'value');text(svg,x(i),B+17,labels[i],'tick')})}
+        wrapPlot(pGrid,title,svg);
+      });
+      strata.forEach(([title,labels,baseline,v11])=>{
+        const svg=svgBase(`${title}, baseline versus v1.1 S`,labels.map((d,i)=>`${d}: baseline ${baseline[i].toFixed(3)}, v1.1 ${v11[i].toFixed(3)}`).join(', ')),L=42,R=326,T=12,B=166,y=v=>B-v/.55*(B-T);
+        [0,.2,.4].forEach(v=>{line(svg,L,y(v),R,y(v),'gridline');text(svg,L-7,y(v)+4,v.toFixed(1),'tick','end')});line(svg,L,T,L,B,'axis');line(svg,L,B,R,B,'axis');
+        const gw=(R-L)/labels.length,bw=Math.min(28,gw*.28);labels.forEach((category,i)=>{const cx=L+gw*(i+.5);[baseline[i],v11[i]].forEach((v,j)=>svg.appendChild(el('rect',{x:cx+(j===0?-bw:0),y:y(v),width:bw,height:B-y(v),class:j===0?'base-bar':'v11-bar'})));text(svg,cx,B+17,category,'tick');text(svg,cx,Math.min(y(baseline[i]),y(v11[i]))-6,v11[i].toFixed(3),'value')});
+        wrapPlot(sGrid,title,svg);
+      });
+    })();
+  </script>
+</div>
+

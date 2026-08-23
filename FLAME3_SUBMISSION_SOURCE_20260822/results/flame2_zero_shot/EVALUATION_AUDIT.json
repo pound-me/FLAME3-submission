@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "run_count": 6,
+  "per_image_row_count": 1200,
+  "source_test_rows": 200,
+  "result_sha256": "831e642e5b71b924f98835d70451377e258e986c5940cef1c1cd79e41755f492",
+  "report_sha256": "a1860da1618e6239ac0892bf4930bf65342c3a532f513e6d823f75a62b910ed2",
+  "training_performed": false,
+  "predictions_saved": false,
+  "flame3_test_read": false
+}

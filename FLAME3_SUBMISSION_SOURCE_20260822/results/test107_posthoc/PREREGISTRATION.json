@@ -1,0 +1,235 @@
+{
+  "protocol": "flame3_test107_posthoc_strata_and_perturbation_preregistration",
+  "created_on": "2026-08-22",
+  "nature_disclosure": "The 107-image test set has already undergone frozen evaluations. This is post-hoc descriptive analysis and robustness checking of frozen checkpoints, not a new test-selection session.",
+  "sample_count": 107,
+  "strata": {
+    "time_position": {
+      "rule": "Within Fire and No Fire separately, sort by numeric sample_id and split into early/late halves; odd extra sample goes to early.",
+      "bins": [
+        "early",
+        "late"
+      ]
+    },
+    "smoke_coverage": {
+      "rule": "none for zero valid Smoke pixels; positive ratios split by 1/3 and 2/3 quantiles.",
+      "thresholds": [
+        0.5400866542815034,
+        0.7904136928388232
+      ],
+      "bins": [
+        "none",
+        "low",
+        "mid",
+        "high"
+      ]
+    },
+    "fire_heat_scale": {
+      "rule": "none for zero valid Fire/Heat pixels; positive ratios split by 1/3 and 2/3 quantiles.",
+      "thresholds": [
+        0.008716218571331676,
+        0.0178403630648903
+      ],
+      "bins": [
+        "none",
+        "low",
+        "mid",
+        "high"
+      ]
+    },
+    "rgb_brightness": {
+      "rule": "Mean RGB luma 0.2126R+0.7152G+0.0722B; all 107 samples split by 1/3 and 2/3 quantiles.",
+      "thresholds": [
+        0.454256405433019,
+        0.5782335599263508
+      ],
+      "bins": [
+        "low",
+        "mid",
+        "high"
+      ]
+    },
+    "source_class": {
+      "bins": [
+        "Fire",
+        "No Fire"
+      ]
+    }
+  },
+  "perturbations": [
+    {
+      "id": "clean",
+      "family": "clean"
+    },
+    {
+      "id": "thermal_noise_sigma_0.02",
+      "family": "thermal_noise",
+      "sigma": 0.02
+    },
+    {
+      "id": "thermal_noise_sigma_0.05",
+      "family": "thermal_noise",
+      "sigma": 0.05
+    },
+    {
+      "id": "thermal_noise_sigma_0.10",
+      "family": "thermal_noise",
+      "sigma": 0.1
+    },
+    {
+      "id": "thermal_blur_sigma_1",
+      "family": "thermal_blur",
+      "sigma": 1.0
+    },
+    {
+      "id": "thermal_blur_sigma_2",
+      "family": "thermal_blur",
+      "sigma": 2.0
+    },
+    {
+      "id": "thermal_blur_sigma_4",
+      "family": "thermal_blur",
+      "sigma": 4.0
+    },
+    {
+      "id": "thermal_shift_1px_left",
+      "family": "thermal_shift",
+      "pixels": 1,
+      "direction": "left"
+    },
+    {
+      "id": "thermal_shift_1px_right",
+      "family": "thermal_shift",
+      "pixels": 1,
+      "direction": "right"
+    },
+    {
+      "id": "thermal_shift_1px_up",
+      "family": "thermal_shift",
+      "pixels": 1,
+      "direction": "up"
+    },
+    {
+      "id": "thermal_shift_1px_down",
+      "family": "thermal_shift",
+      "pixels": 1,
+      "direction": "down"
+    },
+    {
+      "id": "thermal_shift_2px_left",
+      "family": "thermal_shift",
+      "pixels": 2,
+      "direction": "left"
+    },
+    {
+      "id": "thermal_shift_2px_right",
+      "family": "thermal_shift",
+      "pixels": 2,
+      "direction": "right"
+    },
+    {
+      "id": "thermal_shift_2px_up",
+      "family": "thermal_shift",
+      "pixels": 2,
+      "direction": "up"
+    },
+    {
+      "id": "thermal_shift_2px_down",
+      "family": "thermal_shift",
+      "pixels": 2,
+      "direction": "down"
+    },
+    {
+      "id": "thermal_shift_4px_left",
+      "family": "thermal_shift",
+      "pixels": 4,
+      "direction": "left"
+    },
+    {
+      "id": "thermal_shift_4px_right",
+      "family": "thermal_shift",
+      "pixels": 4,
+      "direction": "right"
+    },
+    {
+      "id": "thermal_shift_4px_up",
+      "family": "thermal_shift",
+      "pixels": 4,
+      "direction": "up"
+    },
+    {
+      "id": "thermal_shift_4px_down",
+      "family": "thermal_shift",
+      "pixels": 4,
+      "direction": "down"
+    },
+    {
+      "id": "rgb_brightness_0.8",
+      "family": "rgb_brightness",
+      "factor": 0.8
+    },
+    {
+      "id": "rgb_brightness_0.9",
+      "family": "rgb_brightness",
+      "factor": 0.9
+    },
+    {
+      "id": "rgb_brightness_1.1",
+      "family": "rgb_brightness",
+      "factor": 1.1
+    },
+    {
+      "id": "rgb_brightness_1.2",
+      "family": "rgb_brightness",
+      "factor": 1.2
+    },
+    {
+      "id": "rgb_temperature_-0.2",
+      "family": "rgb_temperature",
+      "delta": -0.2,
+      "rule": "R*=1+delta, B*=1-delta, G unchanged; clamp [0,1]"
+    },
+    {
+      "id": "rgb_temperature_-0.1",
+      "family": "rgb_temperature",
+      "delta": -0.1,
+      "rule": "R*=1+delta, B*=1-delta, G unchanged; clamp [0,1]"
+    },
+    {
+      "id": "rgb_temperature_+0.1",
+      "family": "rgb_temperature",
+      "delta": 0.1,
+      "rule": "R*=1+delta, B*=1-delta, G unchanged; clamp [0,1]"
+    },
+    {
+      "id": "rgb_temperature_+0.2",
+      "family": "rgb_temperature",
+      "delta": 0.2,
+      "rule": "R*=1+delta, B*=1-delta, G unchanged; clamp [0,1]"
+    },
+    {
+      "id": "thermal_zero",
+      "family": "modality_failure"
+    },
+    {
+      "id": "rgb_zero",
+      "family": "modality_failure"
+    }
+  ],
+  "thermal_noise_seed_rule": "SHA256(sample_key + perturbation_id), first 8 bytes as unsigned RNG seed; identical across checkpoints.",
+  "thermal_shift_fill": "zero, no wrap; four directions reported individually and averaged by magnitude.",
+  "models": "Frozen baseline and v1.1 best_S checkpoints, seeds 200/201/202, SHA256 pinned.",
+  "inference": "augment=False, deterministic, AMP, no threshold, no prediction saving.",
+  "endpoints": [
+    "three class IoU",
+    "three class mIoU",
+    "equal Fire-Smoke S",
+    "No-Fire joint false-positive ratio",
+    "paired v1.1-minus-baseline delta"
+  ],
+  "test_result_may_change_method_identity": false,
+  "training_performed": false,
+  "threshold_tuning_performed": false,
+  "predictions_saved": false,
+  "manifest_sha256": "0e6dd36bb50b81dd6de47c17a9b8041f7218f6c450e47c3503d6684ad7ff71ed"
+}

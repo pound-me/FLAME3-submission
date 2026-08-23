@@ -1,0 +1,85 @@
+{
+  "protocol": "flame3_threeclass_annotation_final_freeze_v2",
+  "status": "fully_frozen_for_baseline_and_manual_smoke_v1_training",
+  "frozen_at_utc": "2026-08-15T16:10:03.074854+00:00",
+  "reviewer": "Codex visual review confirmed by user-authorized execution",
+  "visual_qa": {
+    "status": "passed",
+    "scope": "20-image stratified review verifies correction of the 46px display coordinate error; it does not reopen semantic annotation",
+    "systematic_vertical_shift_remaining": false,
+    "manual_smoke_coordinates_follow_corrected_rgb": true,
+    "machine_fire_heat_restored_and_not_manually_edited": true,
+    "coarse_manual_brush_regions_accepted_without_semantic_reannotation": true,
+    "selection_count": 20,
+    "selection_ids": [
+      "A054",
+      "A140",
+      "A144",
+      "A148",
+      "A057",
+      "A104",
+      "A019",
+      "A034",
+      "A013",
+      "A038",
+      "A134",
+      "A043",
+      "A083",
+      "A093",
+      "A108",
+      "A118",
+      "A111",
+      "A079",
+      "A080",
+      "A042"
+    ],
+    "selection_csv": "C:\\Users\\钱鹏程QQ78293044\\Documents\\论文2\\flame3_semantic_annotation_subset_150_20260810_threeclass_frozen_v1\\final_incremental_audit_20260815\\qa_selection_20.csv",
+    "selection_csv_sha256": "b4e4493d71ae67f39e951c9ee56c85fd37a92d031e3d299f249152f001f0c34c",
+    "contact_pages": [
+      {
+        "path": "C:\\Users\\钱鹏程QQ78293044\\Documents\\论文2\\flame3_semantic_annotation_subset_150_20260810_threeclass_frozen_v1\\final_incremental_audit_20260815\\qa_alignment_page_1.jpg",
+        "sha256": "7ae106270fce30dd7dcec0dbe09be1d89044fde0250e36a3081cd3664360b41f"
+      },
+      {
+        "path": "C:\\Users\\钱鹏程QQ78293044\\Documents\\论文2\\flame3_semantic_annotation_subset_150_20260810_threeclass_frozen_v1\\final_incremental_audit_20260815\\qa_alignment_page_2.jpg",
+        "sha256": "ea28a619401e97097da35cba4f5fb8ced4a294bfbf13dd6c9a767a09db3b7e3a"
+      },
+      {
+        "path": "C:\\Users\\钱鹏程QQ78293044\\Documents\\论文2\\flame3_semantic_annotation_subset_150_20260810_threeclass_frozen_v1\\final_incremental_audit_20260815\\qa_alignment_page_3.jpg",
+        "sha256": "16163c503d9d4eaedbd4b636ba43d6c47a7c1b5f2d9bd6fbaa570735b86e83d2"
+      },
+      {
+        "path": "C:\\Users\\钱鹏程QQ78293044\\Documents\\论文2\\flame3_semantic_annotation_subset_150_20260810_threeclass_frozen_v1\\final_incremental_audit_20260815\\qa_alignment_page_4.jpg",
+        "sha256": "747f4e5d1909cebb87f6ee7283297595add7e73027c5c3f7a520bd9e4d384de9"
+      }
+    ]
+  },
+  "annotation_integrity": {
+    "mask_count": 150,
+    "split_counts": {
+      "val": 47,
+      "train": 103
+    },
+    "final_mask_manifest_sha256": "40831c4108ee4858e374452318239294f82da73263deeb7769ec575c116ecc3f",
+    "machine_fire_heat_exact_match": true,
+    "seed_ignore_fully_preserved": true,
+    "pixel_totals": {
+      "background_pixels": 35739723,
+      "smoke_pixels": 10458175,
+      "fire_heat_pixels": 484492,
+      "ignore_pixels": 2469610,
+      "manual_added_ignore_pixels": 1277992,
+      "manual_added_ignore_images": 67,
+      "smoke_images": 135
+    },
+    "incremental_audit": "C:\\Users\\钱鹏程QQ78293044\\Documents\\论文2\\flame3_semantic_annotation_subset_150_20260810_threeclass_frozen_v1\\final_incremental_audit_20260815\\ANNOTATION_INCREMENTAL_AUDIT.json",
+    "incremental_audit_sha256": "97b26c1fbd9741a26584aa64f60e761d92ed41aec22a5ce28df037e7e00c9eac"
+  },
+  "data_roles": {
+    "A001-A047": "development_validation_only_never_training",
+    "A048-A150": "manual_smoke_ignore_dense_training_supervision"
+  },
+  "test_images_or_labels_read": false,
+  "semantic_annotation_reopened_during_visual_qa": false,
+  "ready_for_machine_label_regeneration": true
+}

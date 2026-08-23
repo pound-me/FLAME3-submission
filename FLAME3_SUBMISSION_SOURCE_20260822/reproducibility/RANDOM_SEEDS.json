@@ -1,0 +1,13 @@
+{
+  "training_seeds": [200, 201, 202],
+  "split_v2_no_fire_kmeans_random_state": 200,
+  "split_v2_no_fire_kmeans_n_init": 20,
+  "cudnn_benchmark": false,
+  "cudnn_deterministic": true,
+  "torch_deterministic_algorithms_forced": false,
+  "conv1_ablation_paired_order": [
+    "seed200:A_then_B",
+    "seed201:B_then_A",
+    "seed202:A_then_B"
+  ]
+}

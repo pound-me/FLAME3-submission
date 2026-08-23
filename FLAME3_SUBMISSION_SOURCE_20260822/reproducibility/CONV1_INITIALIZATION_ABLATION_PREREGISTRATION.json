@@ -1,0 +1,85 @@
+﻿{
+    "protocol":  "flame3_conv1_four_channel_initialization_ablation_v1",
+    "status":  "frozen_before_training",
+    "freeze_date":  "2026-08-22",
+    "question":  "Does preserving ImageNet RGB stem weights and initializing the IR channel by their input-channel mean improve the frozen v1.1 method over a fully random four-channel stem?",
+    "arms":  {
+                 "A":  {
+                           "name":  "random_four_channel_stem",
+                           "config":  "configs/pidnet_s_fusion_manual_smoke_v11_30e.yaml",
+                           "config_sha256":  "beaf55db4c95ad25fc208110139acb161d217a8ffbb2a34b67c5f3517d565c29",
+                           "pretrain_skip_keys":  [
+                                                      "conv1.0.weight"
+                                                  ],
+                           "pretrain_stem_strategy":  "random"
+                       },
+                 "B":  {
+                           "name":  "imagenet_rgb_plus_ir_mean",
+                           "config":  "configs/pidnet_s_fusion_manual_smoke_v11_conv1_rgb_irmean_30e.yaml",
+                           "config_sha256":  "ca33f9810362c434b23a4410cb1d33b71288358600aca9cbdc43512f9ad1d54c",
+                           "pretrain_skip_keys":  [
+
+                                                  ],
+                           "pretrain_stem_strategy":  "rgb_copy_ir_mean"
+                       }
+             },
+    "allowed_config_differences":  [
+                                       "PROJECTNAME",
+                                       "SESSIONAME",
+                                       "EXPERIMENT_GROUP",
+                                       "METRIC_PROTOCOL",
+                                       "PRETRAIN_SKIP_KEYS",
+                                       "PRETRAIN_STEM_STRATEGY"
+                                   ],
+    "training":  {
+                     "epochs":  30,
+                     "lr_total_epochs":  100,
+                     "seeds":  [
+                                   200,
+                                   201,
+                                   202
+                               ],
+                     "batch_size":  8,
+                     "amp":  true,
+                     "gpu":  "NVIDIA GeForce RTX 4090",
+                     "paired_run_order":  [
+                                              "seed200:A_then_B",
+                                              "seed201:B_then_A",
+                                              "seed202:A_then_B"
+                                          ],
+                     "all_non_stem_initialization_equal_by_seed":  true
+                 },
+    "primary_endpoint":  {
+                             "checkpoint":  "epoch30_last.pth",
+                             "dataset":  "manual_A001_A047_threeclass_development_validation",
+                             "metric":  "three_class_mIoU",
+                             "aggregation":  "paired_B_minus_A_mean_across_three_seeds",
+                             "success":  "mean_delta_gt_0_and_at_least_2_of_3_seeds_positive"
+                         },
+    "secondary_endpoints":  [
+                                "A001_A047_per_class_IoU_precision_recall",
+                                "full_val134_machine_definition_Fire_Heat_IoU_precision_recall",
+                                "frozen_equal_fire_smoke_S",
+                                "No_Fire_joint_false_positive_ratio",
+                                "epoch26_30_training_metric_window"
+                            ],
+    "guards":  {
+                   "mean_full134_fire_heat_iou_delta_min":  -0.03,
+                   "mean_no_fire_joint_fp_delta_max":  0.001
+               },
+    "decision":  {
+                     "success":  "adopt_rgb_copy_ir_mean_initialization_for_future_retraining_only",
+                     "failure":  "retain_random_four_channel_stem",
+                     "no_test_use":  true,
+                     "no_additional_module_or_loss":  true
+                 },
+    "forbidden":  [
+                      "FLAME3_test107_read",
+                      "FLAME2_training_or_tuning",
+                      "model_structure_change",
+                      "loss_change",
+                      "sampling_change",
+                      "augmentation_change",
+                      "threshold_tuning"
+                  ]
+}

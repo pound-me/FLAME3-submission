@@ -1,0 +1,101 @@
+{
+  "protocol": "flame3_submission_efficiency_v1",
+  "status": "complete",
+  "inference": {
+    "augment": false,
+    "batch_size": 1,
+    "input_height": 512,
+    "input_width": 640,
+    "amp": true,
+    "device": "cuda:0"
+  },
+  "runtime": {
+    "python": "3.9.18",
+    "torch": "2.1.0",
+    "cuda_runtime": "12.1",
+    "cudnn": 8801,
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "checkpoint_loading": {
+    "checkpoint": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\FLAME3_SUBMISSION_SOURCE_20260822\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\conv1_random_30e_seed200\\last.pth",
+    "checkpoint_epoch": 30,
+    "deserialization_mode": "restricted_weights_only_pytorch_2_1",
+    "loaded_tensor_count": 453,
+    "ignored_auxiliary_keys": [
+      "seghead_d.bn1.bias",
+      "seghead_d.bn1.num_batches_tracked",
+      "seghead_d.bn1.running_mean",
+      "seghead_d.bn1.running_var",
+      "seghead_d.bn1.weight",
+      "seghead_d.bn2.bias",
+      "seghead_d.bn2.num_batches_tracked",
+      "seghead_d.bn2.running_mean",
+      "seghead_d.bn2.running_var",
+      "seghead_d.bn2.weight",
+      "seghead_d.conv1.weight",
+      "seghead_d.conv2.bias",
+      "seghead_d.conv2.weight",
+      "seghead_p.bn1.bias",
+      "seghead_p.bn1.num_batches_tracked",
+      "seghead_p.bn1.running_mean",
+      "seghead_p.bn1.running_var",
+      "seghead_p.bn1.weight",
+      "seghead_p.bn2.bias",
+      "seghead_p.bn2.num_batches_tracked",
+      "seghead_p.bn2.running_mean",
+      "seghead_p.bn2.running_var",
+      "seghead_p.bn2.weight",
+      "seghead_p.conv1.weight",
+      "seghead_p.conv2.bias",
+      "seghead_p.conv2.weight"
+    ],
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "shape_mismatch_keys": []
+  },
+  "complexity": {
+    "parameters": 7623939,
+    "macs": 7470914048,
+    "gmacs": 7.470914048,
+    "flops_two_per_mac": 14941828096,
+    "gflops_two_per_mac": 14.941828096,
+    "counting_convention": "THOP MACs; FLOPs additionally reported as 2 x MACs"
+  },
+  "latency": {
+    "warmup_iterations": 100,
+    "timed_iterations_per_trial": 200,
+    "trials": 10,
+    "sample_count": 2000,
+    "mean_ms": 7.185028703927994,
+    "median_ms": 7.128064155578613,
+    "p95_ms": 7.715948677062988,
+    "std_ms": 0.2892433061646774,
+    "fps_from_mean": 139.17828880117187,
+    "per_trial_mean_ms": [
+      7.250992324352264,
+      7.210561926364899,
+      7.268239040374755,
+      7.277592480182648,
+      7.256920795440674,
+      7.213776969909668,
+      7.152150084972382,
+      7.0567089414596555,
+      7.0652617573738095,
+      7.098082718849182
+    ],
+    "peak_allocated_vram_mb": 179.47216796875,
+    "peak_reserved_vram_mb": 198.0
+  },
+  "data_loading": {
+    "dataset_rows": 134,
+    "measured_batches": 100,
+    "batch_size": 1,
+    "num_workers": 0,
+    "host_loader_mean_ms": 28.966976000000066,
+    "host_loader_p95_ms": 34.68355999999931,
+    "host_to_device_mean_ms": 1.3075889999998935,
+    "host_to_device_p95_ms": 2.1010099999987375
+  },
+  "test_split_read": false,
+  "training_performed": false
+}

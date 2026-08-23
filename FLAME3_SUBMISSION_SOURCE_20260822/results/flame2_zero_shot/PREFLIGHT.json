@@ -1,0 +1,76 @@
+{
+  "protocol": "flame3_frozen_checkpoint_flame2_zero_shot_preflight",
+  "status": "passed",
+  "source_dataset": "RoboFireFuseNet-preprocessed FLAME2 official test split",
+  "source_test_rows": 200,
+  "source_test_split_sha256": "57e3a4b13be799809b5c013f028f76cecd64ae139caae5d15f9aabcf3fc8cb6a",
+  "class_mapping": {
+    "0": "background",
+    "1": "smoke",
+    "2": "fire_heat"
+  },
+  "mapping_rationale": "FLAME2 has an independent smoke class and visual audit shows class-2 regions under dense RGB smoke aligned with IR hotspots; class 2 is therefore not restricted to RGB-visible flame. No synthetic Ignore pixels are introduced.",
+  "coverage_limitation": "FLAME2 class 2 cannot be proven to cover every residual-heat footprint in the broader FLAME3 Fire/Heat definition; results are reported as a coverage-mismatched lower-bound transfer estimate.",
+  "ir_preprocessing": "PIL convert('L'), divide by 255, matching the official WildFire loader",
+  "spatial_preprocessing": "official FLAME2 256x256 deterministic resize/pad/crop; no augmentation",
+  "model_augment_flag": false,
+  "checkpoint_loading_rule": "Load into augment=False model with strict=False, require no missing keys, and allow unexpected keys only under seghead_p./seghead_d.; verify FP32 main logits and argmax against a strict augment=True compatibility model.",
+  "checkpoints": [
+    {
+      "arm": "baseline",
+      "seed": 200,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed200\\best_S.pth",
+      "sha256": "1770dd6d94fe9bcee378c8a3674ad8dbd7feeb99b710befee6eedd060957f206",
+      "epoch": 97
+    },
+    {
+      "arm": "baseline",
+      "seed": 201,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed201\\best_S.pth",
+      "sha256": "79bf3911aba25c5d484945735b9497ebbec3813feb174efb1f47e25543356a8e",
+      "epoch": 50
+    },
+    {
+      "arm": "baseline",
+      "seed": 202,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed202\\best_S.pth",
+      "sha256": "b78e549e154316c404600d955b2f23af058397669fae61ddb95be33a6d2dd97f",
+      "epoch": 80
+    },
+    {
+      "arm": "v11",
+      "seed": 200,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed200\\best_S.pth",
+      "sha256": "97e9d5902da9eb8beaa240760c41aa5e68086709ced6f8cb3f6481197a4cec6f",
+      "epoch": 77
+    },
+    {
+      "arm": "v11",
+      "seed": 201,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed201\\best_S.pth",
+      "sha256": "32f7e5df88556d3efbee7227e31bfac19677691002a67c24a68e116474c799e7",
+      "epoch": 75
+    },
+    {
+      "arm": "v11",
+      "seed": 202,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed202\\best_S.pth",
+      "sha256": "7e92ae0686b279c9f24f11d02bd8134e62454a10d489d079eb1d86262ca022cf",
+      "epoch": 72
+    }
+  ],
+  "configs": {
+    "baseline": {
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\configs\\flame3\\pidnet_s_fusion_newlabel_baseline_v2_30e.yaml",
+      "sha256": "b94e988c293e11e5993931423d29f892668f784bf16c74562234ab0d13a05ee7"
+    },
+    "v11": {
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\configs\\flame3\\pidnet_s_fusion_manual_smoke_v11_30e.yaml",
+      "sha256": "512b032ba5d37debbc4caaad3d8288fd0adbc68e65c5b43dbf4dd7716868ed43"
+    }
+  },
+  "training_performed": false,
+  "threshold_tuning_performed": false,
+  "predictions_saved": false,
+  "flame3_test_read": false
+}

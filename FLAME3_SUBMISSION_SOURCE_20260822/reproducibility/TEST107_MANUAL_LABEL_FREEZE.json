@@ -1,0 +1,2553 @@
+{
+  "protocol": "flame3_test107_manual_threeclass_frozen_v1",
+  "status": "frozen",
+  "freeze_date": "2026-08-20",
+  "method_frozen_before_mapping_unsealed": true,
+  "method_decision": "adopt_manual_smoke_v11_gradclip5",
+  "method_guards_clear": true,
+  "method_positive_seed_count": 3,
+  "test_evaluation_started": false,
+  "label_classes": {
+    "0": "Background",
+    "1": "Smoke",
+    "2": "Fire/Heat",
+    "255": "Ignore"
+  },
+  "semantic_policy": {
+    "fire_heat_unified": true,
+    "fire_heat_definition": "active fire, smoldering, residual heat, and combustion-related heat footprint",
+    "unclear_edge_or_transition": "Ignore 255",
+    "heavy_smoke_occlusion": "judge using RGB-visible evidence; use Ignore when not reliable",
+    "priority": "Fire/Heat > Smoke > Background"
+  },
+  "sample_count": 107,
+  "source_class_counts": {
+    "Fire": 89,
+    "No Fire": 18
+  },
+  "pixel_totals": {
+    "0": 14480051,
+    "1": 17750969,
+    "2": 459557,
+    "255": 2371183
+  },
+  "class_presence": {
+    "all_background_images": 18,
+    "with_smoke": 89,
+    "with_fire_heat": 87,
+    "with_ignore": 50
+  },
+  "exception_counts": {
+    "reflection_or_sensor_artifact": {
+      "no": 105,
+      "yes": 2
+    },
+    "registration_heat_leak": {
+      "no": 107
+    },
+    "thin_smoke_or_transition_ignore_present": {
+      "yes": 77,
+      "no": 30
+    },
+    "other_exception": {
+      "no": 107
+    }
+  },
+  "files": {
+    "checklist_xlsx": {
+      "path": "flame3_test_blind_annotation_checklist_107.xlsx",
+      "sha256": "647d8589d3d54a2b953105558e5923effad98152d5bac4c7c6dc056108d3a9f0"
+    },
+    "checklist_csv": {
+      "path": "flame3_test_blind_annotation_checklist_107.csv",
+      "sha256": "60cb7a2b3acea0fbdeb731d2465090c7740230ff57879030f75877a08655b20d"
+    },
+    "private_mapping": {
+      "path": "PRIVATE_MAPPING_UNSEALED_AFTER_METHOD_FREEZE.json",
+      "sha256": "bed39d3b4d5b170f4b77f610a5731870f7b610edb21f687a632f4bf897f7b2a0",
+      "source_test_csv_sha256": "a6576e340d76640491bac2051bdbe3cbaf514628778f811cb09c2112792867ed"
+    },
+    "method_summary": {
+      "path": "V11_FORMAL_100E_PAIRED_SUMMARY.json",
+      "sha256": "0472cd4f923e2b000a62e6658f6777c65ebf602561e26e59c15b3b413d389e46"
+    },
+    "technical_audit": {
+      "path": "TEST107_TECHNICAL_MASK_AUDIT.json",
+      "sha256": "9b1ad5a6b5354bd9fbcf9be85a3ebfa84bcd0832cb62f30ea124dae9924c47cd"
+    },
+    "label_index": {
+      "path": "TEST107_MANUAL_LABEL_INDEX.csv",
+      "sha256": "88237988652dc3be5f2d2675ca43f194cc87a81d48a99a6cd4c2c260ea8f92f3"
+    },
+    "portable_test_csv": {
+      "path": "TEST107_MANUAL_THREECLASS_PORTABLE.csv",
+      "sha256": "3ebdccd489d4e71ce87c0bd6f7b75faf34cc051b89d1da137da1ac0f6b7b9355",
+      "rows": 107
+    }
+  },
+  "mask_manifest_sha256": "fd2a8123cbc4607ccc1c4d530e45b9c347a65b5be685ca98f068ee434d0db34d",
+  "source_to_frozen_copy_hash_match": true,
+  "records": [
+    {
+      "annotation_id": "T001",
+      "source_row_index": 32,
+      "sample_key": "fire/00215",
+      "sample_class": "Fire",
+      "sample_id": "00215",
+      "mask_relative_path": "masks/T001.png",
+      "mask_sha256": "4058f214222eaade527fc028def24217f0c23777601e233cc46a1a62f1aa1573",
+      "pixel_counts": {
+        "0": 165887,
+        "1": 159810,
+        "2": 1983,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T002",
+      "source_row_index": 105,
+      "sample_key": "no_fire/00101",
+      "sample_class": "No Fire",
+      "sample_id": "00101",
+      "mask_relative_path": "masks/T002.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T003",
+      "source_row_index": 29,
+      "sample_key": "fire/00204",
+      "sample_class": "Fire",
+      "sample_id": "00204",
+      "mask_relative_path": "masks/T003.png",
+      "mask_sha256": "59339c2d24a29f07cfcdc0b2127d7122880c363e394938da5fff462386eaef08",
+      "pixel_counts": {
+        "0": 59660,
+        "1": 263471,
+        "2": 4549,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T004",
+      "source_row_index": 75,
+      "sample_key": "fire/00524",
+      "sample_class": "Fire",
+      "sample_id": "00524",
+      "mask_relative_path": "masks/T004.png",
+      "mask_sha256": "fd588197136085179785b9211b873e337380fd1f95c5e62195a78fdf05dfbf77",
+      "pixel_counts": {
+        "0": 96849,
+        "1": 181228,
+        "2": 13574,
+        "255": 36029
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T005",
+      "source_row_index": 64,
+      "sample_key": "fire/00441",
+      "sample_class": "Fire",
+      "sample_id": "00441",
+      "mask_relative_path": "masks/T005.png",
+      "mask_sha256": "973d74dd6862c7199294c4b22579c8a5109869b2044644ec2f591c0525c79c56",
+      "pixel_counts": {
+        "0": 64080,
+        "1": 250725,
+        "2": 12875,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T006",
+      "source_row_index": 86,
+      "sample_key": "fire/00608",
+      "sample_class": "Fire",
+      "sample_id": "00608",
+      "mask_relative_path": "masks/T006.png",
+      "mask_sha256": "df4c5c93a180fd32b1f9a01cdc3a131685c651bf45f46bf4806c23cff4100c1d",
+      "pixel_counts": {
+        "0": 245398,
+        "1": 74994,
+        "2": 7288,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T007",
+      "source_row_index": 50,
+      "sample_key": "fire/00359",
+      "sample_class": "Fire",
+      "sample_id": "00359",
+      "mask_relative_path": "masks/T007.png",
+      "mask_sha256": "9bf16924d86351fedf68fc05cd52ab8acad0f519eef4c1ca5cd4172f3cf50876",
+      "pixel_counts": {
+        "0": 165372,
+        "1": 145268,
+        "2": 8179,
+        "255": 8861
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T008",
+      "source_row_index": 10,
+      "sample_key": "fire/00098",
+      "sample_class": "Fire",
+      "sample_id": "00098",
+      "mask_relative_path": "masks/T008.png",
+      "mask_sha256": "027234c8ed5e05d5928c9a60d83ebae59ca3cc8ee90a9e0b58994d3069016a24",
+      "pixel_counts": {
+        "0": 16261,
+        "1": 308938,
+        "2": 2481,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T009",
+      "source_row_index": 90,
+      "sample_key": "no_fire/00014",
+      "sample_class": "No Fire",
+      "sample_id": "00014",
+      "mask_relative_path": "masks/T009.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T010",
+      "source_row_index": 53,
+      "sample_key": "fire/00383",
+      "sample_class": "Fire",
+      "sample_id": "00383",
+      "mask_relative_path": "masks/T010.png",
+      "mask_sha256": "14f54336f3e8840ee7c6babd257ea7176eeb5eb3d4d7b7c833ff6083bd08b553",
+      "pixel_counts": {
+        "0": 12366,
+        "1": 313951,
+        "2": 1363,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T011",
+      "source_row_index": 27,
+      "sample_key": "fire/00195",
+      "sample_class": "Fire",
+      "sample_id": "00195",
+      "mask_relative_path": "masks/T011.png",
+      "mask_sha256": "4183b997d5e6633f9bdb4d09f5c8cc9be0f4e0316817a7db37ec87f1349e78c9",
+      "pixel_counts": {
+        "0": 238422,
+        "1": 86624,
+        "2": 2634,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T012",
+      "source_row_index": 93,
+      "sample_key": "no_fire/00032",
+      "sample_class": "No Fire",
+      "sample_id": "00032",
+      "mask_relative_path": "masks/T012.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T013",
+      "source_row_index": 70,
+      "sample_key": "fire/00491",
+      "sample_class": "Fire",
+      "sample_id": "00491",
+      "mask_relative_path": "masks/T013.png",
+      "mask_sha256": "2354ae63b00e5a6d8ad4f97facb3c449b14b90d65778fb5bb9102a14861b1f75",
+      "pixel_counts": {
+        "0": 19426,
+        "1": 300975,
+        "2": 7279,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T014",
+      "source_row_index": 21,
+      "sample_key": "fire/00167",
+      "sample_class": "Fire",
+      "sample_id": "00167",
+      "mask_relative_path": "masks/T014.png",
+      "mask_sha256": "7748b901416a580ca61dafda430bf5c537c1115638027a0d3ba3890e8616a10e",
+      "pixel_counts": {
+        "0": 20204,
+        "1": 306438,
+        "2": 1038,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T015",
+      "source_row_index": 83,
+      "sample_key": "fire/00583",
+      "sample_class": "Fire",
+      "sample_id": "00583",
+      "mask_relative_path": "masks/T015.png",
+      "mask_sha256": "bdd7f1821f88d76cccc53e145a8c42788254879746bbdb8611e0a173a8085b42",
+      "pixel_counts": {
+        "0": 167173,
+        "1": 156065,
+        "2": 4442,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T016",
+      "source_row_index": 94,
+      "sample_key": "no_fire/00034",
+      "sample_class": "No Fire",
+      "sample_id": "00034",
+      "mask_relative_path": "masks/T016.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T017",
+      "source_row_index": 73,
+      "sample_key": "fire/00506",
+      "sample_class": "Fire",
+      "sample_id": "00506",
+      "mask_relative_path": "masks/T017.png",
+      "mask_sha256": "c94ab73a04ee88765cce5f09562a13324bac777abe72ef9b1ca6e044d18bf38e",
+      "pixel_counts": {
+        "0": 203295,
+        "1": 120719,
+        "2": 3666,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T018",
+      "source_row_index": 12,
+      "sample_key": "fire/00120",
+      "sample_class": "Fire",
+      "sample_id": "00120",
+      "mask_relative_path": "masks/T018.png",
+      "mask_sha256": "fb6d35a7dffad674111770aea366a68e988154a1a906ab273e2bb2f5917142e9",
+      "pixel_counts": {
+        "0": 214371,
+        "1": 110562,
+        "2": 2747,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T019",
+      "source_row_index": 65,
+      "sample_key": "fire/00443",
+      "sample_class": "Fire",
+      "sample_id": "00443",
+      "mask_relative_path": "masks/T019.png",
+      "mask_sha256": "21c6b1a6fbfaf8fc4a7e381e640c911c81d3015f577afc0df0f3ef8fb680ae23",
+      "pixel_counts": {
+        "0": 17087,
+        "1": 290885,
+        "2": 1480,
+        "255": 18228
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T020",
+      "source_row_index": 88,
+      "sample_key": "fire/00621",
+      "sample_class": "Fire",
+      "sample_id": "00621",
+      "mask_relative_path": "masks/T020.png",
+      "mask_sha256": "6f9e25a73ab769959c05cb0edf7139c14bc5aff62338052197fc55bc5b4b8d25",
+      "pixel_counts": {
+        "0": 189420,
+        "1": 135143,
+        "2": 3117,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T021",
+      "source_row_index": 87,
+      "sample_key": "fire/00619",
+      "sample_class": "Fire",
+      "sample_id": "00619",
+      "mask_relative_path": "masks/T021.png",
+      "mask_sha256": "e0caa5cb394308d796b6552ff700be1f9242399709c419cf5ecbf09575b77c5a",
+      "pixel_counts": {
+        "0": 84443,
+        "1": 238852,
+        "2": 4385,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T022",
+      "source_row_index": 19,
+      "sample_key": "fire/00162",
+      "sample_class": "Fire",
+      "sample_id": "00162",
+      "mask_relative_path": "masks/T022.png",
+      "mask_sha256": "e87528f24779e96cca2f366fde84f4a319fa0f2288ffa1d61d5c7033eab6f047",
+      "pixel_counts": {
+        "0": 163940,
+        "1": 141457,
+        "2": 1866,
+        "255": 20417
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T023",
+      "source_row_index": 98,
+      "sample_key": "no_fire/00059",
+      "sample_class": "No Fire",
+      "sample_id": "00059",
+      "mask_relative_path": "masks/T023.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T024",
+      "source_row_index": 0,
+      "sample_key": "fire/00014",
+      "sample_class": "Fire",
+      "sample_id": "00014",
+      "mask_relative_path": "masks/T024.png",
+      "mask_sha256": "9df4bf334773672d4cfc835bdf3393c10f81b7c9229caa115a08080b2386002f",
+      "pixel_counts": {
+        "0": 87717,
+        "1": 238267,
+        "2": 1696,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T025",
+      "source_row_index": 69,
+      "sample_key": "fire/00483",
+      "sample_class": "Fire",
+      "sample_id": "00483",
+      "mask_relative_path": "masks/T025.png",
+      "mask_sha256": "0c2e2fc80c37e74600e6d5474370fef58d8f64263fff92ad7d516cad8b6177f2",
+      "pixel_counts": {
+        "0": 85994,
+        "1": 233179,
+        "2": 8507,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T026",
+      "source_row_index": 11,
+      "sample_key": "fire/00115",
+      "sample_class": "Fire",
+      "sample_id": "00115",
+      "mask_relative_path": "masks/T026.png",
+      "mask_sha256": "42a0659ff4a8a4173223ea95e33562f4fd4f8355f2213b605f269732637e3159",
+      "pixel_counts": {
+        "0": 169903,
+        "1": 155478,
+        "2": 2299,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T027",
+      "source_row_index": 54,
+      "sample_key": "fire/00390",
+      "sample_class": "Fire",
+      "sample_id": "00390",
+      "mask_relative_path": "masks/T027.png",
+      "mask_sha256": "39b24d77915a278cabb47b9f91ef1e8a5d20fc9a30e40fa10c348fb49eec06be",
+      "pixel_counts": {
+        "0": 19197,
+        "1": 276711,
+        "2": 7009,
+        "255": 24763
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T028",
+      "source_row_index": 85,
+      "sample_key": "fire/00605",
+      "sample_class": "Fire",
+      "sample_id": "00605",
+      "mask_relative_path": "masks/T028.png",
+      "mask_sha256": "05666b087d76a51bd26de42fa7ea216d5e99228d608b77947f6ab9d056964083",
+      "pixel_counts": {
+        "0": 33853,
+        "1": 242385,
+        "2": 4519,
+        "255": 46923
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T029",
+      "source_row_index": 17,
+      "sample_key": "fire/00150",
+      "sample_class": "Fire",
+      "sample_id": "00150",
+      "mask_relative_path": "masks/T029.png",
+      "mask_sha256": "3314d4f4dc2c3b4d78f061cc6fefe7df3be23c6181cb56dcdc3c9b12819d986e",
+      "pixel_counts": {
+        "0": 20126,
+        "1": 250647,
+        "2": 708,
+        "255": 56199
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T030",
+      "source_row_index": 57,
+      "sample_key": "fire/00411",
+      "sample_class": "Fire",
+      "sample_id": "00411",
+      "mask_relative_path": "masks/T030.png",
+      "mask_sha256": "f5ec03b5cf673e5718bed3824b1b2f03dd09f72981222986d4ddf472cb54d132",
+      "pixel_counts": {
+        "0": 137209,
+        "1": 185168,
+        "2": 5303,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T031",
+      "source_row_index": 6,
+      "sample_key": "fire/00082",
+      "sample_class": "Fire",
+      "sample_id": "00082",
+      "mask_relative_path": "masks/T031.png",
+      "mask_sha256": "ce2302305e56007339a95b675331a3d0d5d5c6e50c74e40a014400ca4edebd1a",
+      "pixel_counts": {
+        "0": 163333,
+        "1": 159156,
+        "2": 1753,
+        "255": 3438
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "yes",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T032",
+      "source_row_index": 78,
+      "sample_key": "fire/00547",
+      "sample_class": "Fire",
+      "sample_id": "00547",
+      "mask_relative_path": "masks/T032.png",
+      "mask_sha256": "0f015eb17dc41e722d817ba980cf7eee7d5623609c659d90341702f136b1d9d8",
+      "pixel_counts": {
+        "0": 86151,
+        "1": 206427,
+        "2": 0,
+        "255": 35102
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T033",
+      "source_row_index": 43,
+      "sample_key": "fire/00307",
+      "sample_class": "Fire",
+      "sample_id": "00307",
+      "mask_relative_path": "masks/T033.png",
+      "mask_sha256": "f9c6bdb9590bc4292879de7784e902ccd47f9136cba5df004d818efca5855064",
+      "pixel_counts": {
+        "0": 126834,
+        "1": 180713,
+        "2": 12826,
+        "255": 7307
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T034",
+      "source_row_index": 24,
+      "sample_key": "fire/00186",
+      "sample_class": "Fire",
+      "sample_id": "00186",
+      "mask_relative_path": "masks/T034.png",
+      "mask_sha256": "f0a076a833dd0fe413192c39c1b2a65860bca42135ccead0803bfc931b5cc88a",
+      "pixel_counts": {
+        "0": 113906,
+        "1": 204498,
+        "2": 4268,
+        "255": 5008
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T035",
+      "source_row_index": 30,
+      "sample_key": "fire/00208",
+      "sample_class": "Fire",
+      "sample_id": "00208",
+      "mask_relative_path": "masks/T035.png",
+      "mask_sha256": "658caeaad359e7d7dba3c587a403c0acb8d97cf39f9179c3f171fd8d6e2f3989",
+      "pixel_counts": {
+        "0": 99889,
+        "1": 223296,
+        "2": 4495,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T036",
+      "source_row_index": 61,
+      "sample_key": "fire/00427",
+      "sample_class": "Fire",
+      "sample_id": "00427",
+      "mask_relative_path": "masks/T036.png",
+      "mask_sha256": "771445df9397a0e4a4c37172118ff9a7bed07c7eddf636d1ab2ff8c6f591e069",
+      "pixel_counts": {
+        "0": 75777,
+        "1": 236551,
+        "2": 3300,
+        "255": 12052
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T037",
+      "source_row_index": 101,
+      "sample_key": "no_fire/00075",
+      "sample_class": "No Fire",
+      "sample_id": "00075",
+      "mask_relative_path": "masks/T037.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T038",
+      "source_row_index": 49,
+      "sample_key": "fire/00339",
+      "sample_class": "Fire",
+      "sample_id": "00339",
+      "mask_relative_path": "masks/T038.png",
+      "mask_sha256": "e1f24100830b22476f148c9858f299f0ac7f25dfb7a96cfb61134094516aa7a8",
+      "pixel_counts": {
+        "0": 166780,
+        "1": 153853,
+        "2": 7047,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T039",
+      "source_row_index": 42,
+      "sample_key": "fire/00283",
+      "sample_class": "Fire",
+      "sample_id": "00283",
+      "mask_relative_path": "masks/T039.png",
+      "mask_sha256": "bfc0465c65100ec0770025f37308d37bcf54a5f604320a52d8dc6bf7130eb552",
+      "pixel_counts": {
+        "0": 83269,
+        "1": 169138,
+        "2": 4713,
+        "255": 70560
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T040",
+      "source_row_index": 9,
+      "sample_key": "fire/00094",
+      "sample_class": "Fire",
+      "sample_id": "00094",
+      "mask_relative_path": "masks/T040.png",
+      "mask_sha256": "9a4ebee3a815081520010d9f5ce8e55fb11ce7942dcec52b4cfd8f5fa2db47a0",
+      "pixel_counts": {
+        "0": 139886,
+        "1": 166046,
+        "2": 990,
+        "255": 20758
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T041",
+      "source_row_index": 31,
+      "sample_key": "fire/00214",
+      "sample_class": "Fire",
+      "sample_id": "00214",
+      "mask_relative_path": "masks/T041.png",
+      "mask_sha256": "4f4ea1b98585b4ad43c03c944f3e57d5765082e150546b9c77e824c563903008",
+      "pixel_counts": {
+        "0": 18815,
+        "1": 300052,
+        "2": 1025,
+        "255": 7788
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T042",
+      "source_row_index": 66,
+      "sample_key": "fire/00473",
+      "sample_class": "Fire",
+      "sample_id": "00473",
+      "mask_relative_path": "masks/T042.png",
+      "mask_sha256": "b30fa780c6cc8babc4e40d681b733a0539a928894213b1c16e633e4705e16406",
+      "pixel_counts": {
+        "0": 19407,
+        "1": 306484,
+        "2": 1789,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T043",
+      "source_row_index": 82,
+      "sample_key": "fire/00573",
+      "sample_class": "Fire",
+      "sample_id": "00573",
+      "mask_relative_path": "masks/T043.png",
+      "mask_sha256": "e15cda048394f2b1bf3a59509d62b8482412e4a1ff50ad21e88c1e10fa3472b8",
+      "pixel_counts": {
+        "0": 229990,
+        "1": 95613,
+        "2": 2077,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T044",
+      "source_row_index": 77,
+      "sample_key": "fire/00528",
+      "sample_class": "Fire",
+      "sample_id": "00528",
+      "mask_relative_path": "masks/T044.png",
+      "mask_sha256": "3d70b4f0ce7d630ac96b83f3a52f33cb3431dedfbd3d3af3ef4fbe448e4d6c0e",
+      "pixel_counts": {
+        "0": 157909,
+        "1": 54089,
+        "2": 1900,
+        "255": 113782
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T045",
+      "source_row_index": 72,
+      "sample_key": "fire/00496",
+      "sample_class": "Fire",
+      "sample_id": "00496",
+      "mask_relative_path": "masks/T045.png",
+      "mask_sha256": "8ee7915ace9a25851dad5e0228b2ad136b4305e58eeec58c1bdfad75d27e7fed",
+      "pixel_counts": {
+        "0": 52007,
+        "1": 204281,
+        "2": 3714,
+        "255": 67678
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T046",
+      "source_row_index": 56,
+      "sample_key": "fire/00407",
+      "sample_class": "Fire",
+      "sample_id": "00407",
+      "mask_relative_path": "masks/T046.png",
+      "mask_sha256": "71d8ce7cd59448c8443d6b4044ecc0aba2e944cb8ae095a97c3b0998154947e1",
+      "pixel_counts": {
+        "0": 85583,
+        "1": 207761,
+        "2": 5254,
+        "255": 29082
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T047",
+      "source_row_index": 63,
+      "sample_key": "fire/00437",
+      "sample_class": "Fire",
+      "sample_id": "00437",
+      "mask_relative_path": "masks/T047.png",
+      "mask_sha256": "74fb8a007be94111b4a41d9a5e5de8e7d1ca451b21d81663e222b4962e900e36",
+      "pixel_counts": {
+        "0": 75370,
+        "1": 225261,
+        "2": 13842,
+        "255": 13207
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T048",
+      "source_row_index": 46,
+      "sample_key": "fire/00316",
+      "sample_class": "Fire",
+      "sample_id": "00316",
+      "mask_relative_path": "masks/T048.png",
+      "mask_sha256": "ed5439ec22f13c330923b5837d1dad6759351b2bf60b0480894b32ff3238ee9c",
+      "pixel_counts": {
+        "0": 208609,
+        "1": 118383,
+        "2": 688,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T049",
+      "source_row_index": 80,
+      "sample_key": "fire/00553",
+      "sample_class": "Fire",
+      "sample_id": "00553",
+      "mask_relative_path": "masks/T049.png",
+      "mask_sha256": "ef917ac4922be5b1ec0b9f51b71b9d6dd83f89925e49afb7aecc64d4d66fbda9",
+      "pixel_counts": {
+        "0": 39662,
+        "1": 255791,
+        "2": 4470,
+        "255": 27757
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T050",
+      "source_row_index": 3,
+      "sample_key": "fire/00060",
+      "sample_class": "Fire",
+      "sample_id": "00060",
+      "mask_relative_path": "masks/T050.png",
+      "mask_sha256": "5cae574e51f9c07bb7dc9f9bca7e15e28caaa9c4d5cfc6e3741d581d6cea793f",
+      "pixel_counts": {
+        "0": 131632,
+        "1": 118010,
+        "2": 2081,
+        "255": 75957
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T051",
+      "source_row_index": 58,
+      "sample_key": "fire/00413",
+      "sample_class": "Fire",
+      "sample_id": "00413",
+      "mask_relative_path": "masks/T051.png",
+      "mask_sha256": "1481a4b2933b18e232fc0f37e5dcf7e6c1e1582cd207c8a2cc24b04c1e52aaf9",
+      "pixel_counts": {
+        "0": 23847,
+        "1": 227855,
+        "2": 3720,
+        "255": 72258
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T052",
+      "source_row_index": 34,
+      "sample_key": "fire/00231",
+      "sample_class": "Fire",
+      "sample_id": "00231",
+      "mask_relative_path": "masks/T052.png",
+      "mask_sha256": "46ac9a55b318d5e7cd567b04cd58a7d1cd73954e785c7ab267d68dfd37e3876c",
+      "pixel_counts": {
+        "0": 22540,
+        "1": 272255,
+        "2": 1615,
+        "255": 31270
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T053",
+      "source_row_index": 55,
+      "sample_key": "fire/00400",
+      "sample_class": "Fire",
+      "sample_id": "00400",
+      "mask_relative_path": "masks/T053.png",
+      "mask_sha256": "b8285a6420e90f1901c9a51c527f2d8c9f6f2acb1cf79096039056c487b315bb",
+      "pixel_counts": {
+        "0": 210533,
+        "1": 107435,
+        "2": 9712,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T054",
+      "source_row_index": 38,
+      "sample_key": "fire/00242",
+      "sample_class": "Fire",
+      "sample_id": "00242",
+      "mask_relative_path": "masks/T054.png",
+      "mask_sha256": "acfc655708327c64a1093d7c8aca13b10863d923bf2175bcb892e2aac5b48e4b",
+      "pixel_counts": {
+        "0": 152200,
+        "1": 171170,
+        "2": 4310,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T055",
+      "source_row_index": 100,
+      "sample_key": "no_fire/00069",
+      "sample_class": "No Fire",
+      "sample_id": "00069",
+      "mask_relative_path": "masks/T055.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T056",
+      "source_row_index": 15,
+      "sample_key": "fire/00144",
+      "sample_class": "Fire",
+      "sample_id": "00144",
+      "mask_relative_path": "masks/T056.png",
+      "mask_sha256": "3aeeeb3a00cb8deb6ae041706857db91dd06b077a642e0784f77fb6ae472bb0f",
+      "pixel_counts": {
+        "0": 162121,
+        "1": 160395,
+        "2": 5164,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T057",
+      "source_row_index": 23,
+      "sample_key": "fire/00176",
+      "sample_class": "Fire",
+      "sample_id": "00176",
+      "mask_relative_path": "masks/T057.png",
+      "mask_sha256": "7c8d5d008803b0d0e1917aeb1261b3e3ec81f95082db4215cf20975d50969be9",
+      "pixel_counts": {
+        "0": 170255,
+        "1": 153184,
+        "2": 4241,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T058",
+      "source_row_index": 92,
+      "sample_key": "no_fire/00026",
+      "sample_class": "No Fire",
+      "sample_id": "00026",
+      "mask_relative_path": "masks/T058.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T059",
+      "source_row_index": 79,
+      "sample_key": "fire/00548",
+      "sample_class": "Fire",
+      "sample_id": "00548",
+      "mask_relative_path": "masks/T059.png",
+      "mask_sha256": "f43f237238b9f9c64cce5a7d0100cb1cf420fde100cbd2788f58131cfa302b18",
+      "pixel_counts": {
+        "0": 89267,
+        "1": 235414,
+        "2": 2999,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T060",
+      "source_row_index": 76,
+      "sample_key": "fire/00526",
+      "sample_class": "Fire",
+      "sample_id": "00526",
+      "mask_relative_path": "masks/T060.png",
+      "mask_sha256": "ccaa48d0736d0af75a9dfe851b68c173b08868c50a0e049d06adc2bb9b0c3cc9",
+      "pixel_counts": {
+        "0": 313671,
+        "1": 9090,
+        "2": 4919,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T061",
+      "source_row_index": 67,
+      "sample_key": "fire/00476",
+      "sample_class": "Fire",
+      "sample_id": "00476",
+      "mask_relative_path": "masks/T061.png",
+      "mask_sha256": "69103639ac95ec7da2e78371acd07c97bc4cb619d49145ed473c82c7a77aea03",
+      "pixel_counts": {
+        "0": 53857,
+        "1": 143429,
+        "2": 5610,
+        "255": 124784
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T062",
+      "source_row_index": 13,
+      "sample_key": "fire/00129",
+      "sample_class": "Fire",
+      "sample_id": "00129",
+      "mask_relative_path": "masks/T062.png",
+      "mask_sha256": "65205f2b4c9ce863ccd4a7769d1dc862648b90f422fdde43ae119731343435c0",
+      "pixel_counts": {
+        "0": 11699,
+        "1": 214581,
+        "2": 3962,
+        "255": 97438
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T063",
+      "source_row_index": 33,
+      "sample_key": "fire/00217",
+      "sample_class": "Fire",
+      "sample_id": "00217",
+      "mask_relative_path": "masks/T063.png",
+      "mask_sha256": "10c55a8afc71bb7280fb2a55170e57ae30e35af9cc3e38a793bea5a4d03039d4",
+      "pixel_counts": {
+        "0": 12005,
+        "1": 313822,
+        "2": 1853,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T064",
+      "source_row_index": 97,
+      "sample_key": "no_fire/00050",
+      "sample_class": "No Fire",
+      "sample_id": "00050",
+      "mask_relative_path": "masks/T064.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T065",
+      "source_row_index": 89,
+      "sample_key": "no_fire/00012",
+      "sample_class": "No Fire",
+      "sample_id": "00012",
+      "mask_relative_path": "masks/T065.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T066",
+      "source_row_index": 71,
+      "sample_key": "fire/00492",
+      "sample_class": "Fire",
+      "sample_id": "00492",
+      "mask_relative_path": "masks/T066.png",
+      "mask_sha256": "23d68f66aba20106c8bf8158c016dfb149789edeba0db86fa87f595f2aac76cc",
+      "pixel_counts": {
+        "0": 70301,
+        "1": 256352,
+        "2": 1027,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T067",
+      "source_row_index": 8,
+      "sample_key": "fire/00088",
+      "sample_class": "Fire",
+      "sample_id": "00088",
+      "mask_relative_path": "masks/T067.png",
+      "mask_sha256": "2ccb2df225bf17ea6f9e9ea910dbe37070aca92f8d299238be520b6801586ba0",
+      "pixel_counts": {
+        "0": 20508,
+        "1": 228641,
+        "2": 1115,
+        "255": 77416
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T068",
+      "source_row_index": 26,
+      "sample_key": "fire/00192",
+      "sample_class": "Fire",
+      "sample_id": "00192",
+      "mask_relative_path": "masks/T068.png",
+      "mask_sha256": "c701821709239e9fb288602cf01ddca7c3223ddcaf24f22282afa7dd068d7816",
+      "pixel_counts": {
+        "0": 189722,
+        "1": 130199,
+        "2": 1288,
+        "255": 6471
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "yes",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T069",
+      "source_row_index": 5,
+      "sample_key": "fire/00081",
+      "sample_class": "Fire",
+      "sample_id": "00081",
+      "mask_relative_path": "masks/T069.png",
+      "mask_sha256": "272115887f61d19fddcfa27b91bcbad01234b34ce9545f277163528be0b02259",
+      "pixel_counts": {
+        "0": 2594,
+        "1": 324063,
+        "2": 1023,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T070",
+      "source_row_index": 40,
+      "sample_key": "fire/00262",
+      "sample_class": "Fire",
+      "sample_id": "00262",
+      "mask_relative_path": "masks/T070.png",
+      "mask_sha256": "1bfbeec3bae12bf2dd6b0647fd18d3c17d033f6a8c73d59513b3ce7f0c964824",
+      "pixel_counts": {
+        "0": 133611,
+        "1": 189345,
+        "2": 4724,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T071",
+      "source_row_index": 20,
+      "sample_key": "fire/00165",
+      "sample_class": "Fire",
+      "sample_id": "00165",
+      "mask_relative_path": "masks/T071.png",
+      "mask_sha256": "ed19f084b5b98cf2a362f2df6ea47404aef59a6f0ca7c28946214e8d0a744d87",
+      "pixel_counts": {
+        "0": 10033,
+        "1": 317285,
+        "2": 362,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T072",
+      "source_row_index": 4,
+      "sample_key": "fire/00076",
+      "sample_class": "Fire",
+      "sample_id": "00076",
+      "mask_relative_path": "masks/T072.png",
+      "mask_sha256": "caefe4d6e9c729b177217cf2e9e59d998529b55512ef147bbe5bcdf62d88fe5e",
+      "pixel_counts": {
+        "0": 179758,
+        "1": 146592,
+        "2": 1330,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T073",
+      "source_row_index": 68,
+      "sample_key": "fire/00481",
+      "sample_class": "Fire",
+      "sample_id": "00481",
+      "mask_relative_path": "masks/T073.png",
+      "mask_sha256": "64ee53e6896158b8aceb4395a35fd6991af1dc7ac513675a7406d69a34066c31",
+      "pixel_counts": {
+        "0": 58914,
+        "1": 237983,
+        "2": 10766,
+        "255": 20017
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T074",
+      "source_row_index": 39,
+      "sample_key": "fire/00244",
+      "sample_class": "Fire",
+      "sample_id": "00244",
+      "mask_relative_path": "masks/T074.png",
+      "mask_sha256": "caa2fc0d41b2538eabcb5fee093d057bceca41ec7807f36e2bd9b6f1b8c8e49d",
+      "pixel_counts": {
+        "0": 166887,
+        "1": 155425,
+        "2": 5368,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T075",
+      "source_row_index": 35,
+      "sample_key": "fire/00237",
+      "sample_class": "Fire",
+      "sample_id": "00237",
+      "mask_relative_path": "masks/T075.png",
+      "mask_sha256": "52a7cbfa4ee906f9fff0358079d043d564f559352f7b34ee94dfe5ecc85d4080",
+      "pixel_counts": {
+        "0": 49863,
+        "1": 196864,
+        "2": 6381,
+        "255": 74572
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T076",
+      "source_row_index": 2,
+      "sample_key": "fire/00043",
+      "sample_class": "Fire",
+      "sample_id": "00043",
+      "mask_relative_path": "masks/T076.png",
+      "mask_sha256": "c3b4dfd1c545e745adad3995919449cda3f840148727a2025be6b58f5df542ad",
+      "pixel_counts": {
+        "0": 51087,
+        "1": 207968,
+        "2": 3274,
+        "255": 65351
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T077",
+      "source_row_index": 99,
+      "sample_key": "no_fire/00060",
+      "sample_class": "No Fire",
+      "sample_id": "00060",
+      "mask_relative_path": "masks/T077.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T078",
+      "source_row_index": 14,
+      "sample_key": "fire/00141",
+      "sample_class": "Fire",
+      "sample_id": "00141",
+      "mask_relative_path": "masks/T078.png",
+      "mask_sha256": "7a63610add4b6c96accf38f645e64b1bd7859b083d523d0afe5977b18f2ed69b",
+      "pixel_counts": {
+        "0": 18784,
+        "1": 271868,
+        "2": 2291,
+        "255": 34737
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T079",
+      "source_row_index": 52,
+      "sample_key": "fire/00382",
+      "sample_class": "Fire",
+      "sample_id": "00382",
+      "mask_relative_path": "masks/T079.png",
+      "mask_sha256": "f7b41a3a277c66be3e826f2804003f6392d540f55dc8123e41e3cacfb3a15211",
+      "pixel_counts": {
+        "0": 109695,
+        "1": 135295,
+        "2": 5729,
+        "255": 76961
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T080",
+      "source_row_index": 106,
+      "sample_key": "no_fire/00103",
+      "sample_class": "No Fire",
+      "sample_id": "00103",
+      "mask_relative_path": "masks/T080.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T081",
+      "source_row_index": 37,
+      "sample_key": "fire/00240",
+      "sample_class": "Fire",
+      "sample_id": "00240",
+      "mask_relative_path": "masks/T081.png",
+      "mask_sha256": "fe4c3ea5ebe5ef86b5153baa956a9a5ea01b6fcbf56f2a17c4e8339bf7f32a7f",
+      "pixel_counts": {
+        "0": 110093,
+        "1": 191297,
+        "2": 6834,
+        "255": 19456
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T082",
+      "source_row_index": 104,
+      "sample_key": "no_fire/00090",
+      "sample_class": "No Fire",
+      "sample_id": "00090",
+      "mask_relative_path": "masks/T082.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T083",
+      "source_row_index": 81,
+      "sample_key": "fire/00565",
+      "sample_class": "Fire",
+      "sample_id": "00565",
+      "mask_relative_path": "masks/T083.png",
+      "mask_sha256": "a23a000587f2e23444d2435938e90ecd6bbfe162febd833c20d4be4d241b8438",
+      "pixel_counts": {
+        "0": 89827,
+        "1": 162458,
+        "2": 8153,
+        "255": 67242
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T084",
+      "source_row_index": 22,
+      "sample_key": "fire/00172",
+      "sample_class": "Fire",
+      "sample_id": "00172",
+      "mask_relative_path": "masks/T084.png",
+      "mask_sha256": "314317412e2a154456271b268a2dca354ae1164245557aaac33958c95a8f72c5",
+      "pixel_counts": {
+        "0": 26382,
+        "1": 283705,
+        "2": 3272,
+        "255": 14321
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T085",
+      "source_row_index": 48,
+      "sample_key": "fire/00320",
+      "sample_class": "Fire",
+      "sample_id": "00320",
+      "mask_relative_path": "masks/T085.png",
+      "mask_sha256": "4f20628b7ad133b1a6979f0366cc12d6509c65bbfd6425c3bc25c133603a4dae",
+      "pixel_counts": {
+        "0": 14367,
+        "1": 184736,
+        "2": 4072,
+        "255": 124505
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T086",
+      "source_row_index": 16,
+      "sample_key": "fire/00145",
+      "sample_class": "Fire",
+      "sample_id": "00145",
+      "mask_relative_path": "masks/T086.png",
+      "mask_sha256": "9b68e56b4e422747643868dfba67af8fa3c7266ff58bb7f804bf11ea0a670237",
+      "pixel_counts": {
+        "0": 79785,
+        "1": 170763,
+        "2": 3442,
+        "255": 73690
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T087",
+      "source_row_index": 28,
+      "sample_key": "fire/00199",
+      "sample_class": "Fire",
+      "sample_id": "00199",
+      "mask_relative_path": "masks/T087.png",
+      "mask_sha256": "fd49d397209d16261771ce09e5cf30e56ad1e75c0cb1ce0db656112af92ce85c",
+      "pixel_counts": {
+        "0": 134340,
+        "1": 172553,
+        "2": 4804,
+        "255": 15983
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T088",
+      "source_row_index": 7,
+      "sample_key": "fire/00085",
+      "sample_class": "Fire",
+      "sample_id": "00085",
+      "mask_relative_path": "masks/T088.png",
+      "mask_sha256": "8c190067d04954f07dac9b4721268c3cabb326a50c6fbd9c9d9ac2221cda6202",
+      "pixel_counts": {
+        "0": 180233,
+        "1": 145001,
+        "2": 2446,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T089",
+      "source_row_index": 25,
+      "sample_key": "fire/00188",
+      "sample_class": "Fire",
+      "sample_id": "00188",
+      "mask_relative_path": "masks/T089.png",
+      "mask_sha256": "0638aa85bbbf22b857308f1c53dc514d78c1aef6ddc1022790db802f1dc33d66",
+      "pixel_counts": {
+        "0": 6151,
+        "1": 211949,
+        "2": 5577,
+        "255": 104003
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T090",
+      "source_row_index": 103,
+      "sample_key": "no_fire/00085",
+      "sample_class": "No Fire",
+      "sample_id": "00085",
+      "mask_relative_path": "masks/T090.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T091",
+      "source_row_index": 102,
+      "sample_key": "no_fire/00081",
+      "sample_class": "No Fire",
+      "sample_id": "00081",
+      "mask_relative_path": "masks/T091.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T092",
+      "source_row_index": 41,
+      "sample_key": "fire/00271",
+      "sample_class": "Fire",
+      "sample_id": "00271",
+      "mask_relative_path": "masks/T092.png",
+      "mask_sha256": "5377e45f395186083254a58be85e7c45cf60f8a73bd8a9f2e22a786a34e76ac8",
+      "pixel_counts": {
+        "0": 10595,
+        "1": 285987,
+        "2": 5228,
+        "255": 25870
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T093",
+      "source_row_index": 62,
+      "sample_key": "fire/00434",
+      "sample_class": "Fire",
+      "sample_id": "00434",
+      "mask_relative_path": "masks/T093.png",
+      "mask_sha256": "81088c19749097c3c83a6a9f9aabfe8c9954645ade39cd2c67e3b0aa86da9e50",
+      "pixel_counts": {
+        "0": 164831,
+        "1": 109512,
+        "2": 9354,
+        "255": 43983
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T094",
+      "source_row_index": 45,
+      "sample_key": "fire/00310",
+      "sample_class": "Fire",
+      "sample_id": "00310",
+      "mask_relative_path": "masks/T094.png",
+      "mask_sha256": "6ac71b9db7eaf24f1cb1e41d30c22c75922f9adf0705b1d17fdf135d6bc8a3dc",
+      "pixel_counts": {
+        "0": 151744,
+        "1": 114148,
+        "2": 0,
+        "255": 61788
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T095",
+      "source_row_index": 84,
+      "sample_key": "fire/00584",
+      "sample_class": "Fire",
+      "sample_id": "00584",
+      "mask_relative_path": "masks/T095.png",
+      "mask_sha256": "cf920149edbe608c7e990f8529c9581777d4aa032d44007297dc160d1d5ced63",
+      "pixel_counts": {
+        "0": 105656,
+        "1": 138883,
+        "2": 19073,
+        "255": 64068
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T096",
+      "source_row_index": 18,
+      "sample_key": "fire/00156",
+      "sample_class": "Fire",
+      "sample_id": "00156",
+      "mask_relative_path": "masks/T096.png",
+      "mask_sha256": "5503873b916c8cff68db7dd4dd3c32bad38a3dfcc4dccdcc278dc5096e95812e",
+      "pixel_counts": {
+        "0": 73741,
+        "1": 178731,
+        "2": 11308,
+        "255": 63900
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T097",
+      "source_row_index": 51,
+      "sample_key": "fire/00375",
+      "sample_class": "Fire",
+      "sample_id": "00375",
+      "mask_relative_path": "masks/T097.png",
+      "mask_sha256": "1daa0edb4a449098b2d8fbf5f6a9af4bd8fed4ef0980a8ee1d5e59879a445f81",
+      "pixel_counts": {
+        "0": 143992,
+        "1": 141718,
+        "2": 6102,
+        "255": 35868
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T098",
+      "source_row_index": 91,
+      "sample_key": "no_fire/00022",
+      "sample_class": "No Fire",
+      "sample_id": "00022",
+      "mask_relative_path": "masks/T098.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T099",
+      "source_row_index": 47,
+      "sample_key": "fire/00317",
+      "sample_class": "Fire",
+      "sample_id": "00317",
+      "mask_relative_path": "masks/T099.png",
+      "mask_sha256": "e68560b86d8ed08152dc4fc3309b913dfb8f8640eb3c5f988ee885fb870e3f5c",
+      "pixel_counts": {
+        "0": 24626,
+        "1": 257898,
+        "2": 7452,
+        "255": 37704
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T100",
+      "source_row_index": 95,
+      "sample_key": "no_fire/00043",
+      "sample_class": "No Fire",
+      "sample_id": "00043",
+      "mask_relative_path": "masks/T100.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T101",
+      "source_row_index": 1,
+      "sample_key": "fire/00017",
+      "sample_class": "Fire",
+      "sample_id": "00017",
+      "mask_relative_path": "masks/T101.png",
+      "mask_sha256": "a9358eacf8b2f8ab420df43a2b3113e02c42edbbbb7e499a399daf0993af2aa8",
+      "pixel_counts": {
+        "0": 8637,
+        "1": 167839,
+        "2": 1967,
+        "255": 149237
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T102",
+      "source_row_index": 36,
+      "sample_key": "fire/00238",
+      "sample_class": "Fire",
+      "sample_id": "00238",
+      "mask_relative_path": "masks/T102.png",
+      "mask_sha256": "af461185a292d9ceb1241830ee60ced6e6c155fd518b667edf97a7932fc9ff94",
+      "pixel_counts": {
+        "0": 8444,
+        "1": 318252,
+        "2": 984,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T103",
+      "source_row_index": 59,
+      "sample_key": "fire/00420",
+      "sample_class": "Fire",
+      "sample_id": "00420",
+      "mask_relative_path": "masks/T103.png",
+      "mask_sha256": "092f30f057e81a5b75423e0a660cf4056812ca2f390ea6ec748c8304cac273e8",
+      "pixel_counts": {
+        "0": 24718,
+        "1": 241557,
+        "2": 22024,
+        "255": 39381
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T104",
+      "source_row_index": 96,
+      "sample_key": "no_fire/00046",
+      "sample_class": "No Fire",
+      "sample_id": "00046",
+      "mask_relative_path": "masks/T104.png",
+      "mask_sha256": "700dee90ec86a83133bac986fba383112f64d681f68584ef3daf74cc81fcb2d2",
+      "pixel_counts": {
+        "0": 327680,
+        "1": 0,
+        "2": 0,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "no",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T105",
+      "source_row_index": 44,
+      "sample_key": "fire/00308",
+      "sample_class": "Fire",
+      "sample_id": "00308",
+      "mask_relative_path": "masks/T105.png",
+      "mask_sha256": "6795a3ce5bf1b713ec9e236fa325cb6f6210ccbeda136bf02e6ae26de0605381",
+      "pixel_counts": {
+        "0": 7613,
+        "1": 276830,
+        "2": 10161,
+        "255": 33076
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T106",
+      "source_row_index": 60,
+      "sample_key": "fire/00422",
+      "sample_class": "Fire",
+      "sample_id": "00422",
+      "mask_relative_path": "masks/T106.png",
+      "mask_sha256": "44c4342e7961ce312b6c94449dc2b087a82770b78dc36c0decce13e5cc8296f8",
+      "pixel_counts": {
+        "0": 70240,
+        "1": 226645,
+        "2": 30795,
+        "255": 0
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    },
+    {
+      "annotation_id": "T107",
+      "source_row_index": 74,
+      "sample_key": "fire/00511",
+      "sample_class": "Fire",
+      "sample_id": "00511",
+      "mask_relative_path": "masks/T107.png",
+      "mask_sha256": "91780b4419870b7126347aa1947e77f153083917efb2f166898bb0efa4ec88c8",
+      "pixel_counts": {
+        "0": 89582,
+        "1": 210654,
+        "2": 12507,
+        "255": 14937
+      },
+      "exception_flags": {
+        "reflection_or_sensor_artifact": "no",
+        "registration_heat_leak": "no",
+        "thin_smoke_or_transition_ignore_present": "yes",
+        "other_exception": "no"
+      },
+      "exception_note": "",
+      "annotator_note": ""
+    }
+  ]
+}

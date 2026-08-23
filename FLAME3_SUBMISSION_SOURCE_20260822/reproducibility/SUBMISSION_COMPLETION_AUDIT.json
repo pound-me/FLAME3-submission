@@ -1,0 +1,1371 @@
+{
+  "protocol": "flame3_submission_package_completion_audit_v1",
+  "created_on": "2026-08-22",
+  "status": "complete",
+  "failed_checks": [],
+  "checks": [
+    {
+      "name": "critical_artifacts_exist",
+      "status": "passed",
+      "evidence": []
+    },
+    {
+      "name": "split_row_counts",
+      "status": "passed",
+      "evidence": {
+        "train": 493,
+        "val": 134,
+        "test107": 107
+      }
+    },
+    {
+      "name": "split_sha256",
+      "status": "passed",
+      "evidence": {
+        "train": "108a73f11490b342160804838b54591667fbdb089c25d3aa90668990a14122e3",
+        "val": "c3899b01604b9c3d62cf7f6be4370d12b6f794151017bbcad27057851830b0e1",
+        "test107": "3ebdccd489d4e71ce87c0bd6f7b75faf34cc051b89d1da137da1ac0f6b7b9355"
+      }
+    },
+    {
+      "name": "reproducibility_hash_index",
+      "status": "passed",
+      "evidence": []
+    },
+    {
+      "name": "complete_per_file_manifest",
+      "status": "passed",
+      "evidence": {
+        "protocol": "flame3_complete_split_and_file_hash_manifest_v1",
+        "status": "complete",
+        "bundle_root_recorded_for_audit_only": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731",
+        "split_counts": {
+          "train": 493,
+          "val": 134,
+          "test107": 107
+        },
+        "dense_supervision_counts": {
+          "train": 103,
+          "val": 0,
+          "test107": 107
+        },
+        "unique_sample_count": 734,
+        "manifest_csv": "FLAME3_COMPLETE_SPLIT_AND_FILE_HASH_MANIFEST.csv",
+        "manifest_csv_sha256": "5af68328a044284433666d5ece4495f019dda28d814bda60b068988dd8579cd2",
+        "source_csv_sha256": {
+          "train": "108a73f11490b342160804838b54591667fbdb089c25d3aa90668990a14122e3",
+          "val": "c3899b01604b9c3d62cf7f6be4370d12b6f794151017bbcad27057851830b0e1",
+          "test107": "3ebdccd489d4e71ce87c0bd6f7b75faf34cc051b89d1da137da1ac0f6b7b9355"
+        },
+        "test_included": true,
+        "training_or_inference_performed": false
+      }
+    },
+    {
+      "name": "flame2_zero_shot_complete",
+      "status": "passed",
+      "evidence": {
+        "run_arms": [
+          "baseline",
+          "baseline",
+          "baseline",
+          "v11",
+          "v11",
+          "v11"
+        ],
+        "preflight": {
+          "protocol": "flame3_frozen_checkpoint_flame2_zero_shot_preflight",
+          "status": "passed",
+          "source_dataset": "RoboFireFuseNet-preprocessed FLAME2 official test split",
+          "source_test_rows": 200,
+          "source_test_split_sha256": "57e3a4b13be799809b5c013f028f76cecd64ae139caae5d15f9aabcf3fc8cb6a",
+          "class_mapping": {
+            "0": "background",
+            "1": "smoke",
+            "2": "fire_heat"
+          },
+          "mapping_rationale": "FLAME2 has an independent smoke class and visual audit shows class-2 regions under dense RGB smoke aligned with IR hotspots; class 2 is therefore not restricted to RGB-visible flame. No synthetic Ignore pixels are introduced.",
+          "coverage_limitation": "FLAME2 class 2 cannot be proven to cover every residual-heat footprint in the broader FLAME3 Fire/Heat definition; results are reported as a coverage-mismatched lower-bound transfer estimate.",
+          "ir_preprocessing": "PIL convert('L'), divide by 255, matching the official WildFire loader",
+          "spatial_preprocessing": "official FLAME2 256x256 deterministic resize/pad/crop; no augmentation",
+          "model_augment_flag": false,
+          "checkpoint_loading_rule": "Load into augment=False model with strict=False, require no missing keys, and allow unexpected keys only under seghead_p./seghead_d.; verify FP32 main logits and argmax against a strict augment=True compatibility model.",
+          "checkpoints": [
+            {
+              "arm": "baseline",
+              "seed": 200,
+              "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed200\\best_S.pth",
+              "sha256": "1770dd6d94fe9bcee378c8a3674ad8dbd7feeb99b710befee6eedd060957f206",
+              "epoch": 97
+            },
+            {
+              "arm": "baseline",
+              "seed": 201,
+              "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed201\\best_S.pth",
+              "sha256": "79bf3911aba25c5d484945735b9497ebbec3813feb174efb1f47e25543356a8e",
+              "epoch": 50
+            },
+            {
+              "arm": "baseline",
+              "seed": 202,
+              "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed202\\best_S.pth",
+              "sha256": "b78e549e154316c404600d955b2f23af058397669fae61ddb95be33a6d2dd97f",
+              "epoch": 80
+            },
+            {
+              "arm": "v11",
+              "seed": 200,
+              "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed200\\best_S.pth",
+              "sha256": "97e9d5902da9eb8beaa240760c41aa5e68086709ced6f8cb3f6481197a4cec6f",
+              "epoch": 77
+            },
+            {
+              "arm": "v11",
+              "seed": 201,
+              "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed201\\best_S.pth",
+              "sha256": "32f7e5df88556d3efbee7227e31bfac19677691002a67c24a68e116474c799e7",
+              "epoch": 75
+            },
+            {
+              "arm": "v11",
+              "seed": 202,
+              "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed202\\best_S.pth",
+              "sha256": "7e92ae0686b279c9f24f11d02bd8134e62454a10d489d079eb1d86262ca022cf",
+              "epoch": 72
+            }
+          ],
+          "configs": {
+            "baseline": {
+              "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\configs\\flame3\\pidnet_s_fusion_newlabel_baseline_v2_30e.yaml",
+              "sha256": "b94e988c293e11e5993931423d29f892668f784bf16c74562234ab0d13a05ee7"
+            },
+            "v11": {
+              "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\configs\\flame3\\pidnet_s_fusion_manual_smoke_v11_30e.yaml",
+              "sha256": "512b032ba5d37debbc4caaad3d8288fd0adbc68e65c5b43dbf4dd7716868ed43"
+            }
+          },
+          "training_performed": false,
+          "threshold_tuning_performed": false,
+          "predictions_saved": false,
+          "flame3_test_read": false
+        }
+      }
+    },
+    {
+      "name": "flame2_per_image_metrics",
+      "status": "passed",
+      "evidence": 1200
+    },
+    {
+      "name": "test107_posthoc_complete",
+      "status": "passed",
+      "evidence": {
+        "protocol": "flame3_test107_posthoc_strata_and_perturbation",
+        "status": "complete",
+        "nature_disclosure": "The 107-image test has already undergone frozen evaluations. This run is post-hoc descriptive analysis and robustness checking of frozen checkpoints, not a new test-selection session.",
+        "clean_equivalence": [
+          {
+            "arm": "baseline",
+            "seed": 200,
+            "ignored_auxiliary_key_count": 26,
+            "fp32_max_abs_error": 0.0,
+            "clean_confusion_exactly_matches_frozen_result": true
+          },
+          {
+            "arm": "baseline",
+            "seed": 201,
+            "ignored_auxiliary_key_count": 26,
+            "fp32_max_abs_error": 0.0,
+            "clean_confusion_exactly_matches_frozen_result": true
+          },
+          {
+            "arm": "baseline",
+            "seed": 202,
+            "ignored_auxiliary_key_count": 26,
+            "fp32_max_abs_error": 0.0,
+            "clean_confusion_exactly_matches_frozen_result": true
+          },
+          {
+            "arm": "v11",
+            "seed": 200,
+            "ignored_auxiliary_key_count": 26,
+            "fp32_max_abs_error": 0.0,
+            "clean_confusion_exactly_matches_frozen_result": true
+          },
+          {
+            "arm": "v11",
+            "seed": 201,
+            "ignored_auxiliary_key_count": 26,
+            "fp32_max_abs_error": 0.0,
+            "clean_confusion_exactly_matches_frozen_result": true
+          },
+          {
+            "arm": "v11",
+            "seed": 202,
+            "ignored_auxiliary_key_count": 26,
+            "fp32_max_abs_error": 0.0,
+            "clean_confusion_exactly_matches_frozen_result": true
+          }
+        ],
+        "run_count": 6,
+        "perturbation_count": 29,
+        "per_image_confusion_rows": 18618,
+        "strata_rows": 90,
+        "strata_aggregate_rows": 30,
+        "strata_paired_rows": 15,
+        "training_performed": false,
+        "threshold_tuning_performed": false,
+        "predictions_saved": false,
+        "method_identity_changed": false
+      }
+    },
+    {
+      "name": "conv1_ablation_frozen_decision",
+      "status": "passed",
+      "evidence": {
+        "result": {
+          "protocol": "flame3_conv1_initialization_ablation_epoch30_last",
+          "status": "complete",
+          "preregistration_sha256": "09a418210f4025667539327a5cad0dd2c832c85c0a4d6233dcb33123838ff10e",
+          "primary_endpoint": "manual_A001_A047_three_class_mIoU",
+          "checkpoint_rule": "epoch30_last.pth_for_both_arms",
+          "seeds": {
+            "200": {
+              "A_random": {
+                "checkpoint": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\FLAME3_SUBMISSION_SOURCE_20260822\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\conv1_random_30e_seed200\\last.pth",
+                "checkpoint_sha256": "537511363ced4bd8588f91f7056ce51bbff28a74cfac2afb2594ac9eeeec42c4",
+                "checkpoint_epoch": 30,
+                "manual_A001_A047_three_class_mIoU": 0.7595994416466157,
+                "manual_A001_A047_classes": {
+                  "background": {
+                    "true_positive": 8725703,
+                    "false_positive": 494376,
+                    "false_negative": 1052689,
+                    "iou": 0.8494013492760666,
+                    "precision": 0.9463805028134792,
+                    "recall": 0.8923453876670111,
+                    "f1": 0.9185689732610588
+                  },
+                  "smoke": {
+                    "true_positive": 3244110,
+                    "false_positive": 1004798,
+                    "false_negative": 518174,
+                    "iou": 0.680523221543074,
+                    "precision": 0.7635161787452212,
+                    "recall": 0.8622714287385004,
+                    "f1": 0.8098944576537425
+                  },
+                  "fire_heat": {
+                    "true_positive": 309857,
+                    "false_positive": 87798,
+                    "false_negative": 16109,
+                    "iou": 0.7488737541207064,
+                    "precision": 0.7792106222730759,
+                    "recall": 0.9505807354141229,
+                    "f1": 0.8564068759751307
+                  }
+                },
+                "manual_A001_A047_smoke_to_fire_ratio": 0.00925448477573729,
+                "manual_A001_A047_fire_heat_to_smoke_ratio": 0.015612057699269249,
+                "full_val134_fire_heat": {
+                  "true_positive": 521033,
+                  "false_positive": 149590,
+                  "false_negative": 22397,
+                  "true_negative": 42221473,
+                  "iou": 0.7518296730253096,
+                  "precision": 0.7769387569468986,
+                  "recall": 0.9587858601843844,
+                  "f1": 0.8583364976652584
+                },
+                "selection_score_S": 0.7161764472841918,
+                "no_fire": {
+                  "image_count": 35,
+                  "valid_pixels": 11468800,
+                  "predicted_background_pixels": 11458012,
+                  "predicted_smoke_pixels": 10674,
+                  "predicted_fire_heat_pixels": 114,
+                  "predicted_smoke_ratio": 0.0009306989397321429,
+                  "predicted_fire_heat_ratio": 9.940011160714286e-06,
+                  "joint_false_positive_pixels": 10788,
+                  "joint_false_positive_ratio": 0.0009406389508928571
+                }
+              },
+              "B_rgb_irmean": {
+                "checkpoint": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\FLAME3_SUBMISSION_SOURCE_20260822\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11_conv1_rgb_irmean\\conv1_rgb_irmean_30e_seed200\\last.pth",
+                "checkpoint_sha256": "6e22076867c8793389900a18321e96d9f26ce33dec64990b9bcde5de253e8781",
+                "checkpoint_epoch": 30,
+                "manual_A001_A047_three_class_mIoU": 0.7563481820601824,
+                "manual_A001_A047_classes": {
+                  "background": {
+                    "true_positive": 8596392,
+                    "false_positive": 282405,
+                    "false_negative": 1182000,
+                    "iou": 0.8544444341735551,
+                    "precision": 0.9681933261904738,
+                    "recall": 0.879121229748204,
+                    "f1": 0.9215098801861309
+                  },
+                  "smoke": {
+                    "true_positive": 3446654,
+                    "false_positive": 1107077,
+                    "false_negative": 315630,
+                    "iou": 0.7078247022555937,
+                    "precision": 0.7568857273299631,
+                    "recall": 0.9161068117133103,
+                    "f1": 0.8289196207558548
+                  },
+                  "fire_heat": {
+                    "true_positive": 314749,
+                    "false_positive": 119365,
+                    "false_negative": 11217,
+                    "iou": 0.7067754097513984,
+                    "precision": 0.7250376629180354,
+                    "recall": 0.9655884356037133,
+                    "f1": 0.828199663193348
+                  }
+                },
+                "manual_A001_A047_smoke_to_fire_ratio": 0.011162899983095375,
+                "manual_A001_A047_fire_heat_to_smoke_ratio": 0.007497714485559844,
+                "full_val134_fire_heat": {
+                  "true_positive": 528089,
+                  "false_positive": 215238,
+                  "false_negative": 15341,
+                  "true_negative": 42155825,
+                  "iou": 0.6960739084817074,
+                  "precision": 0.7104396853605479,
+                  "recall": 0.9717700531807224,
+                  "f1": 0.8208061040274115
+                },
+                "selection_score_S": 0.7019493053686505,
+                "no_fire": {
+                  "image_count": 35,
+                  "valid_pixels": 11468800,
+                  "predicted_background_pixels": 11467577,
+                  "predicted_smoke_pixels": 898,
+                  "predicted_fire_heat_pixels": 325,
+                  "predicted_smoke_ratio": 7.829938616071429e-05,
+                  "predicted_fire_heat_ratio": 2.833775111607143e-05,
+                  "joint_false_positive_pixels": 1223,
+                  "joint_false_positive_ratio": 0.00010663713727678571
+                }
+              },
+              "B_minus_A": {
+                "manual_A001_A047_smoke_to_fire_ratio": 0.001908415207358084,
+                "checkpoint_epoch": 0.0,
+                "manual_A001_A047_fire_heat_to_smoke_ratio": -0.008114343213709404,
+                "full_val134_fire_heat": {
+                  "precision": -0.06649907158635071,
+                  "f1": -0.03753039363784694,
+                  "false_positive": 65648.0,
+                  "false_negative": -7056.0,
+                  "true_positive": 7056.0,
+                  "true_negative": -65648.0,
+                  "recall": 0.012984192996338018,
+                  "iou": -0.055755764543602204
+                },
+                "selection_score_S": -0.014227141915541308,
+                "manual_A001_A047_three_class_mIoU": -0.0032512595864333527,
+                "manual_A001_A047_classes": {
+                  "background": {
+                    "precision": 0.02181282337699464,
+                    "f1": 0.0029409069250720954,
+                    "false_positive": -211971.0,
+                    "false_negative": 129311.0,
+                    "true_positive": -129311.0,
+                    "recall": -0.013224157918807156,
+                    "iou": 0.005043084897488503
+                  },
+                  "smoke": {
+                    "precision": -0.006630451415258087,
+                    "f1": 0.01902516310211233,
+                    "false_positive": 102279.0,
+                    "false_negative": -202544.0,
+                    "true_positive": 202544.0,
+                    "recall": 0.05383538297480994,
+                    "iou": 0.0273014807125197
+                  },
+                  "fire_heat": {
+                    "precision": -0.05417295935504052,
+                    "f1": -0.02820721278178262,
+                    "false_positive": 31567.0,
+                    "false_negative": -4892.0,
+                    "true_positive": 4892.0,
+                    "recall": 0.015007700189590412,
+                    "iou": -0.04209834436930804
+                  }
+                },
+                "no_fire": {
+                  "image_count": 0.0,
+                  "predicted_fire_heat_ratio": 1.8397739955357143e-05,
+                  "joint_false_positive_ratio": -0.0008340018136160714,
+                  "predicted_smoke_ratio": -0.0008523995535714286,
+                  "joint_false_positive_pixels": -9565.0,
+                  "predicted_fire_heat_pixels": 211.0,
+                  "predicted_smoke_pixels": -9776.0,
+                  "valid_pixels": 0.0,
+                  "predicted_background_pixels": 9565.0
+                }
+              },
+              "epoch26_30_window": {
+                "A_random": {
+                  "selection_score_S": 0.7198207519234263,
+                  "fire_heat_iou_full134": 0.7330310313936219,
+                  "fire_heat_precision_full134": 0.7514575019937966,
+                  "fire_heat_recall_full134": 0.9680194321255728,
+                  "smoke_iou_A001_A047": 0.7066104724532305,
+                  "smoke_precision_A001_A047": 0.7931161920916889,
+                  "smoke_recall_A001_A047": 0.8674212260424785,
+                  "no_fire_joint_false_positive_ratio": 0.0019805036272321427
+                },
+                "B_rgb_irmean": {
+                  "selection_score_S": 0.7020525824629749,
+                  "fire_heat_iou_full134": 0.6869286726498712,
+                  "fire_heat_precision_full134": 0.7000890909965212,
+                  "fire_heat_recall_full134": 0.9737555894963472,
+                  "smoke_iou_A001_A047": 0.7171764922760786,
+                  "smoke_precision_A001_A047": 0.7706309221765317,
+                  "smoke_recall_A001_A047": 0.9118407329164944,
+                  "no_fire_joint_false_positive_ratio": 7.535226004464285e-05
+                },
+                "B_minus_A": {
+                  "selection_score_S": -0.017768169460451455,
+                  "fire_heat_iou_full134": -0.04610235874375068,
+                  "fire_heat_precision_full134": -0.051368410997275404,
+                  "fire_heat_recall_full134": 0.005736157370774375,
+                  "smoke_iou_A001_A047": 0.010566019822848105,
+                  "smoke_precision_A001_A047": -0.022485269915157202,
+                  "smoke_recall_A001_A047": 0.04441950687401586,
+                  "no_fire_joint_false_positive_ratio": -0.0019051513671875
+                }
+              }
+            },
+            "201": {
+              "A_random": {
+                "checkpoint": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\FLAME3_SUBMISSION_SOURCE_20260822\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\conv1_random_30e_seed201\\last.pth",
+                "checkpoint_sha256": "4b8b9180e7e9080dba257e88a0389df93448c12809d096a331dc8125bef4b991",
+                "checkpoint_epoch": 30,
+                "manual_A001_A047_three_class_mIoU": 0.7612664513330945,
+                "manual_A001_A047_classes": {
+                  "background": {
+                    "true_positive": 8391159,
+                    "false_positive": 367340,
+                    "false_negative": 1387233,
+                    "iou": 0.8270629462713976,
+                    "precision": 0.9580590235838355,
+                    "recall": 0.8581328095662354,
+                    "f1": 0.9053469646015613
+                  },
+                  "smoke": {
+                    "true_positive": 3376011,
+                    "false_positive": 1351077,
+                    "false_negative": 386273,
+                    "iou": 0.660233259494098,
+                    "precision": 0.7141840811933267,
+                    "recall": 0.8973301856000239,
+                    "f1": 0.7953499976205542
+                  },
+                  "fire_heat": {
+                    "true_positive": 313467,
+                    "false_positive": 67588,
+                    "false_negative": 12499,
+                    "iou": 0.7965031482337875,
+                    "precision": 0.8226292792379053,
+                    "recall": 0.9616555100838737,
+                    "f1": 0.8867261368474204
+                  }
+                },
+                "manual_A001_A047_smoke_to_fire_ratio": 0.007577843671556958,
+                "manual_A001_A047_fire_heat_to_smoke_ratio": 0.00896412509280109,
+                "full_val134_fire_heat": {
+                  "true_positive": 525471,
+                  "false_positive": 109407,
+                  "false_negative": 17959,
+                  "true_negative": 42261656,
+                  "iou": 0.8049038274485055,
+                  "precision": 0.827672403201875,
+                  "recall": 0.966952505382478,
+                  "f1": 0.8919077185252073
+                },
+                "selection_score_S": 0.7325685434713017,
+                "no_fire": {
+                  "image_count": 35,
+                  "valid_pixels": 11468800,
+                  "predicted_background_pixels": 11462909,
+                  "predicted_smoke_pixels": 5537,
+                  "predicted_fire_heat_pixels": 354,
+                  "predicted_smoke_ratio": 0.0004827880859375,
+                  "predicted_fire_heat_ratio": 3.086635044642857e-05,
+                  "joint_false_positive_pixels": 5891,
+                  "joint_false_positive_ratio": 0.0005136544363839286
+                }
+              },
+              "B_rgb_irmean": {
+                "checkpoint": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\FLAME3_SUBMISSION_SOURCE_20260822\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11_conv1_rgb_irmean\\conv1_rgb_irmean_30e_seed201\\last.pth",
+                "checkpoint_sha256": "45dfac20f047bf1f9ec8f02ad0cfbe7c946f3556970edf52113472c259fba430",
+                "checkpoint_epoch": 30,
+                "manual_A001_A047_three_class_mIoU": 0.7841118136270047,
+                "manual_A001_A047_classes": {
+                  "background": {
+                    "true_positive": 8693424,
+                    "false_positive": 325884,
+                    "false_negative": 1084968,
+                    "iou": 0.8603707974722781,
+                    "precision": 0.9638681814613715,
+                    "recall": 0.8890443336695849,
+                    "f1": 0.9249454986514307
+                  },
+                  "smoke": {
+                    "true_positive": 3428101,
+                    "false_positive": 1042047,
+                    "false_negative": 334183,
+                    "iou": 0.71354388363333,
+                    "precision": 0.7668875840352489,
+                    "recall": 0.9111754987130158,
+                    "f1": 0.8328282577979387
+                  },
+                  "fire_heat": {
+                    "true_positive": 307772,
+                    "false_positive": 69414,
+                    "false_negative": 18194,
+                    "iou": 0.7784207597754059,
+                    "precision": 0.8159687793290313,
+                    "recall": 0.9441843627863029,
+                    "f1": 0.875406739936742
+                  }
+                },
+                "manual_A001_A047_smoke_to_fire_ratio": 0.006336576398804556,
+                "manual_A001_A047_fire_heat_to_smoke_ratio": 0.008138885650650681,
+                "full_val134_fire_heat": {
+                  "true_positive": 517488,
+                  "false_positive": 121084,
+                  "false_negative": 25942,
+                  "true_negative": 42249979,
+                  "iou": 0.778746572683194,
+                  "precision": 0.8103831674423557,
+                  "recall": 0.9522624809083047,
+                  "f1": 0.8756127316197434
+                },
+                "selection_score_S": 0.746145228158262,
+                "no_fire": {
+                  "image_count": 35,
+                  "valid_pixels": 11468800,
+                  "predicted_background_pixels": 11468717,
+                  "predicted_smoke_pixels": 11,
+                  "predicted_fire_heat_pixels": 72,
+                  "predicted_smoke_ratio": 9.591238839285715e-07,
+                  "predicted_fire_heat_ratio": 6.277901785714286e-06,
+                  "joint_false_positive_pixels": 83,
+                  "joint_false_positive_ratio": 7.2370256696428575e-06
+                }
+              },
+              "B_minus_A": {
+                "manual_A001_A047_smoke_to_fire_ratio": -0.0012412672727524022,
+                "checkpoint_epoch": 0.0,
+                "manual_A001_A047_fire_heat_to_smoke_ratio": -0.0008252394421504085,
+                "full_val134_fire_heat": {
+                  "precision": -0.01728923575951924,
+                  "f1": -0.016294986905463937,
+                  "false_positive": 11677.0,
+                  "false_negative": 7983.0,
+                  "true_positive": -7983.0,
+                  "true_negative": -11677.0,
+                  "recall": -0.014690024474173335,
+                  "iou": -0.0261572547653115
+                },
+                "selection_score_S": 0.013576684686960272,
+                "manual_A001_A047_three_class_mIoU": 0.02284536229391021,
+                "manual_A001_A047_classes": {
+                  "background": {
+                    "precision": 0.0058091578775359975,
+                    "f1": 0.019598534049869443,
+                    "false_positive": -41456.0,
+                    "false_negative": -302265.0,
+                    "true_positive": 302265.0,
+                    "recall": 0.03091152410334952,
+                    "iou": 0.03330785120088042
+                  },
+                  "smoke": {
+                    "precision": 0.05270350284192227,
+                    "f1": 0.037478260177384426,
+                    "false_positive": -309030.0,
+                    "false_negative": -52090.0,
+                    "true_positive": 52090.0,
+                    "recall": 0.013845313112991975,
+                    "iou": 0.05331062413923204
+                  },
+                  "fire_heat": {
+                    "precision": -0.0066604999088739625,
+                    "f1": -0.011319396910678403,
+                    "false_positive": 1826.0,
+                    "false_negative": 5695.0,
+                    "true_positive": -5695.0,
+                    "recall": -0.01747114729757082,
+                    "iou": -0.018082388458381615
+                  }
+                },
+                "no_fire": {
+                  "image_count": 0.0,
+                  "predicted_fire_heat_ratio": -2.4588448660714282e-05,
+                  "joint_false_positive_ratio": -0.0005064174107142857,
+                  "predicted_smoke_ratio": -0.0004818289620535714,
+                  "joint_false_positive_pixels": -5808.0,
+                  "predicted_fire_heat_pixels": -282.0,
+                  "predicted_smoke_pixels": -5526.0,
+                  "valid_pixels": 0.0,
+                  "predicted_background_pixels": 5808.0
+                }
+              },
+              "epoch26_30_window": {
+                "A_random": {
+                  "selection_score_S": 0.7286362468458039,
+                  "fire_heat_iou_full134": 0.7827155408127199,
+                  "fire_heat_precision_full134": 0.8047587186419707,
+                  "fire_heat_recall_full134": 0.9667798980549472,
+                  "smoke_iou_A001_A047": 0.674556952878888,
+                  "smoke_precision_A001_A047": 0.7201341908767569,
+                  "smoke_recall_A001_A047": 0.9142968473406048,
+                  "no_fire_joint_false_positive_ratio": 0.005520455496651785
+                },
+                "B_rgb_irmean": {
+                  "selection_score_S": 0.7605405097942921,
+                  "fire_heat_iou_full134": 0.7781383571677093,
+                  "fire_heat_precision_full134": 0.8133263452062544,
+                  "fire_heat_recall_full134": 0.9482178017407946,
+                  "smoke_iou_A001_A047": 0.7429426624208748,
+                  "smoke_precision_A001_A047": 0.7914955840215281,
+                  "smoke_recall_A001_A047": 0.923726385355279,
+                  "no_fire_joint_false_positive_ratio": 3.958565848214286e-06
+                },
+                "B_minus_A": {
+                  "selection_score_S": 0.03190426294848825,
+                  "fire_heat_iou_full134": -0.004577183645010585,
+                  "fire_heat_precision_full134": 0.00856762656428367,
+                  "fire_heat_recall_full134": -0.01856209631415262,
+                  "smoke_iou_A001_A047": 0.06838570954198686,
+                  "smoke_precision_A001_A047": 0.07136139314477119,
+                  "smoke_recall_A001_A047": 0.009429538014674166,
+                  "no_fire_joint_false_positive_ratio": -0.0055164969308035714
+                }
+              }
+            },
+            "202": {
+              "A_random": {
+                "checkpoint": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\FLAME3_SUBMISSION_SOURCE_20260822\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\conv1_random_30e_seed202\\last.pth",
+                "checkpoint_sha256": "9a58b6f04aecd5abca88c68899e85b855955a4689d1260b67c191cd5918e00b0",
+                "checkpoint_epoch": 30,
+                "manual_A001_A047_three_class_mIoU": 0.7560453114905291,
+                "manual_A001_A047_classes": {
+                  "background": {
+                    "true_positive": 8485622,
+                    "false_positive": 369420,
+                    "false_negative": 1292770,
+                    "iou": 0.8362021290895022,
+                    "precision": 0.9582813949386124,
+                    "recall": 0.8677931913549795,
+                    "f1": 0.9107952940934022
+                  },
+                  "smoke": {
+                    "true_positive": 3365217,
+                    "false_positive": 1233387,
+                    "false_negative": 397067,
+                    "iou": 0.6736266259327326,
+                    "precision": 0.731790995702174,
+                    "recall": 0.8944611836852295,
+                    "f1": 0.8049903311705646
+                  },
+                  "fire_heat": {
+                    "true_positive": 318693,
+                    "false_positive": 94303,
+                    "false_negative": 7273,
+                    "iou": 0.7583071794493527,
+                    "precision": 0.7716612267431161,
+                    "recall": 0.9776878570157623,
+                    "f1": 0.8625423228799316
+                  }
+                },
+                "manual_A001_A047_smoke_to_fire_ratio": 0.008816452984410533,
+                "manual_A001_A047_fire_heat_to_smoke_ratio": 0.005368658080904144,
+                "full_val134_fire_heat": {
+                  "true_positive": 533441,
+                  "false_positive": 181616,
+                  "false_negative": 9989,
+                  "true_negative": 42189447,
+                  "iou": 0.7357340086008336,
+                  "precision": 0.746011856397462,
+                  "recall": 0.9816186077323666,
+                  "f1": 0.8477497185111964
+                },
+                "selection_score_S": 0.704680317266783,
+                "no_fire": {
+                  "image_count": 35,
+                  "valid_pixels": 11468800,
+                  "predicted_background_pixels": 11455932,
+                  "predicted_smoke_pixels": 11518,
+                  "predicted_fire_heat_pixels": 1350,
+                  "predicted_smoke_ratio": 0.0010042898995535714,
+                  "predicted_fire_heat_ratio": 0.00011771065848214286,
+                  "joint_false_positive_pixels": 12868,
+                  "joint_false_positive_ratio": 0.0011220005580357144
+                }
+              },
+              "B_rgb_irmean": {
+                "checkpoint": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\FLAME3_SUBMISSION_SOURCE_20260822\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11_conv1_rgb_irmean\\conv1_rgb_irmean_30e_seed202\\last.pth",
+                "checkpoint_sha256": "15d55ef0dd71d9529a57382ff19d863b28aabc1063af3463d3e4e82d3020afea",
+                "checkpoint_epoch": 30,
+                "manual_A001_A047_three_class_mIoU": 0.7657330613698875,
+                "manual_A001_A047_classes": {
+                  "background": {
+                    "true_positive": 8700766,
+                    "false_positive": 265559,
+                    "false_negative": 1077626,
+                    "iou": 0.8662692599754818,
+                    "precision": 0.9703826261037828,
+                    "recall": 0.889795172866868,
+                    "f1": 0.9283432766683007
+                  },
+                  "smoke": {
+                    "true_positive": 3462503,
+                    "false_positive": 989300,
+                    "false_negative": 299781,
+                    "iou": 0.7287049960602612,
+                    "precision": 0.7777754316621828,
+                    "recall": 0.9203194123569619,
+                    "f1": 0.843064603528061
+                  },
+                  "fire_heat": {
+                    "true_positive": 319499,
+                    "false_positive": 129015,
+                    "false_negative": 6467,
+                    "iou": 0.7022249280739196,
+                    "precision": 0.7123501161613685,
+                    "recall": 0.980160507537596,
+                    "f1": 0.8250671418241917
+                  }
+                },
+                "manual_A001_A047_smoke_to_fire_ratio": 0.01039740753223308,
+                "manual_A001_A047_fire_heat_to_smoke_ratio": 0.004819521054343091,
+                "full_val134_fire_heat": {
+                  "true_positive": 534888,
+                  "false_positive": 259871,
+                  "false_negative": 8542,
+                  "true_negative": 42111192,
+                  "iou": 0.6658624849215923,
+                  "precision": 0.6730191164868847,
+                  "recall": 0.9842813241815873,
+                  "f1": 0.7994207096307024
+                },
+                "selection_score_S": 0.6972837404909267,
+                "no_fire": {
+                  "image_count": 35,
+                  "valid_pixels": 11468800,
+                  "predicted_background_pixels": 11467051,
+                  "predicted_smoke_pixels": 179,
+                  "predicted_fire_heat_pixels": 1570,
+                  "predicted_smoke_ratio": 1.5607561383928572e-05,
+                  "predicted_fire_heat_ratio": 0.0001368931361607143,
+                  "joint_false_positive_pixels": 1749,
+                  "joint_false_positive_ratio": 0.00015250069754464286
+                }
+              },
+              "B_minus_A": {
+                "manual_A001_A047_smoke_to_fire_ratio": 0.0015809545478225467,
+                "checkpoint_epoch": 0.0,
+                "manual_A001_A047_fire_heat_to_smoke_ratio": -0.0005491370265610527,
+                "full_val134_fire_heat": {
+                  "precision": -0.07299273991057731,
+                  "f1": -0.04832900888049396,
+                  "false_positive": 78255.0,
+                  "false_negative": -1447.0,
+                  "true_positive": 1447.0,
+                  "true_negative": -78255.0,
+                  "recall": 0.00266271644922067,
+                  "iou": -0.06987152367924132
+                },
+                "selection_score_S": -0.007396576775856367,
+                "manual_A001_A047_three_class_mIoU": 0.009687749879358387,
+                "manual_A001_A047_classes": {
+                  "background": {
+                    "precision": 0.012101231165170367,
+                    "f1": 0.017547982574898535,
+                    "false_positive": -103861.0,
+                    "false_negative": -215144.0,
+                    "true_positive": 215144.0,
+                    "recall": 0.02200198151188859,
+                    "iou": 0.030067130885979565
+                  },
+                  "smoke": {
+                    "precision": 0.045984435960008785,
+                    "f1": 0.038074272357496386,
+                    "false_positive": -244087.0,
+                    "false_negative": -97286.0,
+                    "true_positive": 97286.0,
+                    "recall": 0.025858228671732375,
+                    "iou": 0.055078370127528586
+                  },
+                  "fire_heat": {
+                    "precision": -0.05931111058174765,
+                    "f1": -0.03747518105573988,
+                    "false_positive": 34712.0,
+                    "false_negative": -806.0,
+                    "true_positive": 806.0,
+                    "recall": 0.0024726505218336525,
+                    "iou": -0.0560822513754331
+                  }
+                },
+                "no_fire": {
+                  "image_count": 0.0,
+                  "predicted_fire_heat_ratio": 1.9182477678571428e-05,
+                  "joint_false_positive_ratio": -0.0009694998604910715,
+                  "predicted_smoke_ratio": -0.0009886823381696427,
+                  "joint_false_positive_pixels": -11119.0,
+                  "predicted_fire_heat_pixels": 220.0,
+                  "predicted_smoke_pixels": -11339.0,
+                  "valid_pixels": 0.0,
+                  "predicted_background_pixels": 11119.0
+                }
+              },
+              "epoch26_30_window": {
+                "A_random": {
+                  "selection_score_S": 0.7020111862476599,
+                  "fire_heat_iou_full134": 0.7272459119209365,
+                  "fire_heat_precision_full134": 0.738964919917318,
+                  "fire_heat_recall_full134": 0.9787192462690687,
+                  "smoke_iou_A001_A047": 0.6767764605743836,
+                  "smoke_precision_A001_A047": 0.7663651113774363,
+                  "smoke_recall_A001_A047": 0.854970916602787,
+                  "no_fire_joint_false_positive_ratio": 0.00038617815290178573
+                },
+                "B_rgb_irmean": {
+                  "selection_score_S": 0.6951213255092453,
+                  "fire_heat_iou_full134": 0.6603591611591642,
+                  "fire_heat_precision_full134": 0.6693535558785358,
+                  "fire_heat_recall_full134": 0.9802222917395065,
+                  "smoke_iou_A001_A047": 0.7298834898593264,
+                  "smoke_precision_A001_A047": 0.7805733208374356,
+                  "smoke_recall_A001_A047": 0.9186455355310763,
+                  "no_fire_joint_false_positive_ratio": 0.00015788922991071428
+                },
+                "B_minus_A": {
+                  "selection_score_S": -0.006889860738414577,
+                  "fire_heat_iou_full134": -0.0668867507617723,
+                  "fire_heat_precision_full134": -0.06961136403878221,
+                  "fire_heat_recall_full134": 0.0015030454704377805,
+                  "smoke_iou_A001_A047": 0.05310702928494282,
+                  "smoke_precision_A001_A047": 0.014208209459999233,
+                  "smoke_recall_A001_A047": 0.0636746189282893,
+                  "no_fire_joint_false_positive_ratio": -0.00022828892299107145
+                }
+              }
+            }
+          },
+          "paired_deltas": {
+            "primary": [
+              -0.0032512595864333527,
+              0.02284536229391021,
+              0.009687749879358387
+            ],
+            "full_val134_fire_heat_iou": [
+              -0.055755764543602204,
+              -0.0261572547653115,
+              -0.06987152367924132
+            ],
+            "no_fire_joint_false_positive_ratio": [
+              -0.0008340018136160714,
+              -0.0005064174107142857,
+              -0.0009694998604910715
+            ],
+            "selection_score_S": [
+              -0.014227141915541308,
+              0.013576684686960272,
+              -0.007396576775856367
+            ]
+          },
+          "mean_paired_deltas": {
+            "manual_A001_A047_three_class_mIoU": 0.009760617528945081,
+            "full_val134_fire_heat_iou": -0.050594847662718344,
+            "no_fire_joint_false_positive_ratio": -0.0007699730282738096,
+            "selection_score_S": -0.002682344668145801
+          },
+          "sample_sd_paired_deltas": {
+            "primary": 0.01304846353645416,
+            "full_val134_fire_heat_iou": 0.022309429037032452,
+            "no_fire_joint_false_positive_ratio": 0.000238088434908379,
+            "selection_score_S": 0.014489002095020919
+          },
+          "positive_seed_count_primary": 2,
+          "guards_clear": false,
+          "decision": "retain_random_four_channel_stem",
+          "test_split_read": false,
+          "training_protocol_modified_after_preregistration": false
+        },
+        "status": {
+          "state": "complete",
+          "test_split_read": false
+        }
+      }
+    },
+    {
+      "name": "conv1_six_run_metadata",
+      "status": "passed",
+      "evidence": {
+        "armA_seed200": {
+          "files": [
+            "environment.json",
+            "metrics.jsonl",
+            "resolved_config.json",
+            "run_summary.json"
+          ],
+          "epoch_count": 30,
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "status": "passed"
+        },
+        "armA_seed201": {
+          "files": [
+            "environment.json",
+            "metrics.jsonl",
+            "resolved_config.json",
+            "run_summary.json"
+          ],
+          "epoch_count": 30,
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "status": "passed"
+        },
+        "armA_seed202": {
+          "files": [
+            "environment.json",
+            "metrics.jsonl",
+            "resolved_config.json",
+            "run_summary.json"
+          ],
+          "epoch_count": 30,
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "status": "passed"
+        },
+        "armB_seed200": {
+          "files": [
+            "environment.json",
+            "metrics.jsonl",
+            "resolved_config.json",
+            "run_summary.json"
+          ],
+          "epoch_count": 30,
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "status": "passed"
+        },
+        "armB_seed201": {
+          "files": [
+            "environment.json",
+            "metrics.jsonl",
+            "resolved_config.json",
+            "run_summary.json"
+          ],
+          "epoch_count": 30,
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "status": "passed"
+        },
+        "armB_seed202": {
+          "files": [
+            "environment.json",
+            "metrics.jsonl",
+            "resolved_config.json",
+            "run_summary.json"
+          ],
+          "epoch_count": 30,
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "name": "efficiency_protocol_complete",
+      "status": "passed",
+      "evidence": {
+        "protocol": "flame3_submission_efficiency_v1",
+        "status": "complete",
+        "inference": {
+          "augment": false,
+          "batch_size": 1,
+          "input_height": 512,
+          "input_width": 640,
+          "amp": true,
+          "device": "cuda:0"
+        },
+        "runtime": {
+          "python": "3.9.18",
+          "torch": "2.1.0",
+          "cuda_runtime": "12.1",
+          "cudnn": 8801,
+          "gpu": "NVIDIA GeForce RTX 4090"
+        },
+        "checkpoint_loading": {
+          "checkpoint": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\FLAME3_SUBMISSION_SOURCE_20260822\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\conv1_random_30e_seed200\\last.pth",
+          "checkpoint_epoch": 30,
+          "deserialization_mode": "restricted_weights_only_pytorch_2_1",
+          "loaded_tensor_count": 453,
+          "ignored_auxiliary_keys": [
+            "seghead_d.bn1.bias",
+            "seghead_d.bn1.num_batches_tracked",
+            "seghead_d.bn1.running_mean",
+            "seghead_d.bn1.running_var",
+            "seghead_d.bn1.weight",
+            "seghead_d.bn2.bias",
+            "seghead_d.bn2.num_batches_tracked",
+            "seghead_d.bn2.running_mean",
+            "seghead_d.bn2.running_var",
+            "seghead_d.bn2.weight",
+            "seghead_d.conv1.weight",
+            "seghead_d.conv2.bias",
+            "seghead_d.conv2.weight",
+            "seghead_p.bn1.bias",
+            "seghead_p.bn1.num_batches_tracked",
+            "seghead_p.bn1.running_mean",
+            "seghead_p.bn1.running_var",
+            "seghead_p.bn1.weight",
+            "seghead_p.bn2.bias",
+            "seghead_p.bn2.num_batches_tracked",
+            "seghead_p.bn2.running_mean",
+            "seghead_p.bn2.running_var",
+            "seghead_p.bn2.weight",
+            "seghead_p.conv1.weight",
+            "seghead_p.conv2.bias",
+            "seghead_p.conv2.weight"
+          ],
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "shape_mismatch_keys": []
+        },
+        "complexity": {
+          "parameters": 7623939,
+          "macs": 7470914048,
+          "gmacs": 7.470914048,
+          "flops_two_per_mac": 14941828096,
+          "gflops_two_per_mac": 14.941828096,
+          "counting_convention": "THOP MACs; FLOPs additionally reported as 2 x MACs"
+        },
+        "latency": {
+          "warmup_iterations": 100,
+          "timed_iterations_per_trial": 200,
+          "trials": 10,
+          "sample_count": 2000,
+          "mean_ms": 7.185028703927994,
+          "median_ms": 7.128064155578613,
+          "p95_ms": 7.715948677062988,
+          "std_ms": 0.2892433061646774,
+          "fps_from_mean": 139.17828880117187,
+          "per_trial_mean_ms": [
+            7.250992324352264,
+            7.210561926364899,
+            7.268239040374755,
+            7.277592480182648,
+            7.256920795440674,
+            7.213776969909668,
+            7.152150084972382,
+            7.0567089414596555,
+            7.0652617573738095,
+            7.098082718849182
+          ],
+          "peak_allocated_vram_mb": 179.47216796875,
+          "peak_reserved_vram_mb": 198.0
+        },
+        "data_loading": {
+          "dataset_rows": 134,
+          "measured_batches": 100,
+          "batch_size": 1,
+          "num_workers": 0,
+          "host_loader_mean_ms": 28.966976000000066,
+          "host_loader_p95_ms": 34.68355999999931,
+          "host_to_device_mean_ms": 1.3075889999998935,
+          "host_to_device_p95_ms": 2.1010099999987375
+        },
+        "test_split_read": false,
+        "training_performed": false
+      }
+    },
+    {
+      "name": "no_sys_path_insert",
+      "status": "passed",
+      "evidence": []
+    },
+    {
+      "name": "no_machine_paths_in_src_or_configs",
+      "status": "passed",
+      "evidence": []
+    },
+    {
+      "name": "torchsummary_import_main_only",
+      "status": "passed",
+      "evidence": [
+        209
+      ]
+    },
+    {
+      "name": "no_checkpoint_binaries",
+      "status": "passed",
+      "evidence": []
+    },
+    {
+      "name": "no_python_caches",
+      "status": "passed",
+      "evidence": []
+    }
+  ],
+  "critical_artifact_hashes": {
+    "flame2_result": {
+      "path": "results/flame2_zero_shot/FLAME2_ZERO_SHOT_COMPLETE.json",
+      "sha256": "831e642e5b71b924f98835d70451377e258e986c5940cef1c1cd79e41755f492",
+      "bytes": 28337
+    },
+    "flame2_report": {
+      "path": "results/flame2_zero_shot/FLAME2_ZERO_SHOT_REPORT.md",
+      "sha256": "a1860da1618e6239ac0892bf4930bf65342c3a532f513e6d823f75a62b910ed2",
+      "bytes": 2696
+    },
+    "posthoc_result": {
+      "path": "results/test107_posthoc/POSTHOC_COMPLETE.json",
+      "sha256": "9f011a698c1355b2d0b2b9d308f201d37f76355cbbdf52a1bd8a70cc0973c369",
+      "bytes": 1815
+    },
+    "posthoc_report": {
+      "path": "results/test107_posthoc/POSTHOC_REPORT.md",
+      "sha256": "dfbc6581eff4fc82f3cf160a3f542a4e9dcf49857893129a697db23ba5efceb4",
+      "bytes": 5988
+    },
+    "conv1_result": {
+      "path": "results/conv1_initialization_ablation_30e/CONV1_INITIALIZATION_ABLATION_COMPLETE.json",
+      "sha256": "7b6bcdd7146c806d8ac99baa625b2a0f75ff4c394f87c1014cf58e87b2d115c1",
+      "bytes": 28105
+    },
+    "conv1_report": {
+      "path": "results/conv1_initialization_ablation_30e/CONV1_INITIALIZATION_ABLATION_REPORT.md",
+      "sha256": "c67714a3dc83c75e36f48452be9621342d698ded42699a48b3b23be779d1c7b1",
+      "bytes": 667
+    },
+    "efficiency": {
+      "path": "results/efficiency/RTX4090_random_stem_seed200_epoch30.json",
+      "sha256": "50c8ce0d731b58fbe0c1388b68f7125f86664f12ebbed0682986f153397f3357",
+      "bytes": 3160
+    },
+    "complete_file_manifest": {
+      "path": "reproducibility/complete_split_file_manifest/FLAME3_COMPLETE_SPLIT_AND_FILE_HASH_MANIFEST.json",
+      "sha256": "d0a5f65dbd0506f1f0b674612094cc65819b4117ccd945a47ec90d49b4b6f46a",
+      "bytes": 917
+    },
+    "complete_file_manifest_csv": {
+      "path": "reproducibility/complete_split_file_manifest/FLAME3_COMPLETE_SPLIT_AND_FILE_HASH_MANIFEST.csv",
+      "sha256": "5af68328a044284433666d5ece4495f019dda28d814bda60b068988dd8579cd2",
+      "bytes": 525954
+    },
+    "environment": {
+      "path": "environment.yml",
+      "sha256": "e9d54a9cd96ecbb93f1949c0a2f712f01b46e98121541560aa191edf054bd03a",
+      "bytes": 378
+    },
+    "requirements": {
+      "path": "requirements-lock.txt",
+      "sha256": "97e79737060326540346834640135dd9cc9f92a8ddb3e320aef7c9185042d893",
+      "bytes": 171
+    },
+    "license": {
+      "path": "reproducibility/DATA_LICENSE.md",
+      "sha256": "260ecda7d2db0142a48fa302bec17c39062cc6ecaceefcbb87b42f93f45d06fb",
+      "bytes": 1880
+    }
+  },
+  "frozen_conclusions": {
+    "conv1_initialization": "retain_random_four_channel_stem",
+    "conv1_mean_delta_manual_three_class_miou": 0.009760617528945081,
+    "conv1_mean_delta_fire_heat_iou": -0.050594847662718344,
+    "efficiency_fps": 139.17828880117187,
+    "efficiency_mean_ms": 7.185028703927994,
+    "efficiency_p95_ms": 7.715948677062988,
+    "parameter_count": 7623939,
+    "gmacs": 7.470914048,
+    "gflops_two_per_mac": 14.941828096
+  }
+}

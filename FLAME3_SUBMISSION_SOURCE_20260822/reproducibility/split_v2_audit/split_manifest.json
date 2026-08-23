@@ -1,0 +1,162 @@
+{
+  "status": "preregistered_before_flame3_training_test_sealed",
+  "version": "split_v2",
+  "date": "2026-07-31",
+  "supersedes": "G:\\py2\\data\\flame3_splits_preregistered",
+  "revision_motivation": "v1 placed 82 of 84 empty Fire pseudolabel frames in train and none in val; v2 balances this state across train and val without random frame-level splitting",
+  "data_root": "G:\\xiaz\\FLAME 3 CV Dataset (Sycan Marsh)",
+  "pseudolabel_root": "G:\\py2\\experiments\\flame3_temperature_pseudolabels_preregistered",
+  "counts": {
+    "train": {
+      "Fire": 430,
+      "No Fire": 63,
+      "total": 493
+    },
+    "val": {
+      "Fire": 99,
+      "No Fire": 35,
+      "total": 134
+    },
+    "test": {
+      "Fire": 89,
+      "No Fire": 18,
+      "total": 107
+    }
+  },
+  "retained_total": 734,
+  "excluded_boundary_buffer_count": 4,
+  "empty_fire_pseudolabel_counts": {
+    "train": {
+      "empty": 62,
+      "fire_total": 430,
+      "ratio": 0.14418604651162792
+    },
+    "val": {
+      "empty": 16,
+      "fire_total": 99,
+      "ratio": 0.16161616161616163
+    },
+    "test": {
+      "empty": 2,
+      "fire_total": 89,
+      "ratio": 0.02247191011235955
+    }
+  },
+  "fire_assignment_decision": {
+    "original_block0_size": 82,
+    "block0_split_rule": "largest internal timestamp gap; smaller side assigned to validation",
+    "block0_boundary": {
+      "gap_seconds": 199.0,
+      "left_count": 16,
+      "right_count": 66,
+      "left_end": "2022-10-25 16:54:25",
+      "right_start": "2022-10-25 16:57:44",
+      "left_last_sample_id": "00181",
+      "right_first_sample_id": "00499"
+    },
+    "boundary_buffer": {
+      "policy": "exclude four consecutive frames from the train side of the 0a/0b boundary",
+      "count": 4,
+      "start": "2022-10-25 16:57:44",
+      "end": "2022-10-25 16:58:50",
+      "sample_ids": [
+        "00499",
+        "00447",
+        "00089",
+        "00028"
+      ],
+      "retained_train_start": "2022-10-25 16:58:53",
+      "retained_train_first_sample_id": "00091"
+    },
+    "validation_whole_block_rule": "among original non-test blocks 1-8, choose the fewest-block lexicographic combination that exactly preserves the v1 Fire validation count after adding 0a",
+    "validation_whole_blocks": [
+      2,
+      4,
+      6
+    ],
+    "validation_fire_count": 99
+  },
+  "adjacent_frame_cross_split_report": {
+    "definition": "consecutive Fire captures after EXIF ordering; excluded-buffer frames are not retained",
+    "retained_cross_split_pairs_within_300_second_block": 0,
+    "retained_cross_split_pairs_across_all_consecutive_records": 7,
+    "all_global_cross_pairs_are_natural_gaps_over_300_seconds": true,
+    "global_cross_pairs": [
+      {
+        "left_sample_key": "fire/00031",
+        "right_sample_key": "fire/00396",
+        "left_split": "train",
+        "right_split": "val",
+        "gap_seconds": 873.0,
+        "within_300_second_temporal_block": false
+      },
+      {
+        "left_sample_key": "fire/00431",
+        "right_sample_key": "fire/00243",
+        "left_split": "val",
+        "right_split": "train",
+        "gap_seconds": 645.0,
+        "within_300_second_temporal_block": false
+      },
+      {
+        "left_sample_key": "fire/00484",
+        "right_sample_key": "fire/00289",
+        "left_split": "train",
+        "right_split": "val",
+        "gap_seconds": 72850.0,
+        "within_300_second_temporal_block": false
+      },
+      {
+        "left_sample_key": "fire/00232",
+        "right_sample_key": "fire/00470",
+        "left_split": "val",
+        "right_split": "train",
+        "gap_seconds": 627.0,
+        "within_300_second_temporal_block": false
+      },
+      {
+        "left_sample_key": "fire/00303",
+        "right_sample_key": "fire/00444",
+        "left_split": "train",
+        "right_split": "val",
+        "gap_seconds": 5224.0,
+        "within_300_second_temporal_block": false
+      },
+      {
+        "left_sample_key": "fire/00508",
+        "right_sample_key": "fire/00196",
+        "left_split": "val",
+        "right_split": "train",
+        "gap_seconds": 2000.0,
+        "within_300_second_temporal_block": false
+      },
+      {
+        "left_sample_key": "fire/00338",
+        "right_sample_key": "fire/00483",
+        "left_split": "train",
+        "right_split": "test",
+        "gap_seconds": 896.0,
+        "within_300_second_temporal_block": false
+      }
+    ]
+  },
+  "no_fire_assignment": {
+    "method": "unchanged v1 KMeans spatial clusters",
+    "clusters": 3,
+    "random_state": 200,
+    "n_init": 20,
+    "verified_identical_to_v1": true
+  },
+  "test_membership_identical_to_v1": true,
+  "zero_shot_allowed_split": "val",
+  "test_usage": "final_once_after_method_freeze",
+  "output_sha256": {
+    "train.csv": "a20f896921b16a8eab7ff2e91f8dc56df717517a23d842e85f977e63230feecd",
+    "val.csv": "bf641cc447570f0fa06626996508db3aa3ed635811b0758125759f54f714cc72",
+    "test.csv": "a6576e340d76640491bac2051bdbe3cbaf514628778f811cb09c2112792867ed",
+    "fire_time_blocks_v2.csv": "dcdbac325cb3abbf3334d3cc4c8c4409d59795aa2f379b61a904ca1006829453",
+    "excluded_boundary_buffer.csv": "5e973fdf44e351c0d95d94e7947f5dccbde54391fb3f7b40845133ed1334f597",
+    "v1_to_v2_movements.csv": "9ad2d4d00a3acbb7730139d29797f3ed37a8544d18a66bcc4af1e606b3f3abef"
+  },
+  "absolute_date_note": "Official data card states 2023; Raw RGB EXIF states 2022. Only relative EXIF order and gaps are used."
+}

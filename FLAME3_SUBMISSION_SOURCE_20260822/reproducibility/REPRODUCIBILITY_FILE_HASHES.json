@@ -1,0 +1,42 @@
+﻿[
+    {
+        "path":  "ANNOTATION_FINAL_FREEZE.json",
+        "sha256":  "cf73929c99c684d8753569185aa1be57fb82dafe6e9f80e69207b0fa89d62709",
+        "bytes":  3844
+    },
+    {
+        "path":  "manual_mask_sha256_and_stats.csv",
+        "sha256":  "e2bed44c889728b156ec3e39b772b5ad4632263348a6e0831afb73c60b19c3f7",
+        "bytes":  41019
+    },
+    {
+        "path":  "PAIRED_SPLIT_BUILD_SUMMARY.json",
+        "sha256":  "615f4ac57e87d065c901b570493d75a220010a9f2944b9b49e6f6e525f8d590e",
+        "bytes":  1599
+    },
+    {
+        "path":  "splits/test107_manual_threeclass.csv",
+        "sha256":  "3ebdccd489d4e71ce87c0bd6f7b75faf34cc051b89d1da137da1ac0f6b7b9355",
+        "bytes":  26417
+    },
+    {
+        "path":  "splits/train.csv",
+        "sha256":  "108a73f11490b342160804838b54591667fbdb089c25d3aa90668990a14122e3",
+        "bytes":  210280
+    },
+    {
+        "path":  "splits/val.csv",
+        "sha256":  "c3899b01604b9c3d62cf7f6be4370d12b6f794151017bbcad27057851830b0e1",
+        "bytes":  57710
+    },
+    {
+        "path":  "TEST107_MANUAL_LABEL_FREEZE.json",
+        "sha256":  "a1991e99e7510e0b51d32f522e1593ec7e770aa26bf6b7af8ed834173173471b",
+        "bytes":  78286
+    },
+    {
+        "path":  "TEST107_MANUAL_LABEL_INDEX.csv",
+        "sha256":  "88237988652dc3be5f2d2675ca43f194cc87a81d48a99a6cd4c2c260ea8f92f3",
+        "bytes":  13798
+    }
+]

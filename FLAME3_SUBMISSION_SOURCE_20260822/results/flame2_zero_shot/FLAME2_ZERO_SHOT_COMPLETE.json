@@ -1,0 +1,842 @@
+{
+  "protocol": "flame3_frozen_baseline_v11_on_flame2_zero_shot",
+  "status": "complete",
+  "preflight": {
+    "protocol": "flame3_frozen_checkpoint_flame2_zero_shot_preflight",
+    "status": "passed",
+    "source_dataset": "RoboFireFuseNet-preprocessed FLAME2 official test split",
+    "source_test_rows": 200,
+    "source_test_split_sha256": "57e3a4b13be799809b5c013f028f76cecd64ae139caae5d15f9aabcf3fc8cb6a",
+    "class_mapping": {
+      "0": "background",
+      "1": "smoke",
+      "2": "fire_heat"
+    },
+    "mapping_rationale": "FLAME2 has an independent smoke class and visual audit shows class-2 regions under dense RGB smoke aligned with IR hotspots; class 2 is therefore not restricted to RGB-visible flame. No synthetic Ignore pixels are introduced.",
+    "coverage_limitation": "FLAME2 class 2 cannot be proven to cover every residual-heat footprint in the broader FLAME3 Fire/Heat definition; results are reported as a coverage-mismatched lower-bound transfer estimate.",
+    "ir_preprocessing": "PIL convert('L'), divide by 255, matching the official WildFire loader",
+    "spatial_preprocessing": "official FLAME2 256x256 deterministic resize/pad/crop; no augmentation",
+    "model_augment_flag": false,
+    "checkpoint_loading_rule": "Load into augment=False model with strict=False, require no missing keys, and allow unexpected keys only under seghead_p./seghead_d.; verify FP32 main logits and argmax against a strict augment=True compatibility model.",
+    "checkpoints": [
+      {
+        "arm": "baseline",
+        "seed": 200,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed200\\best_S.pth",
+        "sha256": "1770dd6d94fe9bcee378c8a3674ad8dbd7feeb99b710befee6eedd060957f206",
+        "epoch": 97
+      },
+      {
+        "arm": "baseline",
+        "seed": 201,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed201\\best_S.pth",
+        "sha256": "79bf3911aba25c5d484945735b9497ebbec3813feb174efb1f47e25543356a8e",
+        "epoch": 50
+      },
+      {
+        "arm": "baseline",
+        "seed": 202,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed202\\best_S.pth",
+        "sha256": "b78e549e154316c404600d955b2f23af058397669fae61ddb95be33a6d2dd97f",
+        "epoch": 80
+      },
+      {
+        "arm": "v11",
+        "seed": 200,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed200\\best_S.pth",
+        "sha256": "97e9d5902da9eb8beaa240760c41aa5e68086709ced6f8cb3f6481197a4cec6f",
+        "epoch": 77
+      },
+      {
+        "arm": "v11",
+        "seed": 201,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed201\\best_S.pth",
+        "sha256": "32f7e5df88556d3efbee7227e31bfac19677691002a67c24a68e116474c799e7",
+        "epoch": 75
+      },
+      {
+        "arm": "v11",
+        "seed": 202,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed202\\best_S.pth",
+        "sha256": "7e92ae0686b279c9f24f11d02bd8134e62454a10d489d079eb1d86262ca022cf",
+        "epoch": 72
+      }
+    ],
+    "configs": {
+      "baseline": {
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\configs\\flame3\\pidnet_s_fusion_newlabel_baseline_v2_30e.yaml",
+        "sha256": "b94e988c293e11e5993931423d29f892668f784bf16c74562234ab0d13a05ee7"
+      },
+      "v11": {
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\configs\\flame3\\pidnet_s_fusion_manual_smoke_v11_30e.yaml",
+        "sha256": "512b032ba5d37debbc4caaad3d8288fd0adbc68e65c5b43dbf4dd7716868ed43"
+      }
+    },
+    "training_performed": false,
+    "threshold_tuning_performed": false,
+    "predictions_saved": false,
+    "flame3_test_read": false
+  },
+  "runs": [
+    {
+      "arm": "baseline",
+      "seed": 200,
+      "checkpoint": {
+        "arm": "baseline",
+        "seed": 200,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed200\\best_S.pth",
+        "sha256": "1770dd6d94fe9bcee378c8a3674ad8dbd7feeb99b710befee6eedd060957f206",
+        "epoch": 97
+      },
+      "sample_count": 200,
+      "augment_false_checkpoint_loading": {
+        "missing_keys": [],
+        "ignored_auxiliary_checkpoint_key_count": 26,
+        "ignored_auxiliary_prefixes": [
+          "seghead_p.",
+          "seghead_d."
+        ],
+        "fp32_main_logits_equivalence_max_abs_error": 0.0,
+        "argmax_equivalent": true
+      },
+      "metrics": {
+        "background": {
+          "iou": 0.6560499012017601,
+          "precision": 0.6593330107212378,
+          "recall": 0.9924671414408633,
+          "f1": 0.7923069235120013,
+          "true_positive": 8514192,
+          "false_positive": 4399149,
+          "false_negative": 64623
+        },
+        "smoke": {
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "false_positive": 17306,
+          "false_negative": 3674441
+        },
+        "fire_heat": {
+          "iou": 0.12087542746756468,
+          "precision": 0.6294370528962975,
+          "recall": 0.13013616817964643,
+          "f1": 0.2156803949938719,
+          "true_positive": 111129,
+          "false_positive": 65424,
+          "false_negative": 742815
+        },
+        "three_class_mean_iou": 0.2589751095564416,
+        "equal_fire_smoke_S": 0.06043771373378234,
+        "confusion_matrix_target_rows_prediction_columns": [
+          [
+            8514192,
+            17306,
+            47317
+          ],
+          [
+            3656334,
+            0,
+            18107
+          ],
+          [
+            742815,
+            0,
+            111129
+          ]
+        ],
+        "background_only_joint_false_positive_ratio": 0.0179083251953125,
+        "background_only_valid_pixels": 3276800,
+        "ignore_pixel_ratio": 0.0
+      }
+    },
+    {
+      "arm": "baseline",
+      "seed": 201,
+      "checkpoint": {
+        "arm": "baseline",
+        "seed": 201,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed201\\best_S.pth",
+        "sha256": "79bf3911aba25c5d484945735b9497ebbec3813feb174efb1f47e25543356a8e",
+        "epoch": 50
+      },
+      "sample_count": 200,
+      "augment_false_checkpoint_loading": {
+        "missing_keys": [],
+        "ignored_auxiliary_checkpoint_key_count": 26,
+        "ignored_auxiliary_prefixes": [
+          "seghead_p.",
+          "seghead_d."
+        ],
+        "fp32_main_logits_equivalence_max_abs_error": 0.0,
+        "argmax_equivalent": true
+      },
+      "metrics": {
+        "background": {
+          "iou": 0.6017660365943641,
+          "precision": 0.6464573068631407,
+          "recall": 0.8969552321620177,
+          "f1": 0.751378194875232,
+          "true_positive": 7694813,
+          "false_positive": 4208236,
+          "false_negative": 884002
+        },
+        "smoke": {
+          "iou": 0.03278377744645646,
+          "precision": 0.14904030845288832,
+          "recall": 0.04033348201808112,
+          "f1": 0.06348623625269152,
+          "true_positive": 148203,
+          "false_positive": 846179,
+          "false_negative": 3526238
+        },
+        "fire_heat": {
+          "iou": 0.09585553880880095,
+          "precision": 0.4435545767010378,
+          "recall": 0.10895796445668568,
+          "f1": 0.17494192512454018,
+          "true_positive": 93044,
+          "false_positive": 116725,
+          "false_negative": 760900
+        },
+        "three_class_mean_iou": 0.24346845094987385,
+        "equal_fire_smoke_S": 0.0643196581276287,
+        "confusion_matrix_target_rows_prediction_columns": [
+          [
+            7694813,
+            781796,
+            102206
+          ],
+          [
+            3511719,
+            148203,
+            14519
+          ],
+          [
+            696517,
+            64383,
+            93044
+          ]
+        ],
+        "background_only_joint_false_positive_ratio": 0.24942840576171876,
+        "background_only_valid_pixels": 3276800,
+        "ignore_pixel_ratio": 0.0
+      }
+    },
+    {
+      "arm": "baseline",
+      "seed": 202,
+      "checkpoint": {
+        "arm": "baseline",
+        "seed": 202,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed202\\best_S.pth",
+        "sha256": "b78e549e154316c404600d955b2f23af058397669fae61ddb95be33a6d2dd97f",
+        "epoch": 80
+      },
+      "sample_count": 200,
+      "augment_false_checkpoint_loading": {
+        "missing_keys": [],
+        "ignored_auxiliary_checkpoint_key_count": 26,
+        "ignored_auxiliary_prefixes": [
+          "seghead_p.",
+          "seghead_d."
+        ],
+        "fp32_main_logits_equivalence_max_abs_error": 0.0,
+        "argmax_equivalent": true
+      },
+      "metrics": {
+        "background": {
+          "iou": 0.6542599879711067,
+          "precision": 0.6560244666633649,
+          "recall": 0.9959058448049061,
+          "f1": 0.7910001967387656,
+          "true_positive": 8543692,
+          "false_positive": 4479743,
+          "false_negative": 35123
+        },
+        "smoke": {
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "false_positive": 744,
+          "false_negative": 3674441
+        },
+        "fire_heat": {
+          "iou": 0.0447928456336175,
+          "precision": 0.4838534828537358,
+          "recall": 0.047040555352575814,
+          "f1": 0.08574493177439926,
+          "true_positive": 40170,
+          "false_positive": 42851,
+          "false_negative": 813774
+        },
+        "three_class_mean_iou": 0.23301761120157474,
+        "equal_fire_smoke_S": 0.02239642281680875,
+        "confusion_matrix_target_rows_prediction_columns": [
+          [
+            8543692,
+            744,
+            34379
+          ],
+          [
+            3665969,
+            0,
+            8472
+          ],
+          [
+            813774,
+            0,
+            40170
+          ]
+        ],
+        "background_only_joint_false_positive_ratio": 0.01013519287109375,
+        "background_only_valid_pixels": 3276800,
+        "ignore_pixel_ratio": 0.0
+      }
+    },
+    {
+      "arm": "v11",
+      "seed": 200,
+      "checkpoint": {
+        "arm": "v11",
+        "seed": 200,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed200\\best_S.pth",
+        "sha256": "97e9d5902da9eb8beaa240760c41aa5e68086709ced6f8cb3f6481197a4cec6f",
+        "epoch": 77
+      },
+      "sample_count": 200,
+      "augment_false_checkpoint_loading": {
+        "missing_keys": [],
+        "ignored_auxiliary_checkpoint_key_count": 26,
+        "ignored_auxiliary_prefixes": [
+          "seghead_p.",
+          "seghead_d."
+        ],
+        "fp32_main_logits_equivalence_max_abs_error": 0.0,
+        "argmax_equivalent": true
+      },
+      "metrics": {
+        "background": {
+          "iou": 0.7210784088541715,
+          "precision": 0.7254481383317759,
+          "recall": 0.9917157556142661,
+          "f1": 0.8379378942232365,
+          "true_positive": 8507746,
+          "false_positive": 3219827,
+          "false_negative": 71069
+        },
+        "smoke": {
+          "iou": 0.19207480819454947,
+          "precision": 0.9831893918356012,
+          "recall": 0.1927076798892675,
+          "f1": 0.3222529439833652,
+          "true_positive": 708093,
+          "false_positive": 12107,
+          "false_negative": 2966348
+        },
+        "fire_heat": {
+          "iou": 0.3359536794603117,
+          "precision": 0.5771207427054094,
+          "recall": 0.4456603711718801,
+          "f1": 0.502942107388076,
+          "true_positive": 380569,
+          "false_positive": 278858,
+          "false_negative": 473375
+        },
+        "three_class_mean_iou": 0.4163689655030109,
+        "equal_fire_smoke_S": 0.26401424382743055,
+        "confusion_matrix_target_rows_prediction_columns": [
+          [
+            8507746,
+            6838,
+            64231
+          ],
+          [
+            2751721,
+            708093,
+            214627
+          ],
+          [
+            468106,
+            5269,
+            380569
+          ]
+        ],
+        "background_only_joint_false_positive_ratio": 0.01107940673828125,
+        "background_only_valid_pixels": 3276800,
+        "ignore_pixel_ratio": 0.0
+      }
+    },
+    {
+      "arm": "v11",
+      "seed": 201,
+      "checkpoint": {
+        "arm": "v11",
+        "seed": 201,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed201\\best_S.pth",
+        "sha256": "32f7e5df88556d3efbee7227e31bfac19677691002a67c24a68e116474c799e7",
+        "epoch": 75
+      },
+      "sample_count": 200,
+      "augment_false_checkpoint_loading": {
+        "missing_keys": [],
+        "ignored_auxiliary_checkpoint_key_count": 26,
+        "ignored_auxiliary_prefixes": [
+          "seghead_p.",
+          "seghead_d."
+        ],
+        "fp32_main_logits_equivalence_max_abs_error": 0.0,
+        "argmax_equivalent": true
+      },
+      "metrics": {
+        "background": {
+          "iou": 0.7528092872772469,
+          "precision": 0.7600005489878351,
+          "recall": 0.9875868636868845,
+          "f1": 0.8589745532973924,
+          "true_positive": 8472325,
+          "false_positive": 2675463,
+          "false_negative": 106490
+        },
+        "smoke": {
+          "iou": 0.34626872583296675,
+          "precision": 0.8636083358624438,
+          "recall": 0.3663006155221978,
+          "f1": 0.5144124931205284,
+          "true_positive": 1345950,
+          "false_positive": 212569,
+          "false_negative": 2328491
+        },
+        "fire_heat": {
+          "iou": 0.2719730205326154,
+          "precision": 0.6692783361146241,
+          "recall": 0.3141997601716272,
+          "f1": 0.42763960578146804,
+          "true_positive": 268309,
+          "false_positive": 132584,
+          "false_negative": 585635
+        },
+        "three_class_mean_iou": 0.45701701121427635,
+        "equal_fire_smoke_S": 0.3091208731827911,
+        "confusion_matrix_target_rows_prediction_columns": [
+          [
+            8472325,
+            81487,
+            25003
+          ],
+          [
+            2220910,
+            1345950,
+            107581
+          ],
+          [
+            454553,
+            131082,
+            268309
+          ]
+        ],
+        "background_only_joint_false_positive_ratio": 0.0102203369140625,
+        "background_only_valid_pixels": 3276800,
+        "ignore_pixel_ratio": 0.0
+      }
+    },
+    {
+      "arm": "v11",
+      "seed": 202,
+      "checkpoint": {
+        "arm": "v11",
+        "seed": 202,
+        "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed202\\best_S.pth",
+        "sha256": "7e92ae0686b279c9f24f11d02bd8134e62454a10d489d079eb1d86262ca022cf",
+        "epoch": 72
+      },
+      "sample_count": 200,
+      "augment_false_checkpoint_loading": {
+        "missing_keys": [],
+        "ignored_auxiliary_checkpoint_key_count": 26,
+        "ignored_auxiliary_prefixes": [
+          "seghead_p.",
+          "seghead_d."
+        ],
+        "fp32_main_logits_equivalence_max_abs_error": 0.0,
+        "argmax_equivalent": true
+      },
+      "metrics": {
+        "background": {
+          "iou": 0.7073490773593784,
+          "precision": 0.7217703487119702,
+          "recall": 0.9725290730712808,
+          "f1": 0.8285933869521037,
+          "true_positive": 8343147,
+          "false_positive": 3216135,
+          "false_negative": 235668
+        },
+        "smoke": {
+          "iou": 0.24532417181007768,
+          "precision": 0.8285330150570507,
+          "recall": 0.2584455703602262,
+          "f1": 0.3939924677660423,
+          "true_positive": 949643,
+          "false_positive": 196531,
+          "false_negative": 2724798
+        },
+        "fire_heat": {
+          "iou": 0.2386393677423937,
+          "precision": 0.602184475686009,
+          "recall": 0.28330194954235877,
+          "f1": 0.38532501704245004,
+          "true_positive": 241924,
+          "false_positive": 159820,
+          "false_negative": 612020
+        },
+        "three_class_mean_iou": 0.3971042056372832,
+        "equal_fire_smoke_S": 0.2419817697762357,
+        "confusion_matrix_target_rows_prediction_columns": [
+          [
+            8343147,
+            170470,
+            65198
+          ],
+          [
+            2630176,
+            949643,
+            94622
+          ],
+          [
+            585959,
+            26061,
+            241924
+          ]
+        ],
+        "background_only_joint_false_positive_ratio": 0.06992950439453124,
+        "background_only_valid_pixels": 3276800,
+        "ignore_pixel_ratio": 0.0
+      }
+    }
+  ],
+  "aggregate": {
+    "by_arm": {
+      "baseline": {
+        "background_iou": {
+          "seed_200_201_202": [
+            0.6560499012017601,
+            0.6017660365943641,
+            0.6542599879711067
+          ],
+          "mean": 0.6373586419224103,
+          "sample_standard_deviation": 0.030837089889804197
+        },
+        "smoke_iou": {
+          "seed_200_201_202": [
+            0.0,
+            0.03278377744645646,
+            0.0
+          ],
+          "mean": 0.010927925815485488,
+          "sample_standard_deviation": 0.01892772273376442
+        },
+        "smoke_precision": {
+          "seed_200_201_202": [
+            0.0,
+            0.14904030845288832,
+            0.0
+          ],
+          "mean": 0.04968010281762944,
+          "sample_standard_deviation": 0.08604846220537993
+        },
+        "smoke_recall": {
+          "seed_200_201_202": [
+            0.0,
+            0.04033348201808112,
+            0.0
+          ],
+          "mean": 0.01344449400602704,
+          "sample_standard_deviation": 0.023286546700494064
+        },
+        "fire_heat_iou": {
+          "seed_200_201_202": [
+            0.12087542746756468,
+            0.09585553880880095,
+            0.0447928456336175
+          ],
+          "mean": 0.08717460396999438,
+          "sample_standard_deviation": 0.038777039429107034
+        },
+        "fire_heat_precision": {
+          "seed_200_201_202": [
+            0.6294370528962975,
+            0.4435545767010378,
+            0.4838534828537358
+          ],
+          "mean": 0.5189483708170237,
+          "sample_standard_deviation": 0.09778451876440931
+        },
+        "fire_heat_recall": {
+          "seed_200_201_202": [
+            0.13013616817964643,
+            0.10895796445668568,
+            0.047040555352575814
+          ],
+          "mean": 0.09537822932963598,
+          "sample_standard_deviation": 0.043180170476356694
+        },
+        "three_class_mean_iou": {
+          "seed_200_201_202": [
+            0.2589751095564416,
+            0.24346845094987385,
+            0.23301761120157474
+          ],
+          "mean": 0.24515372390263007,
+          "sample_standard_deviation": 0.013060552779446113
+        },
+        "equal_fire_smoke_S": {
+          "seed_200_201_202": [
+            0.06043771373378234,
+            0.0643196581276287,
+            0.02239642281680875
+          ],
+          "mean": 0.04905126489273993,
+          "sample_standard_deviation": 0.02316522884926571
+        },
+        "background_only_joint_false_positive_ratio": {
+          "seed_200_201_202": [
+            0.0179083251953125,
+            0.24942840576171876,
+            0.01013519287109375
+          ],
+          "mean": 0.09249064127604167,
+          "sample_standard_deviation": 0.13596764996812236
+        },
+        "ignore_pixel_ratio": {
+          "seed_200_201_202": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_standard_deviation": 0.0
+        }
+      },
+      "v11": {
+        "background_iou": {
+          "seed_200_201_202": [
+            0.7210784088541715,
+            0.7528092872772469,
+            0.7073490773593784
+          ],
+          "mean": 0.7270789244969322,
+          "sample_standard_deviation": 0.02331656733802023
+        },
+        "smoke_iou": {
+          "seed_200_201_202": [
+            0.19207480819454947,
+            0.34626872583296675,
+            0.24532417181007768
+          ],
+          "mean": 0.2612225686125313,
+          "sample_standard_deviation": 0.07831673081045297
+        },
+        "smoke_precision": {
+          "seed_200_201_202": [
+            0.9831893918356012,
+            0.8636083358624438,
+            0.8285330150570507
+          ],
+          "mean": 0.8917769142516986,
+          "sample_standard_deviation": 0.08108483413019314
+        },
+        "smoke_recall": {
+          "seed_200_201_202": [
+            0.1927076798892675,
+            0.3663006155221978,
+            0.2584455703602262
+          ],
+          "mean": 0.27248462192389716,
+          "sample_standard_deviation": 0.08764387059013441
+        },
+        "fire_heat_iou": {
+          "seed_200_201_202": [
+            0.3359536794603117,
+            0.2719730205326154,
+            0.2386393677423937
+          ],
+          "mean": 0.2821886892451069,
+          "sample_standard_deviation": 0.0494549161531547
+        },
+        "fire_heat_precision": {
+          "seed_200_201_202": [
+            0.5771207427054094,
+            0.6692783361146241,
+            0.602184475686009
+          ],
+          "mean": 0.6161945181686808,
+          "sample_standard_deviation": 0.0476494121004576
+        },
+        "fire_heat_recall": {
+          "seed_200_201_202": [
+            0.4456603711718801,
+            0.3141997601716272,
+            0.28330194954235877
+          ],
+          "mean": 0.347720693628622,
+          "sample_standard_deviation": 0.08621371122610698
+        },
+        "three_class_mean_iou": {
+          "seed_200_201_202": [
+            0.4163689655030109,
+            0.45701701121427635,
+            0.3971042056372832
+          ],
+          "mean": 0.4234967274515235,
+          "sample_standard_deviation": 0.03058577791756559
+        },
+        "equal_fire_smoke_S": {
+          "seed_200_201_202": [
+            0.26401424382743055,
+            0.3091208731827911,
+            0.2419817697762357
+          ],
+          "mean": 0.2717056289288191,
+          "sample_standard_deviation": 0.03422400992201864
+        },
+        "background_only_joint_false_positive_ratio": {
+          "seed_200_201_202": [
+            0.01107940673828125,
+            0.0102203369140625,
+            0.06992950439453124
+          ],
+          "mean": 0.03040974934895833,
+          "sample_standard_deviation": 0.034227807107486234
+        },
+        "ignore_pixel_ratio": {
+          "seed_200_201_202": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_standard_deviation": 0.0
+        }
+      }
+    },
+    "paired_v11_minus_baseline": {
+      "background_iou": {
+        "seed_200_201_202": [
+          0.06502850765241142,
+          0.15104325068288282,
+          0.053089089388271615
+        ],
+        "mean": 0.08972028257452196,
+        "sample_standard_deviation": 0.05344171816414403,
+        "positive_seed_count": 3
+      },
+      "smoke_iou": {
+        "seed_200_201_202": [
+          0.19207480819454947,
+          0.3134849483865103,
+          0.24532417181007768
+        ],
+        "mean": 0.25029464279704583,
+        "sample_standard_deviation": 0.060857495197651004,
+        "positive_seed_count": 3
+      },
+      "smoke_precision": {
+        "seed_200_201_202": [
+          0.9831893918356012,
+          0.7145680274095555,
+          0.8285330150570507
+        ],
+        "mean": 0.8420968114340691,
+        "sample_standard_deviation": 0.13482337254958993,
+        "positive_seed_count": 3
+      },
+      "smoke_recall": {
+        "seed_200_201_202": [
+          0.1927076798892675,
+          0.32596713350411666,
+          0.2584455703602262
+        ],
+        "mean": 0.2590401279178701,
+        "sample_standard_deviation": 0.06663171631024557,
+        "positive_seed_count": 3
+      },
+      "fire_heat_iou": {
+        "seed_200_201_202": [
+          0.215078251992747,
+          0.17611748172381447,
+          0.1938465221087762
+        ],
+        "mean": 0.19501408527511255,
+        "sample_standard_deviation": 0.019506609336265312,
+        "positive_seed_count": 3
+      },
+      "fire_heat_precision": {
+        "seed_200_201_202": [
+          -0.052316310190888116,
+          0.22572375941358624,
+          0.11833099283227316
+        ],
+        "mean": 0.0972461473516571,
+        "sample_standard_deviation": 0.1402141152242574,
+        "positive_seed_count": 2
+      },
+      "fire_heat_recall": {
+        "seed_200_201_202": [
+          0.3155242029922337,
+          0.20524179571494153,
+          0.23626139418978295
+        ],
+        "mean": 0.25234246429898605,
+        "sample_standard_deviation": 0.056872690727725085,
+        "positive_seed_count": 3
+      },
+      "three_class_mean_iou": {
+        "seed_200_201_202": [
+          0.1573938559465693,
+          0.2135485602644025,
+          0.16408659443570847
+        ],
+        "mean": 0.17834300354889343,
+        "sample_standard_deviation": 0.030672000340011996,
+        "positive_seed_count": 3
+      },
+      "equal_fire_smoke_S": {
+        "seed_200_201_202": [
+          0.2035765300936482,
+          0.2448012150551624,
+          0.21958534695942694
+        ],
+        "mean": 0.2226543640360792,
+        "sample_standard_deviation": 0.020782993333651693,
+        "positive_seed_count": 3
+      },
+      "background_only_joint_false_positive_ratio": {
+        "seed_200_201_202": [
+          -0.006828918457031251,
+          -0.23920806884765627,
+          0.05979431152343749
+        ],
+        "mean": -0.06208089192708335,
+        "sample_standard_deviation": 0.15697194429625494,
+        "positive_seed_count": 1
+      },
+      "ignore_pixel_ratio": {
+        "seed_200_201_202": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "sample_standard_deviation": 0.0,
+        "positive_seed_count": 0
+      }
+    }
+  },
+  "training_performed": false,
+  "threshold_tuning_performed": false,
+  "predictions_saved": false,
+  "flame3_test_read": false
+}

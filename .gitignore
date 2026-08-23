@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+runs/
+!FLAME3_SUBMISSION_SOURCE_20260822/artifacts/conv1_initialization_ablation/runs/
+!FLAME3_SUBMISSION_SOURCE_20260822/artifacts/conv1_initialization_ablation/runs/**
+weights/
+datasets/
+!FLAME3_SUBMISSION_SOURCE_20260822/third_party/RoboFireFuseNet/datasets/
+!FLAME3_SUBMISSION_SOURCE_20260822/third_party/RoboFireFuseNet/datasets/**
+*.pt
+*.pth
+*.onnx

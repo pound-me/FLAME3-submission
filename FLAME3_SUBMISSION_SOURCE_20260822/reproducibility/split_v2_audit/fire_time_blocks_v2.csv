@@ -1,0 +1,13 @@
+﻿time_block_id,original_block_id,split,count,empty_pseudolabel_count,start_timestamp,end_timestamp,first_sample_id,last_sample_id,boundary_reason
+0a,0,val,16,16,2022-10-25 16:53:40,2022-10-25 16:54:25,00394,00181,smaller side before the largest 199-second internal gap in original block0
+0b,0,train,62,62,2022-10-25 16:58:53,2022-10-25 17:04:36,00091,00531,larger side after the four-frame excluded boundary buffer
+0buf,0,excluded_buffer,4,4,2022-10-25 16:57:44,2022-10-25 16:58:50,00499,00028,four consecutive frames excluded after the natural 199-second gap
+1,1,train,126,0,2022-10-26 18:31:36,2022-10-26 18:44:45,00255,00031,original >300-second temporal block retained intact
+2,2,val,34,0,2022-10-26 18:59:18,2022-10-26 19:00:57,00396,00431,original >300-second temporal block retained intact
+3,3,train,16,0,2022-10-26 19:11:42,2022-10-26 19:12:34,00243,00484,original >300-second temporal block retained intact
+4,4,val,17,0,2022-10-27 15:26:44,2022-10-27 15:27:46,00289,00232,original >300-second temporal block retained intact
+5,5,train,99,0,2022-10-27 15:38:13,2022-10-27 15:43:39,00470,00303,original >300-second temporal block retained intact
+6,6,val,32,0,2022-10-27 17:10:43,2022-10-27 17:12:16,00444,00508,original >300-second temporal block retained intact
+7,7,train,106,0,2022-10-27 17:45:36,2022-10-27 17:49:59,00196,00252,original >300-second temporal block retained intact
+8,8,train,21,0,2022-10-27 19:00:13,2022-10-27 19:01:19,00107,00338,original >300-second temporal block retained intact
+9,9,test,89,2,2022-10-27 19:16:15,2022-10-27 19:23:08,00483,00526,original >300-second temporal block retained intact

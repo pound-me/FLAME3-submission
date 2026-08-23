@@ -1,0 +1,22 @@
+﻿[
+    {
+        "name":  "excluded_boundary_buffer.csv",
+        "sha256":  "5e973fdf44e351c0d95d94e7947f5dccbde54391fb3f7b40845133ed1334f597",
+        "bytes":  567
+    },
+    {
+        "name":  "fire_time_blocks_v2.csv",
+        "sha256":  "dcdbac325cb3abbf3334d3cc4c8c4409d59795aa2f379b61a904ca1006829453",
+        "bytes":  1641
+    },
+    {
+        "name":  "split_manifest.json",
+        "sha256":  "943cb012c26f34d49fec2d4a0c63d66c56a76337d3a61a9b6d7685b9f84d0036",
+        "bytes":  5576
+    },
+    {
+        "name":  "v1_to_v2_movements.csv",
+        "sha256":  "9ad2d4d00a3acbb7730139d29797f3ed37a8544d18a66bcc4af1e606b3f3abef",
+        "bytes":  11257
+    }
+]

@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "clean_confusions_exactly_match_frozen_result": true,
+  "run_count": 6,
+  "perturbation_count": 29,
+  "per_image_confusion_rows": 18618,
+  "result_sha256": "9f011a698c1355b2d0b2b9d308f201d37f76355cbbdf52a1bd8a70cc0973c369",
+  "report_sha256": "dfbc6581eff4fc82f3cf160a3f542a4e9dcf49857893129a697db23ba5efceb4",
+  "training_performed": false,
+  "threshold_tuning_performed": false,
+  "predictions_saved": false
+}

@@ -1,0 +1,59 @@
+{
+  "protocol": "flame3_test107_posthoc_strata_and_perturbation",
+  "status": "complete",
+  "nature_disclosure": "The 107-image test has already undergone frozen evaluations. This run is post-hoc descriptive analysis and robustness checking of frozen checkpoints, not a new test-selection session.",
+  "clean_equivalence": [
+    {
+      "arm": "baseline",
+      "seed": 200,
+      "ignored_auxiliary_key_count": 26,
+      "fp32_max_abs_error": 0.0,
+      "clean_confusion_exactly_matches_frozen_result": true
+    },
+    {
+      "arm": "baseline",
+      "seed": 201,
+      "ignored_auxiliary_key_count": 26,
+      "fp32_max_abs_error": 0.0,
+      "clean_confusion_exactly_matches_frozen_result": true
+    },
+    {
+      "arm": "baseline",
+      "seed": 202,
+      "ignored_auxiliary_key_count": 26,
+      "fp32_max_abs_error": 0.0,
+      "clean_confusion_exactly_matches_frozen_result": true
+    },
+    {
+      "arm": "v11",
+      "seed": 200,
+      "ignored_auxiliary_key_count": 26,
+      "fp32_max_abs_error": 0.0,
+      "clean_confusion_exactly_matches_frozen_result": true
+    },
+    {
+      "arm": "v11",
+      "seed": 201,
+      "ignored_auxiliary_key_count": 26,
+      "fp32_max_abs_error": 0.0,
+      "clean_confusion_exactly_matches_frozen_result": true
+    },
+    {
+      "arm": "v11",
+      "seed": 202,
+      "ignored_auxiliary_key_count": 26,
+      "fp32_max_abs_error": 0.0,
+      "clean_confusion_exactly_matches_frozen_result": true
+    }
+  ],
+  "run_count": 6,
+  "perturbation_count": 29,
+  "per_image_confusion_rows": 18618,
+  "strata_rows": 90,
+  "strata_aggregate_rows": 30,
+  "strata_paired_rows": 15,
+  "training_performed": false,
+  "threshold_tuning_performed": false,
+  "predictions_saved": false,
+  "method_identity_changed": false
+}

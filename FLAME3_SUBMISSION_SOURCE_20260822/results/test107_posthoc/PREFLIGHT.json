@@ -1,0 +1,76 @@
+{
+  "protocol": "flame3_test107_posthoc_strata_perturbation_preflight",
+  "status": "passed",
+  "nature_disclosure": "The 107-image test has already undergone frozen evaluations. This run is post-hoc descriptive analysis and robustness checking of frozen checkpoints, not a new test-selection session.",
+  "paths": {
+    "test_csv": {
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\data\\flame3_test_manual_threeclass_frozen_v1\\TEST107_MANUAL_THREECLASS_PORTABLE.csv",
+      "sha256": "3ebdccd489d4e71ce87c0bd6f7b75faf34cc051b89d1da137da1ac0f6b7b9355"
+    },
+    "strata": {
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\data\\flame3_test107_posthoc_20260822\\TEST107_STRATA_MANIFEST.csv",
+      "sha256": "0e6dd36bb50b81dd6de47c17a9b8041f7218f6c450e47c3503d6684ad7ff71ed"
+    },
+    "prereg": {
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\data\\flame3_test107_posthoc_20260822\\TEST107_POSTHOC_PREREGISTRATION.json",
+      "sha256": "9312759b787c5526cad63469037960ea80a0085cfbe090965d8660c9f173ea43"
+    },
+    "frozen": {
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\data\\flame3_test107_posthoc_20260822\\MANUAL_TEST107_ONCE_COMPLETE.json",
+      "sha256": "81b0c5f83328d7b646b7ca2ed74c5541e02ca6e49fcc493efee07bb22432e260"
+    }
+  },
+  "perturbation_count": 29,
+  "checkpoint_count": 6,
+  "batch_size": 4,
+  "amp": true,
+  "augment": false,
+  "checkpoints": [
+    {
+      "arm": "baseline",
+      "seed": 200,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed200\\best_S.pth",
+      "sha256": "1770dd6d94fe9bcee378c8a3674ad8dbd7feeb99b710befee6eedd060957f206",
+      "epoch": 97
+    },
+    {
+      "arm": "baseline",
+      "seed": 201,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed201\\best_S.pth",
+      "sha256": "79bf3911aba25c5d484945735b9497ebbec3813feb174efb1f47e25543356a8e",
+      "epoch": 50
+    },
+    {
+      "arm": "baseline",
+      "seed": 202,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_newlabel_baseline_v2\\flame3_fusion_newlabel_baseline_v2_30e_seed202\\best_S.pth",
+      "sha256": "b78e549e154316c404600d955b2f23af058397669fae61ddb95be33a6d2dd97f",
+      "epoch": 80
+    },
+    {
+      "arm": "v11",
+      "seed": 200,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed200\\best_S.pth",
+      "sha256": "97e9d5902da9eb8beaa240760c41aa5e68086709ced6f8cb3f6481197a4cec6f",
+      "epoch": 77
+    },
+    {
+      "arm": "v11",
+      "seed": 201,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed201\\best_S.pth",
+      "sha256": "32f7e5df88556d3efbee7227e31bfac19677691002a67c24a68e116474c799e7",
+      "epoch": 75
+    },
+    {
+      "arm": "v11",
+      "seed": 202,
+      "path": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support\\experiments\\flame3_pidnet_s_fusion_manual_smoke_v11\\flame3_fusion_manual_smoke_v11_30e_seed202\\best_S.pth",
+      "sha256": "7e92ae0686b279c9f24f11d02bd8134e62454a10d489d079eb1d86262ca022cf",
+      "epoch": 72
+    }
+  ],
+  "training_performed": false,
+  "threshold_tuning_performed": false,
+  "predictions_saved": false,
+  "method_identity_may_change": false
+}

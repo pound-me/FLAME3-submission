@@ -1,0 +1,25 @@
+{
+  "protocol": "flame3_complete_split_and_file_hash_manifest_v1",
+  "status": "complete",
+  "bundle_root_recorded_for_audit_only": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731",
+  "split_counts": {
+    "train": 493,
+    "val": 134,
+    "test107": 107
+  },
+  "dense_supervision_counts": {
+    "train": 103,
+    "val": 0,
+    "test107": 107
+  },
+  "unique_sample_count": 734,
+  "manifest_csv": "FLAME3_COMPLETE_SPLIT_AND_FILE_HASH_MANIFEST.csv",
+  "manifest_csv_sha256": "5af68328a044284433666d5ece4495f019dda28d814bda60b068988dd8579cd2",
+  "source_csv_sha256": {
+    "train": "108a73f11490b342160804838b54591667fbdb089c25d3aa90668990a14122e3",
+    "val": "c3899b01604b9c3d62cf7f6be4370d12b6f794151017bbcad27057851830b0e1",
+    "test107": "3ebdccd489d4e71ce87c0bd6f7b75faf34cc051b89d1da137da1ac0f6b7b9355"
+  },
+  "test_included": true,
+  "training_or_inference_performed": false
+}

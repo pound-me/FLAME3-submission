@@ -1,0 +1,26 @@
+{
+  "protocol": "flame3_manual_smoke_v2_paired_split_builder",
+  "status": "passed",
+  "sample_counts": {
+    "train": 493,
+    "val": 134
+  },
+  "manual_dense_train_images": 103,
+  "baseline_dense_train_images": 0,
+  "manual_validation_images_used_for_training": 0,
+  "manual_machine_fire_heat_exact_match": true,
+  "only_paired_arm_difference": "A048-A150 temperature_mask_path and dense_supervision flag",
+  "output_hashes": {
+    "baseline_newlabel_portable_train_sha256": "4c30288c2b55db40fc45372d49783ddf99928a54be1914e1da4b4adbf16b2f88",
+    "baseline_newlabel_portable_val_sha256": "0ed984673f729c0a1757526888f39ca790ff4ad3fa227d414d94847a272b4d49",
+    "manual_smoke_v1_portable_train_sha256": "cd0b869c9af65684e5bd8251c40dd4febf0583e1268ba3b656111cd4a8d7ab12",
+    "manual_smoke_v1_portable_val_sha256": "0ed984673f729c0a1757526888f39ca790ff4ad3fa227d414d94847a272b4d49",
+    "baseline_newlabel_local_train_sha256": "8a3b484da2ad419e31cb6536ab7e27586766985adc65bca2fee044f3ca8f1231",
+    "baseline_newlabel_local_val_sha256": "e4a29df92852af61bbf8d0aad02307a9a6b965e139cbfb3f56655818b54778c0",
+    "manual_smoke_v1_local_train_sha256": "b1b92a1d4d704fe332154f54d5e6cfafb1727044fe50e5be9ddd8cbaca7720ba",
+    "manual_smoke_v1_local_val_sha256": "e4a29df92852af61bbf8d0aad02307a9a6b965e139cbfb3f56655818b54778c0"
+  },
+  "machine_mask_manifest_sha256": "877862ae88c4ec637d781cd35f6d5448f1a848d84e15dc13bfa1489ae93acbf3",
+  "annotation_mask_manifest_sha256": "40831c4108ee4858e374452318239294f82da73263deeb7769ec575c116ecc3f",
+  "test_images_or_labels_read": false
+}
