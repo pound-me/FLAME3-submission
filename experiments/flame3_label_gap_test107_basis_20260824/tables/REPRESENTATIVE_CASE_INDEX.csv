@@ -1,0 +1,21 @@
+﻿category,evidence_level,rank,annotation_id,sample_key,ranking_pixels
+MANUAL_ONLY_BELOW80,direct disagreement direction,1,T106,fire/00422,17474
+MANUAL_ONLY_BELOW80,direct disagreement direction,2,T103,fire/00420,10011
+MANUAL_ONLY_BELOW80,direct disagreement direction,3,T095,fire/00584,9428
+MANUAL_ONLY_GE80,direct disagreement direction,1,T106,fire/00422,13321
+MANUAL_ONLY_GE80,direct disagreement direction,2,T047,fire/00437,8077
+MANUAL_ONLY_GE80,direct disagreement direction,3,T103,fire/00420,6684
+MACHINE_ONLY_VALID_GE80,direct disagreement direction,1,T025,fire/00483,6178
+MACHINE_ONLY_VALID_GE80,direct disagreement direction,2,T024,fire/00014,6089
+MACHINE_ONLY_VALID_GE80,direct disagreement direction,3,T033,fire/00307,4419
+MACHINE_FIRE_ON_IGNORE,direct disagreement direction,1,T061,fire/00476,3054
+MACHINE_FIRE_ON_IGNORE,direct disagreement direction,2,T076,fire/00043,1755
+MACHINE_FIRE_ON_IGNORE,direct disagreement direction,3,T022,fire/00162,647
+REFLECTION_SENSOR_PROXY,image-level proxy,1,T068,fire/00192,394
+REFLECTION_SENSOR_PROXY,image-level proxy,2,T031,fire/00082,266
+THIN_SMOKE_TRANSITION_PROXY,image-level proxy,1,T025,fire/00483,6261
+THIN_SMOKE_TRANSITION_PROXY,image-level proxy,2,T024,fire/00014,6175
+THIN_SMOKE_TRANSITION_PROXY,image-level proxy,3,T033,fire/00307,4537
+REGISTRATION_HEAT_LEAK,unavailable,,,,
+OTHER_EXCEPTION,unavailable,,,,
+RESIDUAL_HEAT_HOT_GROUND_UNRELATED_HEAT,unavailable,,,,

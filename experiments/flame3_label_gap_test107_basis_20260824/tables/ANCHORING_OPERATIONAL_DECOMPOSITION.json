@@ -1,0 +1,20 @@
+{
+  "raw_gap": 0.573385317961957,
+  "controlled_combined_gap": 0.5985694004828039,
+  "composition_associated_gap_change": -0.025184082520846918,
+  "composition_associated_share_of_raw_gap": -0.04392174290468636,
+  "residual_association_with_anchoring_share_of_raw_gap": 1.0439217429046863,
+  "point_multiplier_aggregate_iou": 3.7392458398022836,
+  "controlled_multiplier_matched_per_image_mean": 3.5818200969749534,
+  "causal_warning": "Operational decomposition only. Collection remains confounded with anchoring; the residual is composition-adjusted association, not identified causal anchoring effect.",
+  "temperature_quartile_edges_c": [
+    171.1078987121582,
+    183.3380584716797,
+    204.2884292602539
+  ],
+  "area_quantile_edges_ratio": [
+    0.001763916015625,
+    0.006787109375,
+    0.015235137939453124
+  ]
+}

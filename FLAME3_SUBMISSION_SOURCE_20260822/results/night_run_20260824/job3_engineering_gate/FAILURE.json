@@ -1,0 +1,17 @@
+{
+  "status": "self_check_failed",
+  "failed_job": "Job 3",
+  "stop_job4": true,
+  "error_type": "AssertionError",
+  "error": "Ignore pixels changed full training loss: 2.200896978378296 != 2.222754716873169",
+  "timestamp": "2026-08-24T17:37:39+08:00",
+  "results_before_failure": [],
+  "openmmlab_environment": {
+    "mmsegmentation_version": "1.2.2",
+    "mmsegmentation_root": "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\project_support_night_20260824\\.deps\\mmseg",
+    "mmcv_version": "2.1.0",
+    "mmengine_version": "0.10.7",
+    "loader": "targeted_official_backbones_without_package_wide_ops_import",
+    "compiled_mmcv_ops_required": false
+  }
+}

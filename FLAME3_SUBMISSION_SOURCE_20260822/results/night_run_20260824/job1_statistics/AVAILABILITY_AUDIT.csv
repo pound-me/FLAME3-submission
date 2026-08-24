@@ -1,0 +1,6 @@
+﻿claim,seed_paired_statistics,image_bootstrap,reason
+C-A,complete,unavailable,C per-image metrics not saved
+D-C,complete,unavailable,C per-image metrics not saved
+v1.1-baseline val47,complete,complete,47 paired images x 3 seeds
+v1.1-baseline FLAME2,complete,complete,200 paired images x 3 seeds
+v1.1-baseline test107,complete,complete,"107 saved per-image confusion rows x 3 seeds; no image, mask, or prediction file opened"

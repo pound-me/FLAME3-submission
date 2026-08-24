@@ -1,0 +1,4 @@
+﻿arm,frozen_test107_human_fire_iou,machine_label_reproduction_level,absolute_excess_over_reproduction_level,relative_excess_over_reproduction_level,machine_endpoint_iou,lower_bound,upper_bound,observed_baseline_inside_bound
+baseline,0.297684,0.23409278627973235,0.06359121372026766,0.27164960839194113,,,,
+v1.1,0.287545,0.23409278627973235,0.05345221372026765,0.22833772270280128,,,,
+Jaccard metric bound for model-human IoU,,0.23409278627973235,,,0.689,0.0,0.5450927862797323,True

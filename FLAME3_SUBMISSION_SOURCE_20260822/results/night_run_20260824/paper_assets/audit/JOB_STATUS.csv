@@ -1,0 +1,7 @@
+﻿job,status,plot_state,evidence
+Job 0,complete_continue_allowed,complete,case2_test107_consistency_low_with_no_large_geometric_offset; stop_required=false
+Job 1,complete,complete,"10,000 image bootstrap replicates; paired seed tests; C-A and D-C image CI unavailable"
+Job 2,complete_with_recorded_missing_seed,complete,Fusion/RGB-only/Thermal-only complete seeds 3/3/2; Thermal seed 201 failed reproducibly
+Job 3,self_check_failed,stopped,Ignore pixels changed full training loss: 2.200896978378296 != 2.222754716873169
+Job 4,not_started_due_job3_failure,not_started,Job 3 stop_job4=true; no job4_allowed audit
+Job 5,complete,complete,Frozen tables and vector figures generated; no training or inference

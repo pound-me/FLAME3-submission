@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\qianpengcheng\7.31\flame3_4090_bundle_v1_20260731\project_support_night_20260824\job3_engineering_gate.py", line 541, in <module>
+    main()
+  File "D:\qianpengcheng\7.31\flame3_4090_bundle_v1_20260731\project_support_night_20260824\job3_engineering_gate.py", line 492, in main
+    result = run_network(
+             ^^^^^^^^^^^^
+  File "D:\qianpengcheng\7.31\flame3_4090_bundle_v1_20260731\project_support_night_20260824\job3_engineering_gate.py", line 327, in run_network
+    assert_full_ignore_excluded(criterion, outputs, labels, edges, flags, dense)
+  File "D:\qianpengcheng\7.31\flame3_4090_bundle_v1_20260731\project_support_night_20260824\job3_engineering_gate.py", line 247, in assert_full_ignore_excluded
+    raise AssertionError(
+AssertionError: Ignore pixels changed full training loss: 2.200896978378296 != 2.222754716873169

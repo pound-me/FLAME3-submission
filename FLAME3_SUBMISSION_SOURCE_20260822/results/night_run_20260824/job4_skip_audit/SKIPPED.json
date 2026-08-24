@@ -1,0 +1,13 @@
+{
+    "status":  "not_started_due_job3_failure",
+    "timestamp":  "2026-08-24T18:16:48.4230034+08:00",
+    "job3_status":  "self_check_failed",
+    "job3_error":  "Ignore pixels changed full training loss: 2.200896978378296 != 2.222754716873169",
+    "job3_stop_job4":  true,
+    "job3_completion_audit_exists":  false,
+    "job4_allowed":  false,
+    "job4_training_processes":  0,
+    "job4_experiment_directories":  0,
+    "training_runs":  0,
+    "inference_runs":  0
+}

@@ -1,0 +1,20 @@
+{
+  "count": 107,
+  "mean": 0.18850549274199102,
+  "median": 0.17766219545578976,
+  "p05": 0.0,
+  "p25": 0.03939587208482752,
+  "p75": 0.31237730949961307,
+  "p95": 0.41713365617038545,
+  "minimum": 0.0,
+  "maximum": 0.5660405937594668,
+  "aggregate_iou": 0.23409278627973235,
+  "intersection": 126121,
+  "union": 538765,
+  "image_count": 107,
+  "defined_nonempty_image_count": 89,
+  "empty_empty_image_count": 18,
+  "defined_only_mean": 0.22663019913924762,
+  "defined_only_median": 0.2339640865785661,
+  "empty_empty_rule": "IoU=0 for all-image mean/median; omitted only from explicitly named defined-only summaries"
+}

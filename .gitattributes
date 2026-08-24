@@ -1,0 +1,4 @@
+README.md text eol=lf
+docs/** text eol=lf
+experiments/flame3_label_gap_test107_basis_20260824/** text eol=lf
+*.png binary

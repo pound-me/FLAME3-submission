@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="100%" height="100%" fill="white"/>
+<text x="90" y="32" font-family="Arial" font-size="22" font-weight="700" fill="#18202b">Saved test107 thermal shift robustness (post-hoc descriptive)</text>
+<rect x="90" y="92" width="975" height="446" fill="none" stroke="#333"/>
+<line x1="90" y1="538.0" x2="1065" y2="538.0" stroke="#e1e4e8"/>
+<text x="18" y="543.0" font-family="Arial" font-size="13" fill="#444">-0.037</text>
+<line x1="90" y1="448.8" x2="1065" y2="448.8" stroke="#e1e4e8"/>
+<text x="18" y="453.8" font-family="Arial" font-size="13" fill="#444">0.071</text>
+<line x1="90" y1="359.6" x2="1065" y2="359.6" stroke="#e1e4e8"/>
+<text x="18" y="364.6" font-family="Arial" font-size="13" fill="#444">0.179</text>
+<line x1="90" y1="270.4" x2="1065" y2="270.4" stroke="#e1e4e8"/>
+<text x="18" y="275.4" font-family="Arial" font-size="13" fill="#444">0.287</text>
+<line x1="90" y1="181.2" x2="1065" y2="181.2" stroke="#e1e4e8"/>
+<text x="18" y="186.2" font-family="Arial" font-size="13" fill="#444">0.394</text>
+<line x1="90" y1="92.0" x2="1065" y2="92.0" stroke="#e1e4e8"/>
+<text x="18" y="97.0" font-family="Arial" font-size="13" fill="#444">0.502</text>
+<line x1="90.0" y1="538" x2="90.0" y2="545" stroke="#333"/>
+<text x="78.0" y="563" font-family="Arial" font-size="12" fill="#444">0</text>
+<line x1="333.8" y1="538" x2="333.8" y2="545" stroke="#333"/>
+<text x="321.8" y="563" font-family="Arial" font-size="12" fill="#444">1</text>
+<line x1="577.5" y1="538" x2="577.5" y2="545" stroke="#333"/>
+<text x="565.5" y="563" font-family="Arial" font-size="12" fill="#444">2</text>
+<line x1="1065.0" y1="538" x2="1065.0" y2="545" stroke="#333"/>
+<text x="1053.0" y="563" font-family="Arial" font-size="12" fill="#444">4</text>
+<polyline points="90.0,213.1 333.8,213.7 577.5,216.0 1065.0,224.6" fill="none" stroke="#c84d35" stroke-width="3"/>
+<circle cx="90.0" cy="213.1" r="4" fill="#c84d35"/>
+<circle cx="333.8" cy="213.7" r="4" fill="#c84d35"/>
+<circle cx="577.5" cy="216.0" r="4" fill="#c84d35"/>
+<circle cx="1065.0" cy="224.6" r="4" fill="#c84d35"/>
+<polyline points="90.0,122.8 333.8,123.3 577.5,125.2 1065.0,133.7" fill="none" stroke="#26769a" stroke-width="3"/>
+<circle cx="90.0" cy="122.8" r="4" fill="#26769a"/>
+<circle cx="333.8" cy="123.3" r="4" fill="#26769a"/>
+<circle cx="577.5" cy="125.2" r="4" fill="#26769a"/>
+<circle cx="1065.0" cy="133.7" r="4" fill="#26769a"/>
+<line x1="90" y1="66" x2="122" y2="66" stroke="#c84d35" stroke-width="4"/>
+<text x="130" y="71" font-family="Arial" font-size="13" fill="#333">baseline</text>
+<line x1="315" y1="66" x2="347" y2="66" stroke="#26769a" stroke-width="4"/>
+<text x="355" y="71" font-family="Arial" font-size="13" fill="#333">v1.1</text>
+<text x="90" y="595" font-family="Arial" font-size="15" fill="#333">Thermal shift pixels</text>
+<text x="20" y="310.0" transform="rotate(-90 20 310.0)" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">Equal Fire/Smoke S</text>
+</svg>

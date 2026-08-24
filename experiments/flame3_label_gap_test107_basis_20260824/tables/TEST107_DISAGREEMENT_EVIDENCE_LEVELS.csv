@@ -1,0 +1,9 @@
+﻿category,source_field,evidence_level,image_count,machine_only_valid_pixels_on_flagged_images,pixel_cause_fraction_allowed,overlap_warning,representative_ids
+manual_only_valid,pixel comparison,direct,87,,True,,
+machine_only_valid,pixel comparison,direct,85,79208,True,"Disagreement direction, not visual cause.",
+machine_fire_on_manual_ignore,pixel comparison,direct,31,9001,True,Excluded from valid false positives.,
+reflection_or_sensor_artifact,reflection_or_sensor_artifact,image-level proxy,2,660,False,Flagged-image pixels overlap other categories and are not cause ROIs.,T068;T031
+registration_heat_leak,registration_heat_leak,image-level proxy,0,0,False,Flagged-image pixels overlap other categories and are not cause ROIs.,
+thin_smoke_or_transition_ignore_present,thin_smoke_or_transition_ignore_present,image-level proxy,77,71457,False,Flagged-image pixels overlap other categories and are not cause ROIs.,T025;T024;T033
+other_exception,other_exception,image-level proxy,0,0,False,Flagged-image pixels overlap other categories and are not cause ROIs.,
+residual_heat_hot_ground_unrelated_heat,none,unavailable,0,,False,No frozen test107 field or pixel ROI.,
