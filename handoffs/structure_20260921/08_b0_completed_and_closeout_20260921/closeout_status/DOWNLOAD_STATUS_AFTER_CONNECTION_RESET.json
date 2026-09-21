@@ -1,0 +1,8 @@
+{
+    "at":  "2026-09-21T20:58:31.1266412+08:00",
+    "complete_candidate_preserved":  false,
+    "error":  "SSH slice receiver failed with exit code 255",
+    "remainder_preserved":  true,
+    "status":  "FAILED",
+    "partial_preserved":  true
+}

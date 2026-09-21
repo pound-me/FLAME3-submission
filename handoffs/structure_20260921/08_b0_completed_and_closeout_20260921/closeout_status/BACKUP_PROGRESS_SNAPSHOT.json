@@ -1,0 +1,14 @@
+{
+    "at":  "2026-09-21T21:00:09.0428872+08:00",
+    "receiver_running":  false,
+    "partial_bytes":  43876352,
+    "remainder_bytes":  86982656,
+    "combined_bytes":  130859008,
+    "expected_bytes":  8182829077,
+    "percent":  1.5992,
+    "full_off_machine_verified":  false,
+    "B0_increment_start_confirmed":  false,
+    "test107_read":  false,
+    "transport_status":  "FAILED_CONNECTION_RESET",
+    "last_error":  "SSH exit code 255; all partial files preserved"
+}

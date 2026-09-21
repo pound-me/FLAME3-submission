@@ -1,0 +1,42 @@
+{
+  "status": "COMPLETE_30_EPOCHS",
+  "arm": "B0",
+  "seed": 200,
+  "epochs": 30,
+  "descriptive": {
+    "window_epochs": [
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "window_means": {
+      "smoke_iou_A001_A047": 0.681498408832834,
+      "background_iou_A001_A047": 0.8457887605464887,
+      "three_class_miou_A001_A047": 0.7578524747703924,
+      "no_fire_joint_false_positive_ratio": 0.00022028459821428573,
+      "selection_score_S": 0.7143241567509746,
+      "fire_heat_iou_full134": 0.7471499046691152
+    },
+    "best_S_record_only": {
+      "epoch": 29,
+      "value": 0.7417581790440619
+    },
+    "passed": null,
+    "decision": "PENDING_STAGE3_PAIRED_SMOKE_AND_ROBUSTNESS",
+    "S_used_for_decision": false,
+    "Fire_used_for_positive_decision": false
+  },
+  "input_hashes_unchanged": true,
+  "test107_read": false,
+  "checkpoint_sha256": {
+    "epoch26.pth": "EC555B984F777673E1C2D960FACE0997873DE91C141C159AA1D2670CEB97DE9F",
+    "epoch27.pth": "21430D7D3D43B26B4597059F1FFF4368433A2F8078A2471240A7E925E0EE0416",
+    "epoch28.pth": "7D7E96142A7CD06D4586B0D7AC97908BA0F37122BD89AACAA6AB5F2FEF4617D2",
+    "epoch29.pth": "8D7AD23BF508CCED6759A02E593CE15E2EC49D97EDE5D1709FD8A7D6CB6EF6BC",
+    "epoch30.pth": "1BB0F57986261F8E3EEF28ADBFD6CDC04190B6194B7C085DFF78DA6E119BFC28",
+    "last.pth": "1BB0F57986261F8E3EEF28ADBFD6CDC04190B6194B7C085DFF78DA6E119BFC28"
+  },
+  "stage3_automatically_started": false
+}

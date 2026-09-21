@@ -1,0 +1,12 @@
+{
+    "status":  "BACKUP_RESUME_LAUNCHED",
+    "at":  "2026-09-21T20:41:17.6127399+08:00",
+    "pid":  14848,
+    "script":  "C:\\Users\\钱鹏程QQ78293044\\Documents\\Codex\\2026-08-23\\xi\\scripts\\resume_flame3_backup_via_ssh_stream_20260921.ps1",
+    "script_sha256":  "17C1CF9324957EDA78914F6BC4AE0A692783EDA77ED26C59AB205E173EC9590F",
+    "stdout":  "C:\\Users\\钱鹏程QQ78293044\\Documents\\Codex\\2026-08-23\\xi\\backups\\flame3_4090_preservation_20260921\\ssh_stream_resume_20260921_204117.stdout.log",
+    "stderr":  "C:\\Users\\钱鹏程QQ78293044\\Documents\\Codex\\2026-08-23\\xi\\backups\\flame3_4090_preservation_20260921\\ssh_stream_resume_20260921_204117.stderr.log",
+    "new_training":  false,
+    "rate_limit":  "4 MiB/s",
+    "preserved_prefix_bytes":  105963520
+}

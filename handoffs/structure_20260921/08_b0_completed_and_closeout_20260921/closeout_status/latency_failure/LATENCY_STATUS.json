@@ -1,0 +1,132 @@
+{
+  "status": "WAITING_GPU_IDLE",
+  "snapshot": {
+    "gpu": "2 %, 2217 MiB, 40, 2550 MHz, 63.15 W",
+    "compute_pids": "3972\n10988\n12232\n12256\n14652\n14420\n22056\n15416\n3980\n25392\n23660\n23004\n21968\n27088\n33516\n34236\n47144\n59480\n40028\n55004\n4\n10188\n41388\n7440\n52576\n87036\n84612",
+    "wddm_activity": {
+      "utilization_percent": 2.0,
+      "memory_used_mib": 2217.0,
+      "processes": {
+        "3972": "dwm.exe",
+        "10988": "explorer.exe",
+        "12232": "SearchHost.exe",
+        "12256": "StartMenuExperienceHost.exe",
+        "14652": "TabTip.exe",
+        "14420": "TextInputHost.exe",
+        "22056": "msedgewebview2.exe",
+        "15416": "ShellExperienceHost.exe",
+        "3980": "msedgewebview2.exe",
+        "25392": "PhoneExperienceHost.exe",
+        "23660": "SnippingTool.exe",
+        "23004": "SnippingTool.exe",
+        "21968": "SnippingTool.exe",
+        "27088": "BaiduNetdiskUnite.exe",
+        "33516": "msedgewebview2.exe",
+        "34236": "idlrt.exe",
+        "47144": "msedge.exe",
+        "59480": "msedge.exe",
+        "40028": "CleverGet.exe",
+        "55004": "promecefpluginhost.exe",
+        "4": "System.exe",
+        "10188": "360se.exe",
+        "41388": "360se.exe",
+        "7440": "GameViewerServer.exe",
+        "52576": "MATLABWebUI.exe",
+        "87036": "MATLAB.exe",
+        "84612": "SunloginClient.exe"
+      },
+      "engines": [
+        {
+          "pid": 22056,
+          "engine": "pid_22056_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 0.042370141692408714
+        },
+        {
+          "pid": 3972,
+          "engine": "pid_3972_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 0.6901859972509718
+        },
+        {
+          "pid": 3980,
+          "engine": "pid_3980_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 0.115250172623708
+        },
+        {
+          "pid": 84612,
+          "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 16.06452017184365
+        },
+        {
+          "pid": 84612,
+          "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_6_engtype_videoencode",
+          "percent": 1.6270612605699957
+        },
+        {
+          "pid": 84612,
+          "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_7_engtype_videoencode",
+          "percent": 1.7365083277303062
+        },
+        {
+          "pid": 22056,
+          "engine": "pid_22056_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 0.03942807471996955
+        },
+        {
+          "pid": 3972,
+          "engine": "pid_3972_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 0.6330557885831662
+        },
+        {
+          "pid": 3980,
+          "engine": "pid_3980_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 0.1121274354778397
+        },
+        {
+          "pid": 84612,
+          "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 11.627799762712439
+        },
+        {
+          "pid": 84612,
+          "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_6_engtype_videoencode",
+          "percent": 1.6096406839019972
+        },
+        {
+          "pid": 84612,
+          "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_7_engtype_videoencode",
+          "percent": 1.6089264964148773
+        },
+        {
+          "pid": 22056,
+          "engine": "pid_22056_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 0.04190247057085767
+        },
+        {
+          "pid": 3972,
+          "engine": "pid_3972_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 0.6719454535297575
+        },
+        {
+          "pid": 3980,
+          "engine": "pid_3980_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 0.11187079944009433
+        },
+        {
+          "pid": 84612,
+          "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+          "percent": 8.997068268373818
+        },
+        {
+          "pid": 84612,
+          "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_6_engtype_videoencode",
+          "percent": 1.6221936875227754
+        },
+        {
+          "pid": 84612,
+          "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_7_engtype_videoencode",
+          "percent": 1.62319266707262
+        }
+      ]
+    }
+  }
+}

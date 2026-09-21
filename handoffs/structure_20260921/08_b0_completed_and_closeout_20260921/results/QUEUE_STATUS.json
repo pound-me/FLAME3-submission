@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETE_B0_TRAINING_AND_EVALUATION",
+  "pid": 12372,
+  "seeds": [
+    200,
+    201,
+    202
+  ],
+  "completed": [
+    200,
+    201,
+    202
+  ],
+  "started_unix": 1789986733.893162,
+  "test107_read": false,
+  "other_arm_training": false,
+  "scheduling_amendment_sha256": "A501B8BE05756E313EA01766B0E475C944B5EA8CAB13D73B687D940265D99D43",
+  "updated_unix": 1789989317.3116543,
+  "admission_stable_seconds": 74.18700000015087,
+  "current_seed": null,
+  "finished_unix": 1789989841.8158963,
+  "latency_status": "WAITING_WINDOWS_IDLE_TASK"
+}

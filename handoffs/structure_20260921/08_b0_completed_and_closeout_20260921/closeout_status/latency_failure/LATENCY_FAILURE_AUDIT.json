@@ -1,0 +1,22 @@
+{
+    "at":  "2026-09-21T20:55:49.0464080+08:00",
+    "task_state":  "Disabled",
+    "report_exists":  false,
+    "lock_exists":  false,
+    "automatic_retry":  false,
+    "formal_result_eligible":  false,
+    "artifacts":  [
+                      {
+                          "name":  "LATENCY_FAILURE.json",
+                          "sha256":  "50D94209610AEC1CBF5271E2E102BC89FBD3792970F87E0C4085E694B9E22021"
+                      },
+                      {
+                          "name":  "LATENCY_ATTEMPT.json",
+                          "sha256":  "6A03B494782EA0EA3CA0A253AE671AA5FFDBE61089378539B66B0E47CED1E7BF"
+                      },
+                      {
+                          "name":  "LATENCY_STATUS.json",
+                          "sha256":  "9D44B9D883007C0A1AD78F2B6470D74094B594F41E50799B9704288A961B4EAF"
+                      }
+                  ]
+}

@@ -1,0 +1,69 @@
+{
+    "at":  "2026-09-21T20:43:48.1084444+08:00",
+    "original_source_files":  38,
+    "original_source_mismatches":  [
+
+                                   ],
+    "scheduler_v4_files":  6,
+    "scheduler_v4_mismatches":  [
+
+                                ],
+    "latency_task":  {
+                         "state":  "Ready",
+                         "run_only_if_idle":  true,
+                         "idle_duration":  "PT10M",
+                         "stop_on_idle_end":  true,
+                         "last_run":  "2026-09-21T19:29:29.0000000+08:00",
+                         "last_result":  0,
+                         "next_run":  "2026-09-21T20:44:44.0000000+08:00"
+                     },
+    "test107_read":  false,
+    "new_training_started":  false,
+    "artifacts":  [
+                      {
+                          "name":  "BASELINE_WINDOW_REPORT.json",
+                          "bytes":  96123,
+                          "sha256":  "FFD35053826DC57B27930C0B58C4D8BB32D2CAACF2B22296088A0FB8D998D34C"
+                      },
+                      {
+                          "name":  "QUEUE_STATUS.json",
+                          "bytes":  578,
+                          "sha256":  "06DC324B1DEFB270EB14429F1A69B91EE017D4544F07B71B5C76305D1547E3F9"
+                      },
+                      {
+                          "name":  "EVALUATION_STATUS.json",
+                          "bytes":  142,
+                          "sha256":  "689D898DF17799C923FC6F6035FDECCF7323AE9E2C30940399106B1D562C8793"
+                      },
+                      {
+                          "name":  "LATENCY_STATUS.json",
+                          "bytes":  4649,
+                          "sha256":  "9D44B9D883007C0A1AD78F2B6470D74094B594F41E50799B9704288A961B4EAF"
+                      },
+                      {
+                          "name":  "ACTIVE_USE_PAUSE_AFTER_EVALUATION_20260921.json",
+                          "bytes":  331,
+                          "sha256":  "3687203BDB27F98AB3CF6C7F04D0FF3116F2F37221A8F3622D30B6FFC8024140"
+                      },
+                      {
+                          "name":  "REMOTE_BACKUP_STATUS.json",
+                          "bytes":  746,
+                          "sha256":  "B56B71677A318DA8B5814D09D690174ED61551DEA09B8B10A091F8BB836E774F"
+                      },
+                      {
+                          "name":  "B0_seed200_RESULT.json",
+                          "bytes":  1477,
+                          "sha256":  "3A99DEEFE7EDE2A1C2A77739281011CCB36FF82785BA6A18BD9C2912E8AFD1C6"
+                      },
+                      {
+                          "name":  "B0_seed201_RESULT.json",
+                          "bytes":  1468,
+                          "sha256":  "DEF0335176CE35CED3E96C6698D8EF154CABD41E32D82DE2D46CEF2A23B78D6B"
+                      },
+                      {
+                          "name":  "B0_seed202_RESULT.json",
+                          "bytes":  1478,
+                          "sha256":  "8948DE4009CE44B4C925F439394C5CB47EDC4FC589F214FDCE5A0651775074BC"
+                      }
+                  ]
+}

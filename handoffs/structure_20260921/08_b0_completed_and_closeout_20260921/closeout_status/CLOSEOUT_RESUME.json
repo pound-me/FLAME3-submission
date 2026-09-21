@@ -1,0 +1,18 @@
+{
+    "record":  {
+                   "status":  "LATENCY_IDLE_TASK_REENABLED",
+                   "at":  "2026-09-21T20:38:20.4249625+08:00",
+                   "task_name":  "FLAME3_B0_E1_Idle_Latency_20260921",
+                   "user_authorized_resume":  true,
+                   "training_restarted":  false,
+                   "strict_idle_minutes":  10,
+                   "stop_on_idle_end":  true,
+                   "automatic_retry_after_measurement_attempt":  false,
+                   "thresholds_changed":  false,
+                   "external_processes_stopped":  false,
+                   "test107_read":  false
+               },
+    "record_path":  "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\flame3_baseline_replay_20260921_v1\\CLOSEOUT_RESUME_20260921_203820.json",
+    "task_state":  "Ready",
+    "next_run":  "2026-09-21T20:44:44.0000000+08:00"
+}

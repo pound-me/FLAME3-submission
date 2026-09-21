@@ -4,6 +4,11 @@ Package date: 2026-09-21
 
 Live status entry: [`../../CURRENT_STATUS.md`](../../CURRENT_STATUS.md).
 
+Latest addition: [`08_b0_completed_and_closeout_20260921/README.md`](08_b0_completed_and_closeout_20260921/README.md).
+Read it first: B0 replay and evaluation are now complete, historical recovery
+failed, and the formal-latency attempt failed its occupancy monitoring. The
+18:05 waiting snapshot retained below is historical, not the current state.
+
 Covered work: 2026-09-17 through 2026-09-19 network-structure screening, engineering gates, Stage 2 training records, Stage 3 read-only evaluation, and the final twelve-arm/three-axis summary.
 
 ## Read in this order
@@ -51,11 +56,13 @@ Use `03_evidence` when checking exact numerical values and hashes. Use `04_arm_d
 - `05_code`: architecture implementation, engineering checks, Stage 2/3 runners, tests, and unified-report builder.
 - `06_baseline_replay_authorized_20260921`: frozen B0 replay package and WDDM scheduling amendment.
 - `07_current_status_snapshot_20260921`: exact remote queue, backup and scheduler status files.
+- `08_b0_completed_and_closeout_20260921`: completed B0 report/results, final v4 scheduler, latency failure audit, and backup resumption evidence.
 - `FILE_SHA256.csv`: original 2026-09-19 result-package integrity manifest.
 - `FILE_SHA256_20260921.csv`: refreshed manifest covering the complete current handoff.
 
 ## Recommended next decision
 
-Wait for the B0 replay and fixed evaluation window before revisiting formal
-robustness. Do not describe any tested arm as a confirmed accuracy or robustness
-improvement, and do not start S2/S5/S7/S8 or redesign training automatically.
+The B0 replay is complete but did not recover historical metrics. Keep the new
+pairing descriptive and review provenance before deciding on any new experiment.
+Do not describe any tested arm as a confirmed accuracy or robustness improvement,
+and do not start S2/S5/S7/S8 or redesign training automatically.

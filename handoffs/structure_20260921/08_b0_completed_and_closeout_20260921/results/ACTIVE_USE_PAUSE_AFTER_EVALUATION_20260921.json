@@ -1,0 +1,10 @@
+{
+    "status":  "PAUSED_FOR_ACTIVE_MACHINE_USE",
+    "at":  "2026-09-21T19:35:12.7560069+08:00",
+    "training_and_evaluation_complete":  true,
+    "latency_task_disabled":  true,
+    "latency_completed":  false,
+    "off_machine_sender_stopped":  true,
+    "other_processes_stopped":  false,
+    "test107_read":  false
+}
