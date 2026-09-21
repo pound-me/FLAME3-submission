@@ -1,0 +1,24 @@
+{
+    "status":  "HELD_BEFORE_TRAINING_FOR_ACTIVE_MACHINE_USE",
+    "at":  "2026-09-21T17:41:11.1661170+08:00",
+    "previous_queue_status":  {
+                                  "status":  "WAITING_GPU",
+                                  "pid":  43788,
+                                  "seeds":  [
+                                                200,
+                                                201,
+                                                202
+                                            ],
+                                  "completed":  [
+
+                                                ],
+                                  "started_unix":  1789982683.0349755,
+                                  "test107_read":  false,
+                                  "other_arm_training":  false,
+                                  "updated_unix":  1789983644.5356529
+                              },
+    "reason":  "User reports someone is using the computer; assistant holds its unstarted queue to avoid automatic launch.",
+    "training_started":  false,
+    "others_stopped":  false,
+    "resume_requires_confirmation":  true
+}

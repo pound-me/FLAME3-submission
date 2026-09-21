@@ -1,0 +1,18 @@
+{
+  "arm": "S3",
+  "site": "layer4[1]",
+  "status": "DESIGN_ONLY_PENDING_APPROVAL",
+  "old_target_parameters": 1180672,
+  "new_target_deploy_parameters": 1022208,
+  "delta_deploy_parameters": -158464,
+  "estimated_deploy_parameters": 7465475,
+  "delta_training_parameters": -158464,
+  "estimated_training_parameters": 7558631,
+  "delta_conv_matmul_gmacs": -0.05095424,
+  "estimated_total_gmacs_proxy": 7.419959808,
+  "proxy_change_percent": -0.6820348845218036,
+  "train_forward_delta_conv_matmul_gmacs": -0.05095424,
+  "under_rounded_cap_proxy": true,
+  "p95_ms": null,
+  "peak_vram_mb": null
+}

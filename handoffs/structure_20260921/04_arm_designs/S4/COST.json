@@ -1,0 +1,18 @@
+{
+  "arm": "S4",
+  "site": "layer3[1]",
+  "status": "DESIGN_ONLY_PENDING_APPROVAL",
+  "old_target_parameters": 295424,
+  "new_target_deploy_parameters": 32544,
+  "delta_deploy_parameters": -262880,
+  "estimated_deploy_parameters": 7361059,
+  "delta_training_parameters": -262880,
+  "estimated_training_parameters": 7454215,
+  "delta_conv_matmul_gmacs": -0.3364864,
+  "estimated_total_gmacs_proxy": 7.134427648,
+  "proxy_change_percent": -4.503952231789884,
+  "train_forward_delta_conv_matmul_gmacs": -0.3364864,
+  "under_rounded_cap_proxy": true,
+  "p95_ms": null,
+  "peak_vram_mb": null
+}

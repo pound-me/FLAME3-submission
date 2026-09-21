@@ -1,0 +1,14 @@
+{
+  "status": "WAITING_GPU",
+  "pid": 43788,
+  "seeds": [
+    200,
+    201,
+    202
+  ],
+  "completed": [],
+  "started_unix": 1789982683.0349755,
+  "test107_read": false,
+  "other_arm_training": false,
+  "updated_unix": 1789983644.5356529
+}

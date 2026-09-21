@@ -1,0 +1,19 @@
+{
+  "status": "REMOTE_BACKUP_VERIFIED",
+  "pid": 85132,
+  "files": 1458,
+  "bytes": 8809315756,
+  "destination": "E:\\FLAME3_BACKUPS\\structure_20260921_v1",
+  "completed": 1458,
+  "test107_read": false,
+  "dataset_read": false,
+  "current": "weights/PIDNet_S_ImageNet.pth.tar",
+  "updated_unix": 1789981715.2682948,
+  "verified_files": 1458,
+  "archive": "E:\\FLAME3_BACKUPS\\structure_20260921_v1\\FLAME3_CHECKPOINT_BACKUP_20260921.zip",
+  "archive_sha256": "08459837EE608B5D35AF26C5D434A2B26E66083B950C53E7395370D2F183108D",
+  "archive_bytes": 8182829077,
+  "manifest_sha256": "2843E15D28597C73ADDDD3D795D936301781E2846928E081E14E4B22DF27479E",
+  "finished_unix": 1789982400.487372,
+  "off_machine_backup_verified": false
+}

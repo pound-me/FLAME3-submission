@@ -1,0 +1,1442 @@
+{
+  "protocol": "flame3_append_stage3_and_2x2_20260919_v1",
+  "status": "COMPLETE_S1_R2_R3_9_RUNS_THREE_AXES_REPORTED",
+  "baseline_clean_epoch26_30": {
+    "200": {
+      "background_iou_A001_A047": 0.8531487053987833,
+      "smoke_iou_A001_A047": 0.7005964004049379,
+      "fire_heat_iou_A001_A047_record_only": 0.7357213856620967,
+      "three_class_miou_A001_A047_record_only": 0.7631554971552725,
+      "selection_score_S_record_only": 0.7160287729082976,
+      "fire_heat_iou_full134_record_only": 0.7314611454116572,
+      "no_fire_joint_false_positive_ratio": 0.00011523437500000002,
+      "smoke_precision_A001_A047": 0.7574628935523184,
+      "smoke_recall_A001_A047": 0.9035760192478823
+    },
+    "201": {
+      "background_iou_A001_A047": 0.8570898665691848,
+      "smoke_iou_A001_A047": 0.7028778687167248,
+      "fire_heat_iou_A001_A047_record_only": 0.7953173978459949,
+      "three_class_miou_A001_A047_record_only": 0.7850950443773014,
+      "selection_score_S_record_only": 0.7509638374725439,
+      "fire_heat_iou_full134_record_only": 0.7990498062283631,
+      "no_fire_joint_false_positive_ratio": 0.0017381243024553572,
+      "smoke_precision_A001_A047": 0.765766961252853,
+      "smoke_recall_A001_A047": 0.894818413495632
+    },
+    "202": {
+      "background_iou_A001_A047": 0.8589591820445349,
+      "smoke_iou_A001_A047": 0.6967310784759693,
+      "fire_heat_iou_A001_A047_record_only": 0.709484887334218,
+      "three_class_miou_A001_A047_record_only": 0.7550583826182407,
+      "selection_score_S_record_only": 0.6998385907765997,
+      "fire_heat_iou_full134_record_only": 0.7029461030772304,
+      "no_fire_joint_false_positive_ratio": 7.48814174107143e-05,
+      "smoke_precision_A001_A047": 0.7850847044199765,
+      "smoke_recall_A001_A047": 0.8609933221415502
+    }
+  },
+  "baseline_robust_epoch100_context_only": {
+    "200": {
+      "clean": {
+        "background_iou_A001_A047": 0.8765574434096083,
+        "smoke_iou_A001_A047": 0.7326893544154132,
+        "fire_heat_iou_A001_A047_record_only": 0.8323990671601874,
+        "three_class_miou_A001_A047_record_only": 0.8138819549950695,
+        "selection_score_S_record_only": 0.7907954409386133,
+        "fire_heat_iou_full134_record_only": 0.8489015274618135,
+        "no_fire_joint_false_positive_ratio": 1.918247767857143e-06,
+        "smoke_precision_A001_A047": 0.7954564456600934,
+        "smoke_recall_A001_A047": 0.9027755480447516
+      },
+      "thermal_noise_002": {
+        "background_iou_A001_A047": 0.8600247731454607,
+        "smoke_iou_A001_A047": 0.6764245389872071,
+        "fire_heat_iou_A001_A047_record_only": 0.8304610215890001,
+        "three_class_miou_A001_A047_record_only": 0.7889701112405559,
+        "selection_score_S_record_only": 0.763781012089281,
+        "fire_heat_iou_full134_record_only": 0.8511374851913549,
+        "no_fire_joint_false_positive_ratio": 1.6566685267857142e-06,
+        "smoke_precision_A001_A047": 0.8060076623719944,
+        "smoke_recall_A001_A047": 0.8079642578816485
+      },
+      "thermal_noise_005": {
+        "background_iou_A001_A047": 0.8236885148693371,
+        "smoke_iou_A001_A047": 0.5258614766683678,
+        "fire_heat_iou_A001_A047_record_only": 0.7798642444279641,
+        "three_class_miou_A001_A047_record_only": 0.7098047453218896,
+        "selection_score_S_record_only": 0.6673618647151436,
+        "fire_heat_iou_full134_record_only": 0.8088622527619195,
+        "no_fire_joint_false_positive_ratio": 1.8310546875e-06,
+        "smoke_precision_A001_A047": 0.8497156143886148,
+        "smoke_recall_A001_A047": 0.579785045467062
+      },
+      "thermal_noise_010": {
+        "background_iou_A001_A047": 0.7591677866789799,
+        "smoke_iou_A001_A047": 0.25041131798365884,
+        "fire_heat_iou_A001_A047_record_only": 0.46751675716888647,
+        "three_class_miou_A001_A047_record_only": 0.4923652872771751,
+        "selection_score_S_record_only": 0.376042627643549,
+        "fire_heat_iou_full134_record_only": 0.5016739373034392,
+        "no_fire_joint_false_positive_ratio": 2.0926339285714287e-06,
+        "smoke_precision_A001_A047": 0.8976060063639915,
+        "smoke_recall_A001_A047": 0.2577747985000601
+      },
+      "thermal_zero": {
+        "background_iou_A001_A047": 0.8478612603765159,
+        "smoke_iou_A001_A047": 0.7158234386332258,
+        "fire_heat_iou_A001_A047_record_only": 6.098062950303836e-06,
+        "three_class_miou_A001_A047_record_only": 0.5212302656908974,
+        "selection_score_S_record_only": 0.3579135118682025,
+        "fire_heat_iou_full134_record_only": 3.585103179269499e-06,
+        "no_fire_joint_false_positive_ratio": 0.06518798828125,
+        "smoke_precision_A001_A047": 0.7651446512800265,
+        "smoke_recall_A001_A047": 0.9173890115685046
+      },
+      "rgb_zero": {
+        "background_iou_A001_A047": 0.6427991848813036,
+        "smoke_iou_A001_A047": 0.09064853820674584,
+        "fire_heat_iou_A001_A047_record_only": 0.7241898846740418,
+        "three_class_miou_A001_A047_record_only": 0.4858792025873637,
+        "selection_score_S_record_only": 0.4003255040447201,
+        "fire_heat_iou_full134_record_only": 0.7100024698826944,
+        "no_fire_joint_false_positive_ratio": 0.0014297921316964285,
+        "smoke_precision_A001_A047": 0.2594059863657172,
+        "smoke_recall_A001_A047": 0.1222993798447964
+      }
+    },
+    "201": {
+      "clean": {
+        "background_iou_A001_A047": 0.8814009311658052,
+        "smoke_iou_A001_A047": 0.7373492707883342,
+        "fire_heat_iou_A001_A047_record_only": 0.8628673397299679,
+        "three_class_miou_A001_A047_record_only": 0.8272058472280358,
+        "selection_score_S_record_only": 0.8069490856992272,
+        "fire_heat_iou_full134_record_only": 0.8765489006101201,
+        "no_fire_joint_false_positive_ratio": 4.359654017857143e-06,
+        "smoke_precision_A001_A047": 0.8111899511884832,
+        "smoke_recall_A001_A047": 0.8901132928827277
+      },
+      "thermal_noise_002": {
+        "background_iou_A001_A047": 0.8604287329969518,
+        "smoke_iou_A001_A047": 0.6696368857896391,
+        "fire_heat_iou_A001_A047_record_only": 0.8613182900215404,
+        "three_class_miou_A001_A047_record_only": 0.7971279696027104,
+        "selection_score_S_record_only": 0.7726925573800534,
+        "fire_heat_iou_full134_record_only": 0.8757482289704678,
+        "no_fire_joint_false_positive_ratio": 4.359654017857143e-06,
+        "smoke_precision_A001_A047": 0.8184904677017252,
+        "smoke_recall_A001_A047": 0.786419898125713
+      },
+      "thermal_noise_005": {
+        "background_iou_A001_A047": 0.8151636627970051,
+        "smoke_iou_A001_A047": 0.48601065896338097,
+        "fire_heat_iou_A001_A047_record_only": 0.8515764995157707,
+        "three_class_miou_A001_A047_record_only": 0.7175836070920524,
+        "selection_score_S_record_only": 0.6756913039355906,
+        "fire_heat_iou_full134_record_only": 0.8653719489078002,
+        "no_fire_joint_false_positive_ratio": 1.8310546875e-06,
+        "smoke_precision_A001_A047": 0.8541260365368116,
+        "smoke_recall_A001_A047": 0.5300033171339538
+      },
+      "thermal_noise_010": {
+        "background_iou_A001_A047": 0.7521608990319337,
+        "smoke_iou_A001_A047": 0.2025675510767709,
+        "fire_heat_iou_A001_A047_record_only": 0.7510892573778932,
+        "three_class_miou_A001_A047_record_only": 0.5686059024955327,
+        "selection_score_S_record_only": 0.4831146977807001,
+        "fire_heat_iou_full134_record_only": 0.7636618444846293,
+        "no_fire_joint_false_positive_ratio": 0.0,
+        "smoke_precision_A001_A047": 0.8583298861335481,
+        "smoke_recall_A001_A047": 0.2095745563067541
+      },
+      "thermal_zero": {
+        "background_iou_A001_A047": 0.857345805631383,
+        "smoke_iou_A001_A047": 0.7119103568494483,
+        "fire_heat_iou_A001_A047_record_only": 3.048111390182643e-06,
+        "three_class_miou_A001_A047_record_only": 0.5230864035307404,
+        "selection_score_S_record_only": 0.3559560939056904,
+        "fire_heat_iou_full134_record_only": 1.8309619324704621e-06,
+        "no_fire_joint_false_positive_ratio": 0.0024032156808035713,
+        "smoke_precision_A001_A047": 0.8134454507567672,
+        "smoke_recall_A001_A047": 0.8508230638622709
+      },
+      "rgb_zero": {
+        "background_iou_A001_A047": 0.5858045971936044,
+        "smoke_iou_A001_A047": 0.3951446765862655,
+        "fire_heat_iou_A001_A047_record_only": 0.6208996323377715,
+        "three_class_miou_A001_A047_record_only": 0.5339496353725471,
+        "selection_score_S_record_only": 0.5203655093280107,
+        "fire_heat_iou_full134_record_only": 0.645586342069756,
+        "no_fire_joint_false_positive_ratio": 0.003315516880580357,
+        "smoke_precision_A001_A047": 0.456051245488805,
+        "smoke_recall_A001_A047": 0.7473938703191997
+      }
+    },
+    "202": {
+      "clean": {
+        "background_iou_A001_A047": 0.8781244957818052,
+        "smoke_iou_A001_A047": 0.7372052349074242,
+        "fire_heat_iou_A001_A047_record_only": 0.803467368660078,
+        "three_class_miou_A001_A047_record_only": 0.8062656997831024,
+        "selection_score_S_record_only": 0.7805513319383962,
+        "fire_heat_iou_full134_record_only": 0.8238974289693682,
+        "no_fire_joint_false_positive_ratio": 5.231584821428572e-07,
+        "smoke_precision_A001_A047": 0.795399678921981,
+        "smoke_recall_A001_A047": 0.9097154813405899
+      },
+      "thermal_noise_002": {
+        "background_iou_A001_A047": 0.8498602890837635,
+        "smoke_iou_A001_A047": 0.6564417742446463,
+        "fire_heat_iou_A001_A047_record_only": 0.808354776455452,
+        "three_class_miou_A001_A047_record_only": 0.7715522799279539,
+        "selection_score_S_record_only": 0.7428947717738748,
+        "fire_heat_iou_full134_record_only": 0.8293477693031032,
+        "no_fire_joint_false_positive_ratio": 6.103515625e-07,
+        "smoke_precision_A001_A047": 0.7888462662478707,
+        "smoke_recall_A001_A047": 0.7963747553347913
+      },
+      "thermal_noise_005": {
+        "background_iou_A001_A047": 0.807651300770292,
+        "smoke_iou_A001_A047": 0.5013595648837872,
+        "fire_heat_iou_A001_A047_record_only": 0.7971903243994618,
+        "three_class_miou_A001_A047_record_only": 0.7020670633511804,
+        "selection_score_S_record_only": 0.6615012562087355,
+        "fire_heat_iou_full134_record_only": 0.8216429475336838,
+        "no_fire_joint_false_positive_ratio": 5.231584821428572e-07,
+        "smoke_precision_A001_A047": 0.7931460359986623,
+        "smoke_recall_A001_A047": 0.5767762348615894
+      },
+      "thermal_noise_010": {
+        "background_iou_A001_A047": 0.7476806728389882,
+        "smoke_iou_A001_A047": 0.3063356162007579,
+        "fire_heat_iou_A001_A047_record_only": 0.6415652627508117,
+        "three_class_miou_A001_A047_record_only": 0.5651938505968527,
+        "selection_score_S_record_only": 0.49303245986251926,
+        "fire_heat_iou_full134_record_only": 0.6797293035242806,
+        "no_fire_joint_false_positive_ratio": 4.7607421875e-05,
+        "smoke_precision_A001_A047": 0.702184120939296,
+        "smoke_recall_A001_A047": 0.3520797473024365
+      },
+      "thermal_zero": {
+        "background_iou_A001_A047": 0.8479558165545481,
+        "smoke_iou_A001_A047": 0.6887426706909857,
+        "fire_heat_iou_A001_A047_record_only": 0.0,
+        "three_class_miou_A001_A047_record_only": 0.5122328290818446,
+        "selection_score_S_record_only": 0.34437133534549286,
+        "fire_heat_iou_full134_record_only": 0.0,
+        "no_fire_joint_false_positive_ratio": 0.0003632463727678571,
+        "smoke_precision_A001_A047": 0.8013739506929896,
+        "smoke_recall_A001_A047": 0.8305205029710676
+      },
+      "rgb_zero": {
+        "background_iou_A001_A047": 0.7028236561783506,
+        "smoke_iou_A001_A047": 0.3093162687704428,
+        "fire_heat_iou_A001_A047_record_only": 0.7038639715192231,
+        "three_class_miou_A001_A047_record_only": 0.5720012988226721,
+        "selection_score_S_record_only": 0.5034368429660838,
+        "fire_heat_iou_full134_record_only": 0.6975574171617249,
+        "no_fire_joint_false_positive_ratio": 0.00015476771763392856,
+        "smoke_precision_A001_A047": 0.550774801376308,
+        "smoke_recall_A001_A047": 0.41368248648958983
+      }
+    }
+  },
+  "r1_clean_epoch26_30": {
+    "200": {
+      "background_iou_A001_A047": 0.8300218710876335,
+      "smoke_iou_A001_A047": 0.6570712741745911,
+      "fire_heat_iou_A001_A047_record_only": 0.7606019074114082,
+      "three_class_miou_A001_A047_record_only": 0.7492316842245442,
+      "selection_score_S_record_only": 0.7058151407811245,
+      "fire_heat_iou_full134_record_only": 0.7545590073876577,
+      "no_fire_joint_false_positive_ratio": 0.000779541015625,
+      "smoke_precision_A001_A047": 0.730793562736879,
+      "smoke_recall_A001_A047": 0.8698525682803318
+    },
+    "201": {
+      "background_iou_A001_A047": 0.8407225141173733,
+      "smoke_iou_A001_A047": 0.6834916601261082,
+      "fire_heat_iou_A001_A047_record_only": 0.7540004910150802,
+      "three_class_miou_A001_A047_record_only": 0.7594048884195205,
+      "selection_score_S_record_only": 0.7171277956804399,
+      "fire_heat_iou_full134_record_only": 0.7507639312347717,
+      "no_fire_joint_false_positive_ratio": 0.00012069266183035712,
+      "smoke_precision_A001_A047": 0.7346277670273889,
+      "smoke_recall_A001_A047": 0.9078642654302547
+    },
+    "202": {
+      "background_iou_A001_A047": 0.8308797488750728,
+      "smoke_iou_A001_A047": 0.6340132958641,
+      "fire_heat_iou_A001_A047_record_only": 0.6738154217161367,
+      "three_class_miou_A001_A047_record_only": 0.7129028221517698,
+      "selection_score_S_record_only": 0.6472185620843516,
+      "fire_heat_iou_full134_record_only": 0.6604238283046031,
+      "no_fire_joint_false_positive_ratio": 0.0002567836216517857,
+      "smoke_precision_A001_A047": 0.7596611254170368,
+      "smoke_recall_A001_A047": 0.7940639781579486
+    }
+  },
+  "r1_robust_epoch26_30": {
+    "200": {
+      "clean": {
+        "background_iou_A001_A047": 0.8300218710876335,
+        "smoke_iou_A001_A047": 0.6570712741745911,
+        "fire_heat_iou_A001_A047_record_only": 0.7606019074114082,
+        "three_class_miou_A001_A047_record_only": 0.7492316842245442,
+        "selection_score_S_record_only": 0.7058151407811245,
+        "fire_heat_iou_full134_record_only": 0.7545590073876577,
+        "no_fire_joint_false_positive_ratio": 0.000779541015625,
+        "smoke_precision_A001_A047": 0.730793562736879,
+        "smoke_recall_A001_A047": 0.8698525682803318
+      },
+      "thermal_noise_002": {
+        "background_iou_A001_A047": 0.8268415359782054,
+        "smoke_iou_A001_A047": 0.647843987833682,
+        "fire_heat_iou_A001_A047_record_only": 0.7645158947889633,
+        "three_class_miou_A001_A047_record_only": 0.7464004728669502,
+        "selection_score_S_record_only": 0.7050251028530872,
+        "fire_heat_iou_full134_record_only": 0.7622062178724923,
+        "no_fire_joint_false_positive_ratio": 0.0009012102399553574,
+        "smoke_precision_A001_A047": 0.7284797080867341,
+        "smoke_recall_A001_A047": 0.8576450900569972
+      },
+      "thermal_noise_005": {
+        "background_iou_A001_A047": 0.8160019962390704,
+        "smoke_iou_A001_A047": 0.613600507710341,
+        "fire_heat_iou_A001_A047_record_only": 0.7764763936526456,
+        "three_class_miou_A001_A047_record_only": 0.735359632534019,
+        "selection_score_S_record_only": 0.6970973193444869,
+        "fire_heat_iou_full134_record_only": 0.7805941309786328,
+        "no_fire_joint_false_positive_ratio": 0.0012470703125,
+        "smoke_precision_A001_A047": 0.7226721411875564,
+        "smoke_recall_A001_A047": 0.8067363867267862
+      },
+      "thermal_noise_010": {
+        "background_iou_A001_A047": 0.8028107497134378,
+        "smoke_iou_A001_A047": 0.5651454425098534,
+        "fire_heat_iou_A001_A047_record_only": 0.7351868295843674,
+        "three_class_miou_A001_A047_record_only": 0.7010476739358863,
+        "selection_score_S_record_only": 0.6571366032320032,
+        "fire_heat_iou_full134_record_only": 0.7491277639541531,
+        "no_fire_joint_false_positive_ratio": 0.0016016148158482142,
+        "smoke_precision_A001_A047": 0.7218174880031697,
+        "smoke_recall_A001_A047": 0.7262658002426186
+      },
+      "thermal_zero": {
+        "background_iou_A001_A047": 0.7964374673769208,
+        "smoke_iou_A001_A047": 0.6113731339517544,
+        "fire_heat_iou_A001_A047_record_only": 0.015065718363237524,
+        "three_class_miou_A001_A047_record_only": 0.47429210656397086,
+        "selection_score_S_record_only": 0.3117331684776553,
+        "fire_heat_iou_full134_record_only": 0.01209320300355626,
+        "no_fire_joint_false_positive_ratio": 0.031168038504464285,
+        "smoke_precision_A001_A047": 0.6975585299143193,
+        "smoke_recall_A001_A047": 0.8352167459979098
+      },
+      "rgb_zero": {
+        "background_iou_A001_A047": 0.6772532333875929,
+        "smoke_iou_A001_A047": 0.044897629676703694,
+        "fire_heat_iou_A001_A047_record_only": 0.6951110252920495,
+        "three_class_miou_A001_A047_record_only": 0.4724206294521154,
+        "selection_score_S_record_only": 0.3591748837142971,
+        "fire_heat_iou_full134_record_only": 0.6734521377518906,
+        "no_fire_joint_false_positive_ratio": 0.00016336495535714289,
+        "smoke_precision_A001_A047": 0.23798046390947913,
+        "smoke_recall_A001_A047": 0.05449466334811513
+      }
+    },
+    "201": {
+      "clean": {
+        "background_iou_A001_A047": 0.8407225141173733,
+        "smoke_iou_A001_A047": 0.6834916601261082,
+        "fire_heat_iou_A001_A047_record_only": 0.7540004910150802,
+        "three_class_miou_A001_A047_record_only": 0.7594048884195205,
+        "selection_score_S_record_only": 0.7171277956804399,
+        "fire_heat_iou_full134_record_only": 0.7507639312347717,
+        "no_fire_joint_false_positive_ratio": 0.00012069266183035712,
+        "smoke_precision_A001_A047": 0.7346277670273889,
+        "smoke_recall_A001_A047": 0.9078642654302547
+      },
+      "thermal_noise_002": {
+        "background_iou_A001_A047": 0.8387991486588252,
+        "smoke_iou_A001_A047": 0.6757062839465261,
+        "fire_heat_iou_A001_A047_record_only": 0.7579146851740657,
+        "three_class_miou_A001_A047_record_only": 0.757473372593139,
+        "selection_score_S_record_only": 0.7155659921339848,
+        "fire_heat_iou_full134_record_only": 0.7554257003214435,
+        "no_fire_joint_false_positive_ratio": 0.00011343819754464286,
+        "smoke_precision_A001_A047": 0.7354110757479495,
+        "smoke_recall_A001_A047": 0.8929542799001883
+      },
+      "thermal_noise_005": {
+        "background_iou_A001_A047": 0.8302135183649542,
+        "smoke_iou_A001_A047": 0.6465901128261182,
+        "fire_heat_iou_A001_A047_record_only": 0.7712989925542768,
+        "three_class_miou_A001_A047_record_only": 0.7493675412484497,
+        "selection_score_S_record_only": 0.7089867342772406,
+        "fire_heat_iou_full134_record_only": 0.771383355728363,
+        "no_fire_joint_false_positive_ratio": 8.286830357142857e-05,
+        "smoke_precision_A001_A047": 0.7340470317397242,
+        "smoke_recall_A001_A047": 0.8441012427557304
+      },
+      "thermal_noise_010": {
+        "background_iou_A001_A047": 0.8040485851407462,
+        "smoke_iou_A001_A047": 0.5469897630436696,
+        "fire_heat_iou_A001_A047_record_only": 0.7771152760698421,
+        "three_class_miou_A001_A047_record_only": 0.7093845414180859,
+        "selection_score_S_record_only": 0.6661679824243796,
+        "fire_heat_iou_full134_record_only": 0.7853462018050894,
+        "no_fire_joint_false_positive_ratio": 6.026785714285715e-05,
+        "smoke_precision_A001_A047": 0.7356192790823647,
+        "smoke_recall_A001_A047": 0.6817506068122449
+      },
+      "thermal_zero": {
+        "background_iou_A001_A047": 0.805860553493012,
+        "smoke_iou_A001_A047": 0.6633495952647344,
+        "fire_heat_iou_A001_A047_record_only": 0.001070063816726446,
+        "three_class_miou_A001_A047_record_only": 0.49009340419149094,
+        "selection_score_S_record_only": 0.3321664412146688,
+        "fire_heat_iou_full134_record_only": 0.0009832871646032585,
+        "no_fire_joint_false_positive_ratio": 0.042852486746651784,
+        "smoke_precision_A001_A047": 0.690631889320256,
+        "smoke_recall_A001_A047": 0.9448574855061447
+      },
+      "rgb_zero": {
+        "background_iou_A001_A047": 0.5837584319764786,
+        "smoke_iou_A001_A047": 0.07797235494630901,
+        "fire_heat_iou_A001_A047_record_only": 0.5564835256132935,
+        "three_class_miou_A001_A047_record_only": 0.40607143751202707,
+        "selection_score_S_record_only": 0.28761966351595586,
+        "fire_heat_iou_full134_record_only": 0.4972669720856027,
+        "no_fire_joint_false_positive_ratio": 0.0033740059988839285,
+        "smoke_precision_A001_A047": 0.18508215560343028,
+        "smoke_recall_A001_A047": 0.11892828930511361
+      }
+    },
+    "202": {
+      "clean": {
+        "background_iou_A001_A047": 0.8308797488750728,
+        "smoke_iou_A001_A047": 0.6340132958641,
+        "fire_heat_iou_A001_A047_record_only": 0.6738154217161367,
+        "three_class_miou_A001_A047_record_only": 0.7129028221517698,
+        "selection_score_S_record_only": 0.6472185620843516,
+        "fire_heat_iou_full134_record_only": 0.6604238283046031,
+        "no_fire_joint_false_positive_ratio": 0.0002567836216517857,
+        "smoke_precision_A001_A047": 0.7596611254170368,
+        "smoke_recall_A001_A047": 0.7940639781579486
+      },
+      "thermal_noise_002": {
+        "background_iou_A001_A047": 0.8266277488144237,
+        "smoke_iou_A001_A047": 0.6195282053542426,
+        "fire_heat_iou_A001_A047_record_only": 0.6747504360807844,
+        "three_class_miou_A001_A047_record_only": 0.7069687967498168,
+        "selection_score_S_record_only": 0.6413125157735463,
+        "fire_heat_iou_full134_record_only": 0.66309682619285,
+        "no_fire_joint_false_positive_ratio": 0.0001713169642857143,
+        "smoke_precision_A001_A047": 0.7575981352838539,
+        "smoke_recall_A001_A047": 0.7737076201583932
+      },
+      "thermal_noise_005": {
+        "background_iou_A001_A047": 0.8176254726983796,
+        "smoke_iou_A001_A047": 0.584403588244126,
+        "fire_heat_iou_A001_A047_record_only": 0.6919281022688706,
+        "three_class_miou_A001_A047_record_only": 0.6979857210704588,
+        "selection_score_S_record_only": 0.6334547617703633,
+        "fire_heat_iou_full134_record_only": 0.6825059352966006,
+        "no_fire_joint_false_positive_ratio": 0.00011846051897321428,
+        "smoke_precision_A001_A047": 0.7570100104114121,
+        "smoke_recall_A001_A047": 0.7207098666660996
+      },
+      "thermal_noise_010": {
+        "background_iou_A001_A047": 0.7894847398590287,
+        "smoke_iou_A001_A047": 0.4782832545530266,
+        "fire_heat_iou_A001_A047_record_only": 0.7051606047056158,
+        "three_class_miou_A001_A047_record_only": 0.657642866372557,
+        "selection_score_S_record_only": 0.5912666891870069,
+        "fire_heat_iou_full134_record_only": 0.7042501238209873,
+        "no_fire_joint_false_positive_ratio": 0.00013211495535714286,
+        "smoke_precision_A001_A047": 0.7448341850815432,
+        "smoke_recall_A001_A047": 0.5733980741485756
+      },
+      "thermal_zero": {
+        "background_iou_A001_A047": 0.821506812446836,
+        "smoke_iou_A001_A047": 0.6455353837163174,
+        "fire_heat_iou_A001_A047_record_only": 0.004582599376524383,
+        "three_class_miou_A001_A047_record_only": 0.4905415985132259,
+        "selection_score_S_record_only": 0.3268633481932756,
+        "fire_heat_iou_full134_record_only": 0.008191312670233862,
+        "no_fire_joint_false_positive_ratio": 0.02978717912946428,
+        "smoke_precision_A001_A047": 0.7580506140864468,
+        "smoke_recall_A001_A047": 0.8149468780134621
+      },
+      "rgb_zero": {
+        "background_iou_A001_A047": 0.7150152250381093,
+        "smoke_iou_A001_A047": 0.012385992067654384,
+        "fire_heat_iou_A001_A047_record_only": 0.6514145900905591,
+        "three_class_miou_A001_A047_record_only": 0.45960526906544086,
+        "selection_score_S_record_only": 0.31918019618468435,
+        "fire_heat_iou_full134_record_only": 0.6259744003017144,
+        "no_fire_joint_false_positive_ratio": 0.0021282784598214287,
+        "smoke_precision_A001_A047": 0.39440883992555864,
+        "smoke_recall_A001_A047": 0.012722590851727302
+      }
+    }
+  },
+  "append_clean_epoch26_30": {
+    "S1": {
+      "200": {
+        "background_iou_A001_A047": 0.8397339709329146,
+        "smoke_iou_A001_A047": 0.659595706999305,
+        "fire_heat_iou_A001_A047_record_only": 0.729873203352791,
+        "three_class_miou_A001_A047_record_only": 0.7430676270950036,
+        "selection_score_S_record_only": 0.6945128902820354,
+        "fire_heat_iou_full134_record_only": 0.7294300735647659,
+        "no_fire_joint_false_positive_ratio": 0.00016165597098214286,
+        "smoke_precision_A001_A047": 0.7576672097753413,
+        "smoke_recall_A001_A047": 0.835850988388968
+      },
+      "201": {
+        "background_iou_A001_A047": 0.8453484654862994,
+        "smoke_iou_A001_A047": 0.6930011121219836,
+        "fire_heat_iou_A001_A047_record_only": 0.7700935656259252,
+        "three_class_miou_A001_A047_record_only": 0.769481047744736,
+        "selection_score_S_record_only": 0.7348051910537592,
+        "fire_heat_iou_full134_record_only": 0.7766092699855351,
+        "no_fire_joint_false_positive_ratio": 0.0002903355189732143,
+        "smoke_precision_A001_A047": 0.7371889834050165,
+        "smoke_recall_A001_A047": 0.9205831882973217
+      },
+      "202": {
+        "background_iou_A001_A047": 0.8530159787310103,
+        "smoke_iou_A001_A047": 0.6890672538704016,
+        "fire_heat_iou_A001_A047_record_only": 0.7433445002535205,
+        "three_class_miou_A001_A047_record_only": 0.7618092442849774,
+        "selection_score_S_record_only": 0.7146769793422528,
+        "fire_heat_iou_full134_record_only": 0.7402867048141041,
+        "no_fire_joint_false_positive_ratio": 0.0012490059988839286,
+        "smoke_precision_A001_A047": 0.772334580015644,
+        "smoke_recall_A001_A047": 0.8661302549196179
+      }
+    },
+    "R2": {
+      "200": {
+        "background_iou_A001_A047": 0.8546643278262367,
+        "smoke_iou_A001_A047": 0.6843917150381346,
+        "fire_heat_iou_A001_A047_record_only": 0.7332230092876294,
+        "three_class_miou_A001_A047_record_only": 0.7574263507173336,
+        "selection_score_S_record_only": 0.7065964708863203,
+        "fire_heat_iou_full134_record_only": 0.7288012267345058,
+        "no_fire_joint_false_positive_ratio": 4.5863560267857144e-05,
+        "smoke_precision_A001_A047": 0.7856387276477621,
+        "smoke_recall_A001_A047": 0.8441917197106863
+      },
+      "201": {
+        "background_iou_A001_A047": 0.8360651944565671,
+        "smoke_iou_A001_A047": 0.6784389980890775,
+        "fire_heat_iou_A001_A047_record_only": 0.7788034951133094,
+        "three_class_miou_A001_A047_record_only": 0.764435895886318,
+        "selection_score_S_record_only": 0.7265910997915768,
+        "fire_heat_iou_full134_record_only": 0.7747432014940762,
+        "no_fire_joint_false_positive_ratio": 0.0002367640904017857,
+        "smoke_precision_A001_A047": 0.7247598891023624,
+        "smoke_recall_A001_A047": 0.9137512213325735
+      },
+      "202": {
+        "background_iou_A001_A047": 0.8565693522424155,
+        "smoke_iou_A001_A047": 0.6906834206000448,
+        "fire_heat_iou_A001_A047_record_only": 0.6618611687068257,
+        "three_class_miou_A001_A047_record_only": 0.7363713138497621,
+        "selection_score_S_record_only": 0.6730433018236142,
+        "fire_heat_iou_full134_record_only": 0.6554031830471836,
+        "no_fire_joint_false_positive_ratio": 0.00043736049107142856,
+        "smoke_precision_A001_A047": 0.7937881495698326,
+        "smoke_recall_A001_A047": 0.8462996413880506
+      }
+    },
+    "R3": {
+      "200": {
+        "background_iou_A001_A047": 0.8366077656630736,
+        "smoke_iou_A001_A047": 0.6513830563370634,
+        "fire_heat_iou_A001_A047_record_only": 0.7212374715501708,
+        "three_class_miou_A001_A047_record_only": 0.7364094311834359,
+        "selection_score_S_record_only": 0.683461114225687,
+        "fire_heat_iou_full134_record_only": 0.7155391721143107,
+        "no_fire_joint_false_positive_ratio": 0.0003625662667410714,
+        "smoke_precision_A001_A047": 0.7544061153328634,
+        "smoke_recall_A001_A047": 0.8263504296857972
+      },
+      "201": {
+        "background_iou_A001_A047": 0.8573276355971927,
+        "smoke_iou_A001_A047": 0.7045678294878516,
+        "fire_heat_iou_A001_A047_record_only": 0.745124188310964,
+        "three_class_miou_A001_A047_record_only": 0.7690065511320027,
+        "selection_score_S_record_only": 0.7249781411986878,
+        "fire_heat_iou_full134_record_only": 0.745388452909524,
+        "no_fire_joint_false_positive_ratio": 6.007603236607143e-05,
+        "smoke_precision_A001_A047": 0.7659661114786782,
+        "smoke_recall_A001_A047": 0.8981664861025909
+      },
+      "202": {
+        "background_iou_A001_A047": 0.8444396998708784,
+        "smoke_iou_A001_A047": 0.6789296373868042,
+        "fire_heat_iou_A001_A047_record_only": 0.7072163344077541,
+        "three_class_miou_A001_A047_record_only": 0.7435285572218122,
+        "selection_score_S_record_only": 0.6812278871327535,
+        "fire_heat_iou_full134_record_only": 0.6835261368787026,
+        "no_fire_joint_false_positive_ratio": 0.00010881696428571429,
+        "smoke_precision_A001_A047": 0.7578203839955214,
+        "smoke_recall_A001_A047": 0.8647414177132827
+      }
+    }
+  },
+  "append_robust_epoch26_30": {
+    "S1": {
+      "200": {
+        "clean": {
+          "background_iou_A001_A047": 0.8397339709329146,
+          "smoke_iou_A001_A047": 0.659595706999305,
+          "fire_heat_iou_A001_A047_record_only": 0.729873203352791,
+          "three_class_miou_A001_A047_record_only": 0.7430676270950036,
+          "selection_score_S_record_only": 0.6945128902820354,
+          "fire_heat_iou_full134_record_only": 0.7294300735647659,
+          "no_fire_joint_false_positive_ratio": 0.00016165597098214286,
+          "smoke_precision_A001_A047": 0.7576672097753413,
+          "smoke_recall_A001_A047": 0.835850988388968
+        },
+        "thermal_noise_002": {
+          "background_iou_A001_A047": 0.8270801534749239,
+          "smoke_iou_A001_A047": 0.6123068090605731,
+          "fire_heat_iou_A001_A047_record_only": 0.7408339322683192,
+          "three_class_miou_A001_A047_record_only": 0.7267402982679388,
+          "selection_score_S_record_only": 0.6769899900290063,
+          "fire_heat_iou_full134_record_only": 0.7416731709974395,
+          "no_fire_joint_false_positive_ratio": 0.00021714564732142858,
+          "smoke_precision_A001_A047": 0.7600285587156755,
+          "smoke_recall_A001_A047": 0.7593778141150429
+        },
+        "thermal_noise_005": {
+          "background_iou_A001_A047": 0.7966711774682848,
+          "smoke_iou_A001_A047": 0.4866082611949644,
+          "fire_heat_iou_A001_A047_record_only": 0.7572986986482494,
+          "three_class_miou_A001_A047_record_only": 0.6801927124371663,
+          "selection_score_S_record_only": 0.6264491857007292,
+          "fire_heat_iou_full134_record_only": 0.766290110206494,
+          "no_fire_joint_false_positive_ratio": 0.0003537772042410714,
+          "smoke_precision_A001_A047": 0.7611087258165091,
+          "smoke_recall_A001_A047": 0.5748589420681693
+        },
+        "thermal_noise_010": {
+          "background_iou_A001_A047": 0.7343524217584884,
+          "smoke_iou_A001_A047": 0.19285982208887117,
+          "fire_heat_iou_A001_A047_record_only": 0.6341338818615445,
+          "three_class_miou_A001_A047_record_only": 0.5204487085696348,
+          "selection_score_S_record_only": 0.4333632965237527,
+          "fire_heat_iou_full134_record_only": 0.6738667709586341,
+          "no_fire_joint_false_positive_ratio": 0.0002916085379464286,
+          "smoke_precision_A001_A047": 0.6893867207500486,
+          "smoke_recall_A001_A047": 0.2115847182190393
+        },
+        "thermal_zero": {
+          "background_iou_A001_A047": 0.8323530737027749,
+          "smoke_iou_A001_A047": 0.6695729335844751,
+          "fire_heat_iou_A001_A047_record_only": 0.00024655770728131495,
+          "three_class_miou_A001_A047_record_only": 0.5007241883315104,
+          "selection_score_S_record_only": 0.3349732169944034,
+          "fire_heat_iou_full134_record_only": 0.0003735004043318163,
+          "no_fire_joint_false_positive_ratio": 0.006772495814732144,
+          "smoke_precision_A001_A047": 0.7659670126187124,
+          "smoke_recall_A001_A047": 0.8415063296657032
+        },
+        "rgb_zero": {
+          "background_iou_A001_A047": 0.4712250414786866,
+          "smoke_iou_A001_A047": 0.3833076301258254,
+          "fire_heat_iou_A001_A047_record_only": 0.29474164328570857,
+          "three_class_miou_A001_A047_record_only": 0.3830914382967402,
+          "selection_score_S_record_only": 0.29643149652787776,
+          "fire_heat_iou_full134_record_only": 0.20955536292993004,
+          "no_fire_joint_false_positive_ratio": 0.00037566266741071434,
+          "smoke_precision_A001_A047": 0.4238267046763632,
+          "smoke_recall_A001_A047": 0.8044256095499435
+        }
+      },
+      "201": {
+        "clean": {
+          "background_iou_A001_A047": 0.8453484654862994,
+          "smoke_iou_A001_A047": 0.6930011121219836,
+          "fire_heat_iou_A001_A047_record_only": 0.7700935656259252,
+          "three_class_miou_A001_A047_record_only": 0.769481047744736,
+          "selection_score_S_record_only": 0.7348051910537592,
+          "fire_heat_iou_full134_record_only": 0.7766092699855351,
+          "no_fire_joint_false_positive_ratio": 0.0002903355189732143,
+          "smoke_precision_A001_A047": 0.7371889834050165,
+          "smoke_recall_A001_A047": 0.9205831882973217
+        },
+        "thermal_noise_002": {
+          "background_iou_A001_A047": 0.8437170884452021,
+          "smoke_iou_A001_A047": 0.6701128598315595,
+          "fire_heat_iou_A001_A047_record_only": 0.7664182081911042,
+          "three_class_miou_A001_A047_record_only": 0.760082718822622,
+          "selection_score_S_record_only": 0.7222956919433735,
+          "fire_heat_iou_full134_record_only": 0.7744785240551874,
+          "no_fire_joint_false_positive_ratio": 0.0002614397321428571,
+          "smoke_precision_A001_A047": 0.7540841178805155,
+          "smoke_recall_A001_A047": 0.8582531249634531
+        },
+        "thermal_noise_005": {
+          "background_iou_A001_A047": 0.830099422614831,
+          "smoke_iou_A001_A047": 0.5838762500714677,
+          "fire_heat_iou_A001_A047_record_only": 0.7580731879448643,
+          "three_class_miou_A001_A047_record_only": 0.7240162868770543,
+          "selection_score_S_record_only": 0.6786917510142774,
+          "fire_heat_iou_full134_record_only": 0.7735072519570869,
+          "no_fire_joint_false_positive_ratio": 0.0002498604910714286,
+          "smoke_precision_A001_A047": 0.798454843532266,
+          "smoke_recall_A001_A047": 0.6860832409249275
+        },
+        "thermal_noise_010": {
+          "background_iou_A001_A047": 0.7843400475852469,
+          "smoke_iou_A001_A047": 0.35744273876873767,
+          "fire_heat_iou_A001_A047_record_only": 0.7181619675776385,
+          "three_class_miou_A001_A047_record_only": 0.6199815846438744,
+          "selection_score_S_record_only": 0.5455282875902007,
+          "fire_heat_iou_full134_record_only": 0.7336138364116638,
+          "no_fire_joint_false_positive_ratio": 5.9500558035714286e-05,
+          "smoke_precision_A001_A047": 0.8680865365438803,
+          "smoke_recall_A001_A047": 0.3793087922123901
+        },
+        "thermal_zero": {
+          "background_iou_A001_A047": 0.833690968160487,
+          "smoke_iou_A001_A047": 0.6874981538566253,
+          "fire_heat_iou_A001_A047_record_only": 4.895841708476804e-05,
+          "three_class_miou_A001_A047_record_only": 0.5070793601447324,
+          "selection_score_S_record_only": 0.3437791554898778,
+          "fire_heat_iou_full134_record_only": 6.015712313027072e-05,
+          "no_fire_joint_false_positive_ratio": 0.029658900669642857,
+          "smoke_precision_A001_A047": 0.7491176575557924,
+          "smoke_recall_A001_A047": 0.893120508712261
+        },
+        "rgb_zero": {
+          "background_iou_A001_A047": 0.17825657900423444,
+          "smoke_iou_A001_A047": 0.2909415289431557,
+          "fire_heat_iou_A001_A047_record_only": 0.5299985942460748,
+          "three_class_miou_A001_A047_record_only": 0.33306556739782167,
+          "selection_score_S_record_only": 0.39324024706085625,
+          "fire_heat_iou_full134_record_only": 0.4955389651785568,
+          "no_fire_joint_false_positive_ratio": 0.0028048444475446428,
+          "smoke_precision_A001_A047": 0.3013638371329136,
+          "smoke_recall_A001_A047": 0.896066963578507
+        }
+      },
+      "202": {
+        "clean": {
+          "background_iou_A001_A047": 0.8530159787310103,
+          "smoke_iou_A001_A047": 0.6890672538704016,
+          "fire_heat_iou_A001_A047_record_only": 0.7433445002535205,
+          "three_class_miou_A001_A047_record_only": 0.7618092442849774,
+          "selection_score_S_record_only": 0.7146769793422528,
+          "fire_heat_iou_full134_record_only": 0.7402867048141041,
+          "no_fire_joint_false_positive_ratio": 0.0012490059988839286,
+          "smoke_precision_A001_A047": 0.772334580015644,
+          "smoke_recall_A001_A047": 0.8661302549196179
+        },
+        "thermal_noise_002": {
+          "background_iou_A001_A047": 0.8327072313398981,
+          "smoke_iou_A001_A047": 0.6257303988864973,
+          "fire_heat_iou_A001_A047_record_only": 0.7494856621882162,
+          "three_class_miou_A001_A047_record_only": 0.7359744308048705,
+          "selection_score_S_record_only": 0.6858258963826602,
+          "fire_heat_iou_full134_record_only": 0.7459213938788232,
+          "no_fire_joint_false_positive_ratio": 0.001356480189732143,
+          "smoke_precision_A001_A047": 0.7676661833029398,
+          "smoke_recall_A001_A047": 0.7736410116833287
+        },
+        "thermal_noise_005": {
+          "background_iou_A001_A047": 0.800546517943328,
+          "smoke_iou_A001_A047": 0.5003576283839748,
+          "fire_heat_iou_A001_A047_record_only": 0.7652436166036521,
+          "three_class_miou_A001_A047_record_only": 0.6887159209769849,
+          "selection_score_S_record_only": 0.6306993365189394,
+          "fire_heat_iou_full134_record_only": 0.7610410446539041,
+          "no_fire_joint_false_positive_ratio": 0.0013367047991071428,
+          "smoke_precision_A001_A047": 0.7699628548306058,
+          "smoke_recall_A001_A047": 0.5909342835362774
+        },
+        "thermal_noise_010": {
+          "background_iou_A001_A047": 0.7570111210624051,
+          "smoke_iou_A001_A047": 0.2684626830606499,
+          "fire_heat_iou_A001_A047_record_only": 0.7940144999896497,
+          "three_class_miou_A001_A047_record_only": 0.6064961013709016,
+          "selection_score_S_record_only": 0.5284033614082164,
+          "fire_heat_iou_full134_record_only": 0.7883440397557827,
+          "no_fire_joint_false_positive_ratio": 0.00125048828125,
+          "smoke_precision_A001_A047": 0.7824337509732082,
+          "smoke_recall_A001_A047": 0.2927884232025014
+        },
+        "thermal_zero": {
+          "background_iou_A001_A047": 0.8451790821619161,
+          "smoke_iou_A001_A047": 0.689047762364102,
+          "fire_heat_iou_A001_A047_record_only": 0.0,
+          "three_class_miou_A001_A047_record_only": 0.5114089481753393,
+          "selection_score_S_record_only": 0.3445290208522123,
+          "fire_heat_iou_full134_record_only": 1.0279340322627546e-05,
+          "no_fire_joint_false_positive_ratio": 0.013840488978794644,
+          "smoke_precision_A001_A047": 0.8010075131875091,
+          "smoke_recall_A001_A047": 0.833831417298641
+        },
+        "rgb_zero": {
+          "background_iou_A001_A047": 0.6990009300715595,
+          "smoke_iou_A001_A047": 0.23646891540052994,
+          "fire_heat_iou_A001_A047_record_only": 0.5820054361750662,
+          "three_class_miou_A001_A047_record_only": 0.5058250938823853,
+          "selection_score_S_record_only": 0.3345987390922315,
+          "fire_heat_iou_full134_record_only": 0.43272856278393307,
+          "no_fire_joint_false_positive_ratio": 0.01862255859375,
+          "smoke_precision_A001_A047": 0.5481130883430725,
+          "smoke_recall_A001_A047": 0.30297021702774163
+        }
+      }
+    },
+    "R2": {
+      "200": {
+        "clean": {
+          "background_iou_A001_A047": 0.8546643278262367,
+          "smoke_iou_A001_A047": 0.6843917150381346,
+          "fire_heat_iou_A001_A047_record_only": 0.7332230092876294,
+          "three_class_miou_A001_A047_record_only": 0.7574263507173336,
+          "selection_score_S_record_only": 0.7065964708863203,
+          "fire_heat_iou_full134_record_only": 0.7288012267345058,
+          "no_fire_joint_false_positive_ratio": 4.5863560267857144e-05,
+          "smoke_precision_A001_A047": 0.7856387276477621,
+          "smoke_recall_A001_A047": 0.8441917197106863
+        },
+        "thermal_noise_002": {
+          "background_iou_A001_A047": 0.8405973758253248,
+          "smoke_iou_A001_A047": 0.6227585431543191,
+          "fire_heat_iou_A001_A047_record_only": 0.7374455483031974,
+          "three_class_miou_A001_A047_record_only": 0.7336004890942804,
+          "selection_score_S_record_only": 0.678341166933875,
+          "fire_heat_iou_full134_record_only": 0.7339237907134312,
+          "no_fire_joint_false_positive_ratio": 4.2166573660714284e-05,
+          "smoke_precision_A001_A047": 0.8038750406908145,
+          "smoke_recall_A001_A047": 0.7373640586409744
+        },
+        "thermal_noise_005": {
+          "background_iou_A001_A047": 0.7779057788357739,
+          "smoke_iou_A001_A047": 0.38372975222787453,
+          "fire_heat_iou_A001_A047_record_only": 0.7642666710357847,
+          "three_class_miou_A001_A047_record_only": 0.6419674006998111,
+          "selection_score_S_record_only": 0.5748337938710036,
+          "fire_heat_iou_full134_record_only": 0.7659378355141327,
+          "no_fire_joint_false_positive_ratio": 3.681291852678572e-05,
+          "smoke_precision_A001_A047": 0.7811155183338686,
+          "smoke_recall_A001_A047": 0.43670929679949744
+        },
+        "thermal_noise_010": {
+          "background_iou_A001_A047": 0.7117237898169079,
+          "smoke_iou_A001_A047": 0.07522225059825793,
+          "fire_heat_iou_A001_A047_record_only": 0.6460982630343347,
+          "three_class_miou_A001_A047_record_only": 0.4776814344831669,
+          "selection_score_S_record_only": 0.377189377354651,
+          "fire_heat_iou_full134_record_only": 0.6791565041110441,
+          "no_fire_joint_false_positive_ratio": 3.712681361607143e-05,
+          "smoke_precision_A001_A047": 0.5264233142848351,
+          "smoke_recall_A001_A047": 0.08237655636841876
+        },
+        "thermal_zero": {
+          "background_iou_A001_A047": 0.8351408101721862,
+          "smoke_iou_A001_A047": 0.6795338115106391,
+          "fire_heat_iou_A001_A047_record_only": 0.00024357432883557892,
+          "three_class_miou_A001_A047_record_only": 0.5049727320038869,
+          "selection_score_S_record_only": 0.3398614344975429,
+          "fire_heat_iou_full134_record_only": 0.00018905748444686933,
+          "no_fire_joint_false_positive_ratio": 0.008430332728794643,
+          "smoke_precision_A001_A047": 0.7757761063195799,
+          "smoke_recall_A001_A047": 0.84704865448754
+        },
+        "rgb_zero": {
+          "background_iou_A001_A047": 0.6947067071736764,
+          "smoke_iou_A001_A047": 0.1195243110232244,
+          "fire_heat_iou_A001_A047_record_only": 0.7635684776776722,
+          "three_class_miou_A001_A047_record_only": 0.5259331652915245,
+          "selection_score_S_record_only": 0.4397628703308557,
+          "fire_heat_iou_full134_record_only": 0.760001429638487,
+          "no_fire_joint_false_positive_ratio": 0.008060006277901786,
+          "smoke_precision_A001_A047": 0.441307100159473,
+          "smoke_recall_A001_A047": 0.1438597936785208
+        }
+      },
+      "201": {
+        "clean": {
+          "background_iou_A001_A047": 0.8360651944565671,
+          "smoke_iou_A001_A047": 0.6784389980890775,
+          "fire_heat_iou_A001_A047_record_only": 0.7788034951133094,
+          "three_class_miou_A001_A047_record_only": 0.764435895886318,
+          "selection_score_S_record_only": 0.7265910997915768,
+          "fire_heat_iou_full134_record_only": 0.7747432014940762,
+          "no_fire_joint_false_positive_ratio": 0.0002367640904017857,
+          "smoke_precision_A001_A047": 0.7247598891023624,
+          "smoke_recall_A001_A047": 0.9137512213325735
+        },
+        "thermal_noise_002": {
+          "background_iou_A001_A047": 0.8228968009290514,
+          "smoke_iou_A001_A047": 0.6392692946419951,
+          "fire_heat_iou_A001_A047_record_only": 0.7836687983705692,
+          "three_class_miou_A001_A047_record_only": 0.7486116313138719,
+          "selection_score_S_record_only": 0.7106203692836054,
+          "fire_heat_iou_full134_record_only": 0.7819714439252158,
+          "no_fire_joint_false_positive_ratio": 0.00022195870535714283,
+          "smoke_precision_A001_A047": 0.7203839026548324,
+          "smoke_recall_A001_A047": 0.8499714003514887
+        },
+        "thermal_noise_005": {
+          "background_iou_A001_A047": 0.8034178340575207,
+          "smoke_iou_A001_A047": 0.5525718174156493,
+          "fire_heat_iou_A001_A047_record_only": 0.7879752254314507,
+          "three_class_miou_A001_A047_record_only": 0.714654958968207,
+          "selection_score_S_record_only": 0.6722245620452421,
+          "fire_heat_iou_full134_record_only": 0.791877306674835,
+          "no_fire_joint_false_positive_ratio": 0.00025376674107142856,
+          "smoke_precision_A001_A047": 0.7286757260408827,
+          "smoke_recall_A001_A047": 0.6958031876381475
+        },
+        "thermal_noise_010": {
+          "background_iou_A001_A047": 0.7862640124761887,
+          "smoke_iou_A001_A047": 0.38766518925438886,
+          "fire_heat_iou_A001_A047_record_only": 0.7300170482420354,
+          "three_class_miou_A001_A047_record_only": 0.634648749990871,
+          "selection_score_S_record_only": 0.5667570161982228,
+          "fire_heat_iou_full134_record_only": 0.7458488431420568,
+          "no_fire_joint_false_positive_ratio": 0.0005583844866071429,
+          "smoke_precision_A001_A047": 0.8229389525574401,
+          "smoke_recall_A001_A047": 0.4230275013794812
+        },
+        "thermal_zero": {
+          "background_iou_A001_A047": 0.8227898813044014,
+          "smoke_iou_A001_A047": 0.6829643020944647,
+          "fire_heat_iou_A001_A047_record_only": 8.026919879091328e-05,
+          "three_class_miou_A001_A047_record_only": 0.5019448175325524,
+          "selection_score_S_record_only": 0.34152727514466613,
+          "fire_heat_iou_full134_record_only": 9.024819486749842e-05,
+          "no_fire_joint_false_positive_ratio": 0.018604300362723213,
+          "smoke_precision_A001_A047": 0.7146432977849451,
+          "smoke_recall_A001_A047": 0.9392682742716925
+        },
+        "rgb_zero": {
+          "background_iou_A001_A047": 0.3183478334650784,
+          "smoke_iou_A001_A047": 0.2720730099192122,
+          "fire_heat_iou_A001_A047_record_only": 0.24443726685732944,
+          "three_class_miou_A001_A047_record_only": 0.27828603674720664,
+          "selection_score_S_record_only": 0.2257323079224876,
+          "fire_heat_iou_full134_record_only": 0.17939160592576298,
+          "no_fire_joint_false_positive_ratio": 0.00045929827008928575,
+          "smoke_precision_A001_A047": 0.3106461743728801,
+          "smoke_recall_A001_A047": 0.6903655332771264
+        }
+      },
+      "202": {
+        "clean": {
+          "background_iou_A001_A047": 0.8565693522424155,
+          "smoke_iou_A001_A047": 0.6906834206000448,
+          "fire_heat_iou_A001_A047_record_only": 0.6618611687068257,
+          "three_class_miou_A001_A047_record_only": 0.7363713138497621,
+          "selection_score_S_record_only": 0.6730433018236142,
+          "fire_heat_iou_full134_record_only": 0.6554031830471836,
+          "no_fire_joint_false_positive_ratio": 0.00043736049107142856,
+          "smoke_precision_A001_A047": 0.7937881495698326,
+          "smoke_recall_A001_A047": 0.8462996413880506
+        },
+        "thermal_noise_002": {
+          "background_iou_A001_A047": 0.8371610406345728,
+          "smoke_iou_A001_A047": 0.6311107493075536,
+          "fire_heat_iou_A001_A047_record_only": 0.6729106562373719,
+          "three_class_miou_A001_A047_record_only": 0.7137274820598327,
+          "selection_score_S_record_only": 0.6492175924572836,
+          "fire_heat_iou_full134_record_only": 0.6673244356070137,
+          "no_fire_joint_false_positive_ratio": 0.0004017159598214286,
+          "smoke_precision_A001_A047": 0.7875811420875186,
+          "smoke_recall_A001_A047": 0.7638354786613664
+        },
+        "thermal_noise_005": {
+          "background_iou_A001_A047": 0.7895335963007264,
+          "smoke_iou_A001_A047": 0.4635766765419822,
+          "fire_heat_iou_A001_A047_record_only": 0.7098646632281344,
+          "three_class_miou_A001_A047_record_only": 0.654324978690281,
+          "selection_score_S_record_only": 0.5855566879995765,
+          "fire_heat_iou_full134_record_only": 0.7075366994571706,
+          "no_fire_joint_false_positive_ratio": 0.00032754952566964286,
+          "smoke_precision_A001_A047": 0.7646619805885468,
+          "smoke_recall_A001_A047": 0.5444889327865733
+        },
+        "thermal_noise_010": {
+          "background_iou_A001_A047": 0.7347525050528739,
+          "smoke_iou_A001_A047": 0.20745523604357383,
+          "fire_heat_iou_A001_A047_record_only": 0.7310754812852718,
+          "three_class_miou_A001_A047_record_only": 0.5577610741272399,
+          "selection_score_S_record_only": 0.4750123148326601,
+          "fire_heat_iou_full134_record_only": 0.7425693936217463,
+          "no_fire_joint_false_positive_ratio": 0.00025094168526785713,
+          "smoke_precision_A001_A047": 0.7071303439779453,
+          "smoke_recall_A001_A047": 0.2336304223710916
+        },
+        "thermal_zero": {
+          "background_iou_A001_A047": 0.8293841632833783,
+          "smoke_iou_A001_A047": 0.6501550639223135,
+          "fire_heat_iou_A001_A047_record_only": 0.00016811965530216718,
+          "three_class_miou_A001_A047_record_only": 0.493235782286998,
+          "selection_score_S_record_only": 0.3251639464188556,
+          "fire_heat_iou_full134_record_only": 0.00017282891539768222,
+          "no_fire_joint_false_positive_ratio": 0.0106722412109375,
+          "smoke_precision_A001_A047": 0.7839703360028005,
+          "smoke_recall_A001_A047": 0.8028549678865284
+        },
+        "rgb_zero": {
+          "background_iou_A001_A047": 0.2543826846150307,
+          "smoke_iou_A001_A047": 0.30142210095829924,
+          "fire_heat_iou_A001_A047_record_only": 0.566795983120967,
+          "three_class_miou_A001_A047_record_only": 0.3742002562314323,
+          "selection_score_S_record_only": 0.4151683452302087,
+          "fire_heat_iou_full134_record_only": 0.5289145895021183,
+          "no_fire_joint_false_positive_ratio": 0.0013276018415178572,
+          "smoke_precision_A001_A047": 0.3184165641932215,
+          "smoke_recall_A001_A047": 0.8559486205719716
+        }
+      }
+    },
+    "R3": {
+      "200": {
+        "clean": {
+          "background_iou_A001_A047": 0.8366077656630736,
+          "smoke_iou_A001_A047": 0.6513830563370634,
+          "fire_heat_iou_A001_A047_record_only": 0.7212374715501708,
+          "three_class_miou_A001_A047_record_only": 0.7364094311834359,
+          "selection_score_S_record_only": 0.683461114225687,
+          "fire_heat_iou_full134_record_only": 0.7155391721143107,
+          "no_fire_joint_false_positive_ratio": 0.0003625662667410714,
+          "smoke_precision_A001_A047": 0.7544061153328634,
+          "smoke_recall_A001_A047": 0.8263504296857972
+        },
+        "thermal_noise_002": {
+          "background_iou_A001_A047": 0.8331423342121912,
+          "smoke_iou_A001_A047": 0.6391605223657211,
+          "fire_heat_iou_A001_A047_record_only": 0.7232333450142614,
+          "three_class_miou_A001_A047_record_only": 0.7318454005307246,
+          "selection_score_S_record_only": 0.6798266976411782,
+          "fire_heat_iou_full134_record_only": 0.7204928729166351,
+          "no_fire_joint_false_positive_ratio": 0.0003731689453125,
+          "smoke_precision_A001_A047": 0.7545802571765188,
+          "smoke_recall_A001_A047": 0.8067779040604058
+        },
+        "thermal_noise_005": {
+          "background_iou_A001_A047": 0.8254278189740779,
+          "smoke_iou_A001_A047": 0.6135358311217585,
+          "fire_heat_iou_A001_A047_record_only": 0.7417655256236377,
+          "three_class_miou_A001_A047_record_only": 0.7269097252398247,
+          "selection_score_S_record_only": 0.6803918600808231,
+          "fire_heat_iou_full134_record_only": 0.7472478890398875,
+          "no_fire_joint_false_positive_ratio": 0.00029811314174107143,
+          "smoke_precision_A001_A047": 0.7521355484366647,
+          "smoke_recall_A001_A047": 0.7689603443014935
+        },
+        "thermal_noise_010": {
+          "background_iou_A001_A047": 0.8039980547788963,
+          "smoke_iou_A001_A047": 0.5443849520181284,
+          "fire_heat_iou_A001_A047_record_only": 0.7621856158194634,
+          "three_class_miou_A001_A047_record_only": 0.703522874205496,
+          "selection_score_S_record_only": 0.6594719270447003,
+          "fire_heat_iou_full134_record_only": 0.774558902071272,
+          "no_fire_joint_false_positive_ratio": 0.0001977887834821429,
+          "smoke_precision_A001_A047": 0.7409951655650548,
+          "smoke_recall_A001_A047": 0.6724080904046585
+        },
+        "thermal_zero": {
+          "background_iou_A001_A047": 0.8095095959829164,
+          "smoke_iou_A001_A047": 0.6195682025273919,
+          "fire_heat_iou_A001_A047_record_only": 0.009778758916931397,
+          "three_class_miou_A001_A047_record_only": 0.4796188524757466,
+          "selection_score_S_record_only": 0.3144872457261646,
+          "fire_heat_iou_full134_record_only": 0.009406288924937218,
+          "no_fire_joint_false_positive_ratio": 0.030940359933035715,
+          "smoke_precision_A001_A047": 0.7303923224801252,
+          "smoke_recall_A001_A047": 0.8034549225948918
+        },
+        "rgb_zero": {
+          "background_iou_A001_A047": 0.6615920899139945,
+          "smoke_iou_A001_A047": 0.08664407187546377,
+          "fire_heat_iou_A001_A047_record_only": 0.703912714063304,
+          "three_class_miou_A001_A047_record_only": 0.48404962528425416,
+          "selection_score_S_record_only": 0.3832391261476188,
+          "fire_heat_iou_full134_record_only": 0.6798341804197738,
+          "no_fire_joint_false_positive_ratio": 0.0021544363839285713,
+          "smoke_precision_A001_A047": 0.28673132413823293,
+          "smoke_recall_A001_A047": 0.11143411821117173
+        }
+      },
+      "201": {
+        "clean": {
+          "background_iou_A001_A047": 0.8573276355971927,
+          "smoke_iou_A001_A047": 0.7045678294878516,
+          "fire_heat_iou_A001_A047_record_only": 0.745124188310964,
+          "three_class_miou_A001_A047_record_only": 0.7690065511320027,
+          "selection_score_S_record_only": 0.7249781411986878,
+          "fire_heat_iou_full134_record_only": 0.745388452909524,
+          "no_fire_joint_false_positive_ratio": 6.007603236607143e-05,
+          "smoke_precision_A001_A047": 0.7659661114786782,
+          "smoke_recall_A001_A047": 0.8981664861025909
+        },
+        "thermal_noise_002": {
+          "background_iou_A001_A047": 0.8531980669117342,
+          "smoke_iou_A001_A047": 0.6962607432501671,
+          "fire_heat_iou_A001_A047_record_only": 0.7505501395014085,
+          "three_class_miou_A001_A047_record_only": 0.7666696498877699,
+          "selection_score_S_record_only": 0.7237298467497989,
+          "fire_heat_iou_full134_record_only": 0.7511989502494308,
+          "no_fire_joint_false_positive_ratio": 6.06689453125e-05,
+          "smoke_precision_A001_A047": 0.7606817499990337,
+          "smoke_recall_A001_A047": 0.8919116685502744
+        },
+        "thermal_noise_005": {
+          "background_iou_A001_A047": 0.8460693531089161,
+          "smoke_iou_A001_A047": 0.6754495062253643,
+          "fire_heat_iou_A001_A047_record_only": 0.7531477916389685,
+          "three_class_miou_A001_A047_record_only": 0.758222216991083,
+          "selection_score_S_record_only": 0.7165977735184639,
+          "fire_heat_iou_full134_record_only": 0.7577460408115637,
+          "no_fire_joint_false_positive_ratio": 6.0302734375000006e-05,
+          "smoke_precision_A001_A047": 0.7587446137906717,
+          "smoke_recall_A001_A047": 0.8608109860924907
+        },
+        "thermal_noise_010": {
+          "background_iou_A001_A047": 0.8102962117319684,
+          "smoke_iou_A001_A047": 0.5530001799560462,
+          "fire_heat_iou_A001_A047_record_only": 0.7394964456718209,
+          "three_class_miou_A001_A047_record_only": 0.7009309457866119,
+          "selection_score_S_record_only": 0.6564771558116461,
+          "fire_heat_iou_full134_record_only": 0.7599541316672461,
+          "no_fire_joint_false_positive_ratio": 2.504185267857143e-05,
+          "smoke_precision_A001_A047": 0.7551481610733531,
+          "smoke_recall_A001_A047": 0.6753976573804635
+        },
+        "thermal_zero": {
+          "background_iou_A001_A047": 0.8278291456517263,
+          "smoke_iou_A001_A047": 0.6807986544812543,
+          "fire_heat_iou_A001_A047_record_only": 0.0003547037044165124,
+          "three_class_miou_A001_A047_record_only": 0.502994167945799,
+          "selection_score_S_record_only": 0.34055986096160795,
+          "fire_heat_iou_full134_record_only": 0.0003210674419616943,
+          "no_fire_joint_false_positive_ratio": 0.05659479631696429,
+          "smoke_precision_A001_A047": 0.7333773721663155,
+          "smoke_recall_A001_A047": 0.9052959319392156
+        },
+        "rgb_zero": {
+          "background_iou_A001_A047": 0.6916242441357872,
+          "smoke_iou_A001_A047": 0.032383797450882566,
+          "fire_heat_iou_A001_A047_record_only": 0.48447075543131807,
+          "three_class_miou_A001_A047_record_only": 0.40282626567266255,
+          "selection_score_S_record_only": 0.24591488619856977,
+          "fire_heat_iou_full134_record_only": 0.459445974946257,
+          "no_fire_joint_false_positive_ratio": 0.0028787144252232144,
+          "smoke_precision_A001_A047": 0.33972490800078625,
+          "smoke_recall_A001_A047": 0.03678026432879602
+        }
+      },
+      "202": {
+        "clean": {
+          "background_iou_A001_A047": 0.8444396998708784,
+          "smoke_iou_A001_A047": 0.6789296373868042,
+          "fire_heat_iou_A001_A047_record_only": 0.7072163344077541,
+          "three_class_miou_A001_A047_record_only": 0.7435285572218122,
+          "selection_score_S_record_only": 0.6812278871327535,
+          "fire_heat_iou_full134_record_only": 0.6835261368787026,
+          "no_fire_joint_false_positive_ratio": 0.00010881696428571429,
+          "smoke_precision_A001_A047": 0.7578203839955214,
+          "smoke_recall_A001_A047": 0.8647414177132827
+        },
+        "thermal_noise_002": {
+          "background_iou_A001_A047": 0.8366237704664256,
+          "smoke_iou_A001_A047": 0.6615046114261484,
+          "fire_heat_iou_A001_A047_record_only": 0.7097885900478762,
+          "three_class_miou_A001_A047_record_only": 0.7359723239801501,
+          "selection_score_S_record_only": 0.6746960200036476,
+          "fire_heat_iou_full134_record_only": 0.6878874285811468,
+          "no_fire_joint_false_positive_ratio": 0.00010491071428571429,
+          "smoke_precision_A001_A047": 0.7495406784058553,
+          "smoke_recall_A001_A047": 0.8471077143564919
+        },
+        "thermal_noise_005": {
+          "background_iou_A001_A047": 0.8231673138848571,
+          "smoke_iou_A001_A047": 0.6205651111262486,
+          "fire_heat_iou_A001_A047_record_only": 0.7220528438661178,
+          "three_class_miou_A001_A047_record_only": 0.7219284229590744,
+          "selection_score_S_record_only": 0.6635245066940803,
+          "fire_heat_iou_full134_record_only": 0.7064839022619119,
+          "no_fire_joint_false_positive_ratio": 8.415876116071428e-05,
+          "smoke_precision_A001_A047": 0.7427620194311373,
+          "smoke_recall_A001_A047": 0.7887656008956261
+        },
+        "thermal_noise_010": {
+          "background_iou_A001_A047": 0.804916410179336,
+          "smoke_iou_A001_A047": 0.5413323803574559,
+          "fire_heat_iou_A001_A047_record_only": 0.7336935500284614,
+          "three_class_miou_A001_A047_record_only": 0.6933141135217511,
+          "selection_score_S_record_only": 0.635279781878838,
+          "fire_heat_iou_full134_record_only": 0.7292271834002203,
+          "no_fire_joint_false_positive_ratio": 0.00011764090401785715,
+          "smoke_precision_A001_A047": 0.7445754337997227,
+          "smoke_recall_A001_A047": 0.6633615112522075
+        },
+        "thermal_zero": {
+          "background_iou_A001_A047": 0.8363177823602024,
+          "smoke_iou_A001_A047": 0.6872540814384054,
+          "fire_heat_iou_A001_A047_record_only": 0.005474315374136776,
+          "three_class_miou_A001_A047_record_only": 0.5096820597242482,
+          "selection_score_S_record_only": 0.34714689673771276,
+          "fire_heat_iou_full134_record_only": 0.0070397120370200685,
+          "no_fire_joint_false_positive_ratio": 0.039535853794642854,
+          "smoke_precision_A001_A047": 0.7479390538522217,
+          "smoke_recall_A001_A047": 0.8924797808990496
+        },
+        "rgb_zero": {
+          "background_iou_A001_A047": 0.7154326502697227,
+          "smoke_iou_A001_A047": 0.040327079871178645,
+          "fire_heat_iou_A001_A047_record_only": 0.673449491674172,
+          "three_class_miou_A001_A047_record_only": 0.47640307393835774,
+          "selection_score_S_record_only": 0.344097682438953,
+          "fire_heat_iou_full134_record_only": 0.6478682850067273,
+          "no_fire_joint_false_positive_ratio": 0.0008581368582589285,
+          "smoke_precision_A001_A047": 0.5069367751689118,
+          "smoke_recall_A001_A047": 0.042383669069108024
+        }
+      }
+    }
+  },
+  "decisions": {
+    "S1": {
+      "seeds": [
+        {
+          "seed": 200,
+          "clean_smoke_delta": -0.04100069340563284,
+          "no_fire_joint_fp_delta": 4.6421595982142836e-05,
+          "guards": {
+            "clean_smoke": false,
+            "no_fire_absolute": true,
+            "no_fire_increase": true
+          },
+          "precision_positive": false,
+          "candidate_sigma005_drop": 0.1729874458043406,
+          "baseline_epoch100_context_sigma005_drop": 0.20682787774704536,
+          "descriptive_robust_advantage_vs_baseline_epoch100_context": 0.03384043194270475,
+          "robust_rule_eligible": false,
+          "robust_rule_reason": "V1.1_EPOCH26_30_CHECKPOINTS_NOT_AVAILABLE"
+        },
+        {
+          "seed": 201,
+          "clean_smoke_delta": -0.009876756594741187,
+          "no_fire_joint_fp_delta": -0.0014477887834821429,
+          "guards": {
+            "clean_smoke": true,
+            "no_fire_absolute": true,
+            "no_fire_increase": true
+          },
+          "precision_positive": false,
+          "candidate_sigma005_drop": 0.10912486205051586,
+          "baseline_epoch100_context_sigma005_drop": 0.25133861182495326,
+          "descriptive_robust_advantage_vs_baseline_epoch100_context": 0.1422137497744374,
+          "robust_rule_eligible": false,
+          "robust_rule_reason": "V1.1_EPOCH26_30_CHECKPOINTS_NOT_AVAILABLE"
+        },
+        {
+          "seed": 202,
+          "clean_smoke_delta": -0.007663824605567693,
+          "no_fire_joint_fp_delta": 0.0011741245814732143,
+          "guards": {
+            "clean_smoke": true,
+            "no_fire_absolute": true,
+            "no_fire_increase": false
+          },
+          "precision_positive": false,
+          "candidate_sigma005_drop": 0.18870962548642678,
+          "baseline_epoch100_context_sigma005_drop": 0.235845670023637,
+          "descriptive_robust_advantage_vs_baseline_epoch100_context": 0.04713604453721021,
+          "robust_rule_eligible": false,
+          "robust_rule_reason": "V1.1_EPOCH26_30_CHECKPOINTS_NOT_AVAILABLE"
+        }
+      ],
+      "clean_guards_3_of_3": false,
+      "precision_rule_3_of_3": false,
+      "precision_axis_pass": false,
+      "robust_axis_decision": "NOT_DETERMINABLE_BASELINE_WINDOW_MISSING",
+      "efficiency": {
+        "deploy_parameters": 7624323,
+        "gmacs_proxy": 7.470914048,
+        "gmacs_change_percent": 0.0,
+        "formal_latency_status": "DEFERRED_BY_AUTHORIZATION"
+      },
+      "efficiency_control_pass": false,
+      "formal_latency_status": "DEFERRED_BY_AUTHORIZATION",
+      "overall_decision": "NO_DISTINGUISHABLE_EFFECT_ON_DETERMINABLE_AXES",
+      "S_used_for_decision": false,
+      "Fire_used_for_positive_decision": false
+    },
+    "R2": {
+      "seeds": [
+        {
+          "seed": 200,
+          "clean_smoke_delta": -0.016204685366803306,
+          "no_fire_joint_fp_delta": -6.937081473214288e-05,
+          "guards": {
+            "clean_smoke": false,
+            "no_fire_absolute": true,
+            "no_fire_increase": true
+          },
+          "precision_positive": false,
+          "candidate_sigma005_drop": 0.30066196281026003,
+          "baseline_epoch100_context_sigma005_drop": 0.20682787774704536,
+          "descriptive_robust_advantage_vs_baseline_epoch100_context": -0.09383408506321467,
+          "robust_rule_eligible": false,
+          "robust_rule_reason": "V1.1_EPOCH26_30_CHECKPOINTS_NOT_AVAILABLE"
+        },
+        {
+          "seed": 201,
+          "clean_smoke_delta": -0.02443887062764727,
+          "no_fire_joint_fp_delta": -0.0015013602120535715,
+          "guards": {
+            "clean_smoke": false,
+            "no_fire_absolute": true,
+            "no_fire_increase": true
+          },
+          "precision_positive": false,
+          "candidate_sigma005_drop": 0.12586718067342817,
+          "baseline_epoch100_context_sigma005_drop": 0.25133861182495326,
+          "descriptive_robust_advantage_vs_baseline_epoch100_context": 0.1254714311515251,
+          "robust_rule_eligible": false,
+          "robust_rule_reason": "V1.1_EPOCH26_30_CHECKPOINTS_NOT_AVAILABLE"
+        },
+        {
+          "seed": 202,
+          "clean_smoke_delta": -0.006047657875924428,
+          "no_fire_joint_fp_delta": 0.00036247907366071427,
+          "guards": {
+            "clean_smoke": true,
+            "no_fire_absolute": true,
+            "no_fire_increase": true
+          },
+          "precision_positive": false,
+          "candidate_sigma005_drop": 0.22710674405806264,
+          "baseline_epoch100_context_sigma005_drop": 0.235845670023637,
+          "descriptive_robust_advantage_vs_baseline_epoch100_context": 0.008738925965574351,
+          "robust_rule_eligible": false,
+          "robust_rule_reason": "V1.1_EPOCH26_30_CHECKPOINTS_NOT_AVAILABLE"
+        }
+      ],
+      "clean_guards_3_of_3": false,
+      "precision_rule_3_of_3": false,
+      "precision_axis_pass": false,
+      "robust_axis_decision": "NOT_DETERMINABLE_BASELINE_WINDOW_MISSING",
+      "efficiency": {
+        "deploy_parameters": 7624164,
+        "gmacs_proxy": 7.489264128,
+        "gmacs_change_percent": 0.24562027995640515,
+        "formal_latency_status": "DEFERRED_BY_AUTHORIZATION"
+      },
+      "efficiency_control_pass": false,
+      "formal_latency_status": "DEFERRED_BY_AUTHORIZATION",
+      "overall_decision": "NO_DISTINGUISHABLE_EFFECT_ON_DETERMINABLE_AXES",
+      "S_used_for_decision": false,
+      "Fire_used_for_positive_decision": false
+    },
+    "R3": {
+      "seeds": [
+        {
+          "seed": 200,
+          "clean_smoke_delta": -0.049213344067874476,
+          "no_fire_joint_fp_delta": 0.00024733189174107133,
+          "guards": {
+            "clean_smoke": false,
+            "no_fire_absolute": true,
+            "no_fire_increase": true
+          },
+          "precision_positive": false,
+          "candidate_sigma005_drop": 0.037847225215304925,
+          "baseline_epoch100_context_sigma005_drop": 0.20682787774704536,
+          "descriptive_robust_advantage_vs_baseline_epoch100_context": 0.16898065253174044,
+          "robust_rule_eligible": false,
+          "robust_rule_reason": "V1.1_EPOCH26_30_CHECKPOINTS_NOT_AVAILABLE"
+        },
+        {
+          "seed": 201,
+          "clean_smoke_delta": 0.0016899607711268194,
+          "no_fire_joint_fp_delta": -0.0016780482700892857,
+          "guards": {
+            "clean_smoke": true,
+            "no_fire_absolute": true,
+            "no_fire_increase": true
+          },
+          "precision_positive": false,
+          "candidate_sigma005_drop": 0.02911832326248731,
+          "baseline_epoch100_context_sigma005_drop": 0.25133861182495326,
+          "descriptive_robust_advantage_vs_baseline_epoch100_context": 0.22222028856246595,
+          "robust_rule_eligible": false,
+          "robust_rule_reason": "V1.1_EPOCH26_30_CHECKPOINTS_NOT_AVAILABLE"
+        },
+        {
+          "seed": 202,
+          "clean_smoke_delta": -0.017801441089165038,
+          "no_fire_joint_fp_delta": 3.393554687499999e-05,
+          "guards": {
+            "clean_smoke": false,
+            "no_fire_absolute": true,
+            "no_fire_increase": true
+          },
+          "precision_positive": false,
+          "candidate_sigma005_drop": 0.05836452626055566,
+          "baseline_epoch100_context_sigma005_drop": 0.235845670023637,
+          "descriptive_robust_advantage_vs_baseline_epoch100_context": 0.17748114376308133,
+          "robust_rule_eligible": false,
+          "robust_rule_reason": "V1.1_EPOCH26_30_CHECKPOINTS_NOT_AVAILABLE"
+        }
+      ],
+      "clean_guards_3_of_3": false,
+      "precision_rule_3_of_3": false,
+      "precision_axis_pass": false,
+      "robust_axis_decision": "NOT_DETERMINABLE_BASELINE_WINDOW_MISSING",
+      "efficiency": {
+        "deploy_parameters": 7624164,
+        "gmacs_proxy": 7.489264128,
+        "gmacs_change_percent": 0.24562027995640515,
+        "formal_latency_status": "DEFERRED_BY_AUTHORIZATION"
+      },
+      "efficiency_control_pass": false,
+      "formal_latency_status": "DEFERRED_BY_AUTHORIZATION",
+      "overall_decision": "NO_DISTINGUISHABLE_EFFECT_ON_DETERMINABLE_AXES",
+      "S_used_for_decision": false,
+      "Fire_used_for_positive_decision": false
+    }
+  },
+  "efficiency_static": {
+    "S1": {
+      "deploy_parameters": 7624323,
+      "gmacs_proxy": 7.470914048,
+      "gmacs_change_percent": 0.0,
+      "formal_latency_status": "DEFERRED_BY_AUTHORIZATION"
+    },
+    "R2": {
+      "deploy_parameters": 7624164,
+      "gmacs_proxy": 7.489264128,
+      "gmacs_change_percent": 0.24562027995640515,
+      "formal_latency_status": "DEFERRED_BY_AUTHORIZATION"
+    },
+    "R3": {
+      "deploy_parameters": 7624164,
+      "gmacs_proxy": 7.489264128,
+      "gmacs_change_percent": 0.24562027995640515,
+      "formal_latency_status": "DEFERRED_BY_AUTHORIZATION"
+    }
+  },
+  "robust_axis_limitation": "V1.1_EPOCH26_30_CHECKPOINTS_NOT_AVAILABLE",
+  "formal_latency_status": "DEFERRED_BY_AUTHORIZATION",
+  "S_used_for_decision": false,
+  "Fire_used_for_positive_decision": false,
+  "test107_read": false,
+  "training_performed": false
+}

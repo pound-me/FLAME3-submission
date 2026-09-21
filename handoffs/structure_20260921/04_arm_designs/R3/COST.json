@@ -1,0 +1,18 @@
+{
+  "arm": "R3",
+  "site": "conv1[0] split; unchanged weight count; gate delta only",
+  "status": "DESIGN_ONLY_PENDING_APPROVAL",
+  "old_target_parameters": 0,
+  "new_target_deploy_parameters": 225,
+  "delta_deploy_parameters": 225,
+  "estimated_deploy_parameters": 7624164,
+  "delta_training_parameters": 225,
+  "estimated_training_parameters": 7717320,
+  "delta_conv_matmul_gmacs": 0.01835008,
+  "estimated_total_gmacs_proxy": 7.489264128,
+  "proxy_change_percent": 0.24562027995640515,
+  "train_forward_delta_conv_matmul_gmacs": 0.01835008,
+  "under_rounded_cap_proxy": true,
+  "p95_ms": null,
+  "peak_vram_mb": null
+}

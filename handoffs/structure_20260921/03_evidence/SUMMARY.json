@@ -1,0 +1,834 @@
+{
+  "protocol": "flame3_numeric_equivalence_precision_revision_20260919_v1",
+  "identity": {
+    "config_sha256": "512B032BA5D37DEBBC4CAAAD3D8288FD0ADBC68E65C5B43DBF4DD7716868ED43",
+    "pretrained_sha256": "F96E2C96B1ACA1400A6F54AC41093D98B4817F6008A5D869ABE6248551A5F359",
+    "matched_pretrained_tensors": 301,
+    "seed": 200
+  },
+  "thresholds": {
+    "cpu_fp32": {
+      "head": 0.0001,
+      "local": 1e-06
+    },
+    "cuda_fp32_tf32_off": {
+      "head": 0.0001,
+      "local": 1e-06
+    },
+    "local_float64": {
+      "local": 1e-09
+    },
+    "cuda_amp_fp16_tf32_off": {
+      "head": null,
+      "local": 0.001
+    }
+  },
+  "results": [
+    {
+      "arm": "S1",
+      "status": "REVISED_PRECISION_GATE_PASS",
+      "eligible_for_two_epoch_smoke": true,
+      "construction": {
+        "unchanged_tensor_count": 473,
+        "allowed_prefixes": [
+          "spp.scale_process."
+        ],
+        "cpu_rng_preserved": true,
+        "cuda_rng_preserved": true
+      },
+      "a_cpu_fp32": {
+        "label": "cpu_fp32",
+        "amp": false,
+        "cases": [
+          {
+            "probe": 0,
+            "head_max_abs": 6.67572021484375e-06,
+            "local_max_abs": 1.1175870895385742e-07,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 1,
+            "head_max_abs": 6.67572021484375e-06,
+            "local_max_abs": 1.4901161193847656e-07,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 2,
+            "head_max_abs": 9.5367431640625e-06,
+            "local_max_abs": 2.086162567138672e-07,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "outputs_finite": true
+          }
+        ],
+        "maximum_head_abs": 9.5367431640625e-06,
+        "maximum_local_abs": 2.086162567138672e-07,
+        "pass_": true
+      },
+      "b_cuda_fp32_tf32_off": {
+        "label": "cuda_fp32_tf32_off",
+        "amp": false,
+        "cases": [
+          {
+            "probe": 0,
+            "head_max_abs": 8.58306884765625e-06,
+            "local_max_abs": 2.086162567138672e-07,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 1,
+            "head_max_abs": 8.58306884765625e-06,
+            "local_max_abs": 1.7881393432617188e-07,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 2,
+            "head_max_abs": 1.33514404296875e-05,
+            "local_max_abs": 2.384185791015625e-07,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "outputs_finite": true
+          }
+        ],
+        "maximum_head_abs": 1.33514404296875e-05,
+        "maximum_local_abs": 2.384185791015625e-07,
+        "pass_": true
+      },
+      "c_local_float64": {
+        "label": "local_float64",
+        "shape": [
+          1,
+          384,
+          8,
+          10
+        ],
+        "maximum_local_abs": 7.549516567451064e-15,
+        "local_threshold": 1e-09,
+        "finite": true,
+        "pass_": true,
+        "cases": [
+          6.661338147750939e-15,
+          0.0,
+          7.549516567451064e-15
+        ]
+      },
+      "d_cuda_amp_tf32_off": {
+        "label": "cuda_amp_fp16_tf32_off",
+        "amp": true,
+        "cases": [
+          {
+            "probe": 0,
+            "head_max_abs": 0.015625,
+            "local_max_abs": 0.000244140625,
+            "head_threshold": null,
+            "local_threshold": 0.001,
+            "head_decision_used": false,
+            "head_pass": null,
+            "local_pass": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 1,
+            "head_max_abs": 0.009765625,
+            "local_max_abs": 0.000244140625,
+            "head_threshold": null,
+            "local_threshold": 0.001,
+            "head_decision_used": false,
+            "head_pass": null,
+            "local_pass": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 2,
+            "head_max_abs": 0.03125,
+            "local_max_abs": 0.00048828125,
+            "head_threshold": null,
+            "local_threshold": 0.001,
+            "head_decision_used": false,
+            "head_pass": null,
+            "local_pass": true,
+            "outputs_finite": true
+          }
+        ],
+        "maximum_head_abs": 0.03125,
+        "maximum_local_abs": 0.00048828125,
+        "pass_": true
+      },
+      "e_v11_self_noise_record_only": {
+        "decision_use": "RECORD_ONLY",
+        "tf32_on": {
+          "cudnn": true,
+          "matmul": true
+        },
+        "tf32_off": {
+          "cudnn": false,
+          "matmul": false
+        },
+        "layout_comparison_tf32_off": true,
+        "maximum_tf32_self_noise": 0.03389662504196167,
+        "maximum_layout_self_noise": 4.792213439941406e-05,
+        "records": [
+          {
+            "probe": 0,
+            "tf32_on_vs_off_head_max_abs": 0.0292665958404541,
+            "default_vs_channels_last_head_max_abs": 4.0531158447265625e-05,
+            "finite": true
+          },
+          {
+            "probe": 1,
+            "tf32_on_vs_off_head_max_abs": 0.02332592010498047,
+            "default_vs_channels_last_head_max_abs": 4.792213439941406e-05,
+            "finite": true
+          },
+          {
+            "probe": 2,
+            "tf32_on_vs_off_head_max_abs": 0.03389662504196167,
+            "default_vs_channels_last_head_max_abs": 4.00543212890625e-05,
+            "finite": true
+          }
+        ]
+      },
+      "learning_signal": null,
+      "test107_read": false,
+      "dataset_files_read": 0
+    },
+    {
+      "arm": "R2",
+      "status": "REVISED_PRECISION_GATE_PASS",
+      "eligible_for_two_epoch_smoke": true,
+      "construction": {
+        "unchanged_tensor_count": 477,
+        "allowed_prefixes": [
+          "conv1.0."
+        ],
+        "cpu_rng_preserved": true,
+        "cuda_rng_preserved": true
+      },
+      "a_cpu_fp32": {
+        "label": "cpu_fp32",
+        "reused_approved_evidence": true,
+        "evidence_sha256": "E24CE10CE87EB4297328C8CED7CED650CC81C74FF245490073F353452969B2B3",
+        "record": {
+          "arm": "R2",
+          "phase": "cpu",
+          "status": "REVISED_GATE5_PASS",
+          "revised_gate5": true,
+          "thresholds": {
+            "cpu_fp32": {
+              "head": 0.0001,
+              "stem": 1e-06
+            },
+            "cuda_fp32": {
+              "head": 0.0001,
+              "stem": 1e-06
+            },
+            "cuda_amp_fp16": {
+              "head": 0.01,
+              "stem": 0.001
+            }
+          },
+          "amp_head_threshold_final": 0.01,
+          "test107_read": false,
+          "dataset_files_read": 0,
+          "unchanged": {
+            "unchanged_tensor_count": 477,
+            "allowed_prefixes": [
+              "conv1.0."
+            ]
+          },
+          "cpu_rng_preserved": true,
+          "cuda_rng_preserved": null,
+          "precision_checks": [
+            {
+              "label": "cpu_fp32",
+              "amp": false,
+              "cases": [
+                {
+                  "probe": 0,
+                  "head_max_abs": 4.2438507080078125e-05,
+                  "stem_max_abs": 5.960464477539062e-07,
+                  "head_threshold": 0.0001,
+                  "stem_threshold": 1e-06,
+                  "head_pass": true,
+                  "stem_pass": true,
+                  "gate_min": 1.0,
+                  "gate_max": 1.0,
+                  "gate_exact_one": true,
+                  "outputs_finite": true
+                },
+                {
+                  "probe": 1,
+                  "head_max_abs": 0.0,
+                  "stem_max_abs": 0.0,
+                  "head_threshold": 0.0001,
+                  "stem_threshold": 1e-06,
+                  "head_pass": true,
+                  "stem_pass": true,
+                  "gate_min": 1.0,
+                  "gate_max": 1.0,
+                  "gate_exact_one": true,
+                  "outputs_finite": true
+                },
+                {
+                  "probe": 2,
+                  "head_max_abs": 5.7578086853027344e-05,
+                  "stem_max_abs": 2.384185791015625e-07,
+                  "head_threshold": 0.0001,
+                  "stem_threshold": 1e-06,
+                  "head_pass": true,
+                  "stem_pass": true,
+                  "gate_min": 1.0,
+                  "gate_max": 1.0,
+                  "gate_exact_one": true,
+                  "outputs_finite": true
+                }
+              ],
+              "pass_": true,
+              "maximum_head_abs": 5.7578086853027344e-05,
+              "maximum_stem_abs": 5.960464477539062e-07
+            }
+          ],
+          "learning_signal": {
+            "initial_thermal_perturb_gate_max_abs": 0.0,
+            "initial_perturb_exact_zero": true,
+            "gate_final_bias_gradient_max_abs": 0.5000030398368835,
+            "gate_final_weight_gradient_max_abs": 0.08026092499494553,
+            "gradients_finite": true,
+            "bias_gradient_nonzero": true,
+            "weight_gradient_nonzero": true,
+            "post_one_synthetic_gate_step_thermal_perturb_max_abs": 7.152557373046875e-07,
+            "post_step_thermal_response_nonzero": true,
+            "synthetic_step_lr": 0.001,
+            "synthetic_step_saved_or_reused": false,
+            "pass_": true
+          },
+          "eligible_for_two_epoch_smoke": false
+        },
+        "pass_": true
+      },
+      "b_cuda_fp32_tf32_off": {
+        "label": "cuda_fp32_tf32_off",
+        "amp": false,
+        "cases": [
+          {
+            "probe": 0,
+            "head_max_abs": 3.337860107421875e-05,
+            "local_max_abs": 3.5762786865234375e-07,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 1,
+            "head_max_abs": 0.0,
+            "local_max_abs": 0.0,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 2,
+            "head_max_abs": 4.57763671875e-05,
+            "local_max_abs": 2.384185791015625e-07,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          }
+        ],
+        "maximum_head_abs": 4.57763671875e-05,
+        "maximum_local_abs": 3.5762786865234375e-07,
+        "pass_": true
+      },
+      "c_local_float64": {
+        "label": "local_float64",
+        "shape": [
+          1,
+          4,
+          64,
+          80
+        ],
+        "maximum_local_abs": 6.661338147750939e-16,
+        "local_threshold": 1e-09,
+        "finite": true,
+        "gate_exact_one": true,
+        "pass_": true,
+        "cases": [
+          {
+            "local_max_abs": 6.661338147750939e-16,
+            "gate_min": 1.0,
+            "gate_max": 1.0
+          },
+          {
+            "local_max_abs": 0.0,
+            "gate_min": 1.0,
+            "gate_max": 1.0
+          },
+          {
+            "local_max_abs": 2.220446049250313e-16,
+            "gate_min": 1.0,
+            "gate_max": 1.0
+          }
+        ]
+      },
+      "d_cuda_amp_tf32_off": {
+        "label": "cuda_amp_fp16_tf32_off",
+        "amp": true,
+        "cases": [
+          {
+            "probe": 0,
+            "head_max_abs": 0.0703125,
+            "local_max_abs": 0.0009768009185791016,
+            "head_threshold": null,
+            "local_threshold": 0.001,
+            "head_decision_used": false,
+            "head_pass": null,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 1,
+            "head_max_abs": 0.0,
+            "local_max_abs": 2.864517512080056e-08,
+            "head_threshold": null,
+            "local_threshold": 0.001,
+            "head_decision_used": false,
+            "head_pass": null,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 2,
+            "head_max_abs": 0.1116943359375,
+            "local_max_abs": 0.000488579273223877,
+            "head_threshold": null,
+            "local_threshold": 0.001,
+            "head_decision_used": false,
+            "head_pass": null,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          }
+        ],
+        "maximum_head_abs": 0.1116943359375,
+        "maximum_local_abs": 0.0009768009185791016,
+        "pass_": true
+      },
+      "e_v11_self_noise_record_only": {
+        "decision_use": "RECORD_ONLY",
+        "tf32_on": {
+          "cudnn": true,
+          "matmul": true
+        },
+        "tf32_off": {
+          "cudnn": false,
+          "matmul": false
+        },
+        "layout_comparison_tf32_off": true,
+        "maximum_tf32_self_noise": 0.03389662504196167,
+        "maximum_layout_self_noise": 4.792213439941406e-05,
+        "records": [
+          {
+            "probe": 0,
+            "tf32_on_vs_off_head_max_abs": 0.0292665958404541,
+            "default_vs_channels_last_head_max_abs": 4.0531158447265625e-05,
+            "finite": true
+          },
+          {
+            "probe": 1,
+            "tf32_on_vs_off_head_max_abs": 0.02332592010498047,
+            "default_vs_channels_last_head_max_abs": 4.792213439941406e-05,
+            "finite": true
+          },
+          {
+            "probe": 2,
+            "tf32_on_vs_off_head_max_abs": 0.03389662504196167,
+            "default_vs_channels_last_head_max_abs": 4.00543212890625e-05,
+            "finite": true
+          }
+        ]
+      },
+      "learning_signal": {
+        "initial_thermal_perturb_gate_max_abs": 0.0,
+        "initial_perturb_exact_zero": true,
+        "gate_final_bias_gradient_max_abs": 0.5,
+        "gate_final_weight_gradient_max_abs": 0.08026091009378433,
+        "gradients_finite": true,
+        "bias_gradient_nonzero": true,
+        "weight_gradient_nonzero": true,
+        "post_one_synthetic_gate_step_thermal_perturb_max_abs": 7.152557373046875e-07,
+        "post_step_thermal_response_nonzero": true,
+        "synthetic_step_saved_or_reused": false,
+        "pass_": true
+      },
+      "test107_read": false,
+      "dataset_files_read": 0
+    },
+    {
+      "arm": "R3",
+      "status": "REVISED_PRECISION_GATE_PASS",
+      "eligible_for_two_epoch_smoke": true,
+      "construction": {
+        "unchanged_tensor_count": 477,
+        "allowed_prefixes": [
+          "conv1.0."
+        ],
+        "cpu_rng_preserved": true,
+        "cuda_rng_preserved": true
+      },
+      "a_cpu_fp32": {
+        "label": "cpu_fp32",
+        "reused_approved_evidence": true,
+        "evidence_sha256": "E24CE10CE87EB4297328C8CED7CED650CC81C74FF245490073F353452969B2B3",
+        "record": {
+          "arm": "R3",
+          "phase": "cpu",
+          "status": "REVISED_GATE5_PASS",
+          "revised_gate5": true,
+          "thresholds": {
+            "cpu_fp32": {
+              "head": 0.0001,
+              "stem": 1e-06
+            },
+            "cuda_fp32": {
+              "head": 0.0001,
+              "stem": 1e-06
+            },
+            "cuda_amp_fp16": {
+              "head": 0.01,
+              "stem": 0.001
+            }
+          },
+          "amp_head_threshold_final": 0.01,
+          "test107_read": false,
+          "dataset_files_read": 0,
+          "unchanged": {
+            "unchanged_tensor_count": 477,
+            "allowed_prefixes": [
+              "conv1.0."
+            ]
+          },
+          "cpu_rng_preserved": true,
+          "cuda_rng_preserved": null,
+          "precision_checks": [
+            {
+              "label": "cpu_fp32",
+              "amp": false,
+              "cases": [
+                {
+                  "probe": 0,
+                  "head_max_abs": 4.2438507080078125e-05,
+                  "stem_max_abs": 5.960464477539062e-07,
+                  "head_threshold": 0.0001,
+                  "stem_threshold": 1e-06,
+                  "head_pass": true,
+                  "stem_pass": true,
+                  "gate_min": 1.0,
+                  "gate_max": 1.0,
+                  "gate_exact_one": true,
+                  "outputs_finite": true
+                },
+                {
+                  "probe": 1,
+                  "head_max_abs": 0.0,
+                  "stem_max_abs": 0.0,
+                  "head_threshold": 0.0001,
+                  "stem_threshold": 1e-06,
+                  "head_pass": true,
+                  "stem_pass": true,
+                  "gate_min": 1.0,
+                  "gate_max": 1.0,
+                  "gate_exact_one": true,
+                  "outputs_finite": true
+                },
+                {
+                  "probe": 2,
+                  "head_max_abs": 5.7578086853027344e-05,
+                  "stem_max_abs": 2.384185791015625e-07,
+                  "head_threshold": 0.0001,
+                  "stem_threshold": 1e-06,
+                  "head_pass": true,
+                  "stem_pass": true,
+                  "gate_min": 1.0,
+                  "gate_max": 1.0,
+                  "gate_exact_one": true,
+                  "outputs_finite": true
+                }
+              ],
+              "pass_": true,
+              "maximum_head_abs": 5.7578086853027344e-05,
+              "maximum_stem_abs": 5.960464477539062e-07
+            }
+          ],
+          "learning_signal": {
+            "initial_thermal_perturb_gate_max_abs": 0.0,
+            "initial_perturb_exact_zero": true,
+            "gate_final_bias_gradient_max_abs": 0.5000030398368835,
+            "gate_final_weight_gradient_max_abs": 0.08026092499494553,
+            "gradients_finite": true,
+            "bias_gradient_nonzero": true,
+            "weight_gradient_nonzero": true,
+            "post_one_synthetic_gate_step_thermal_perturb_max_abs": 7.152557373046875e-07,
+            "post_step_thermal_response_nonzero": true,
+            "synthetic_step_lr": 0.001,
+            "synthetic_step_saved_or_reused": false,
+            "pass_": true
+          },
+          "eligible_for_two_epoch_smoke": false
+        },
+        "pass_": true
+      },
+      "b_cuda_fp32_tf32_off": {
+        "label": "cuda_fp32_tf32_off",
+        "amp": false,
+        "cases": [
+          {
+            "probe": 0,
+            "head_max_abs": 3.337860107421875e-05,
+            "local_max_abs": 3.5762786865234375e-07,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 1,
+            "head_max_abs": 0.0,
+            "local_max_abs": 0.0,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 2,
+            "head_max_abs": 4.57763671875e-05,
+            "local_max_abs": 2.384185791015625e-07,
+            "head_threshold": 0.0001,
+            "local_threshold": 1e-06,
+            "head_decision_used": true,
+            "head_pass": true,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          }
+        ],
+        "maximum_head_abs": 4.57763671875e-05,
+        "maximum_local_abs": 3.5762786865234375e-07,
+        "pass_": true
+      },
+      "c_local_float64": {
+        "label": "local_float64",
+        "shape": [
+          1,
+          4,
+          64,
+          80
+        ],
+        "maximum_local_abs": 6.661338147750939e-16,
+        "local_threshold": 1e-09,
+        "finite": true,
+        "gate_exact_one": true,
+        "pass_": true,
+        "cases": [
+          {
+            "local_max_abs": 6.661338147750939e-16,
+            "gate_min": 1.0,
+            "gate_max": 1.0
+          },
+          {
+            "local_max_abs": 0.0,
+            "gate_min": 1.0,
+            "gate_max": 1.0
+          },
+          {
+            "local_max_abs": 2.220446049250313e-16,
+            "gate_min": 1.0,
+            "gate_max": 1.0
+          }
+        ]
+      },
+      "d_cuda_amp_tf32_off": {
+        "label": "cuda_amp_fp16_tf32_off",
+        "amp": true,
+        "cases": [
+          {
+            "probe": 0,
+            "head_max_abs": 0.0703125,
+            "local_max_abs": 0.0009768009185791016,
+            "head_threshold": null,
+            "local_threshold": 0.001,
+            "head_decision_used": false,
+            "head_pass": null,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 1,
+            "head_max_abs": 0.0,
+            "local_max_abs": 2.864517512080056e-08,
+            "head_threshold": null,
+            "local_threshold": 0.001,
+            "head_decision_used": false,
+            "head_pass": null,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          },
+          {
+            "probe": 2,
+            "head_max_abs": 0.1116943359375,
+            "local_max_abs": 0.000488579273223877,
+            "head_threshold": null,
+            "local_threshold": 0.001,
+            "head_decision_used": false,
+            "head_pass": null,
+            "local_pass": true,
+            "gate_min": 1.0,
+            "gate_max": 1.0,
+            "gate_exact_one": true,
+            "outputs_finite": true
+          }
+        ],
+        "maximum_head_abs": 0.1116943359375,
+        "maximum_local_abs": 0.0009768009185791016,
+        "pass_": true
+      },
+      "e_v11_self_noise_record_only": {
+        "decision_use": "RECORD_ONLY",
+        "tf32_on": {
+          "cudnn": true,
+          "matmul": true
+        },
+        "tf32_off": {
+          "cudnn": false,
+          "matmul": false
+        },
+        "layout_comparison_tf32_off": true,
+        "maximum_tf32_self_noise": 0.03389662504196167,
+        "maximum_layout_self_noise": 4.792213439941406e-05,
+        "records": [
+          {
+            "probe": 0,
+            "tf32_on_vs_off_head_max_abs": 0.0292665958404541,
+            "default_vs_channels_last_head_max_abs": 4.0531158447265625e-05,
+            "finite": true
+          },
+          {
+            "probe": 1,
+            "tf32_on_vs_off_head_max_abs": 0.02332592010498047,
+            "default_vs_channels_last_head_max_abs": 4.792213439941406e-05,
+            "finite": true
+          },
+          {
+            "probe": 2,
+            "tf32_on_vs_off_head_max_abs": 0.03389662504196167,
+            "default_vs_channels_last_head_max_abs": 4.00543212890625e-05,
+            "finite": true
+          }
+        ]
+      },
+      "learning_signal": {
+        "initial_thermal_perturb_gate_max_abs": 0.0,
+        "initial_perturb_exact_zero": true,
+        "gate_final_bias_gradient_max_abs": 0.5,
+        "gate_final_weight_gradient_max_abs": 0.08026091009378433,
+        "gradients_finite": true,
+        "bias_gradient_nonzero": true,
+        "weight_gradient_nonzero": true,
+        "post_one_synthetic_gate_step_thermal_perturb_max_abs": 7.152557373046875e-07,
+        "post_step_thermal_response_nonzero": true,
+        "synthetic_step_saved_or_reused": false,
+        "pass_": true
+      },
+      "test107_read": false,
+      "dataset_files_read": 0
+    }
+  ],
+  "all_pass": true,
+  "eligible_for_two_epoch_smoke": [
+    "S1",
+    "R2",
+    "R3"
+  ],
+  "training_precision_before": {
+    "cudnn_allow_tf32": true,
+    "matmul_allow_tf32": false
+  },
+  "training_precision_restored_to_frozen": {
+    "cudnn_allow_tf32": true,
+    "matmul_allow_tf32": false
+  },
+  "training_precision_restoration_pass": true,
+  "amp_head_decision_use": "RECORD_ONLY",
+  "test107_read": false,
+  "dataset_files_read": 0
+}

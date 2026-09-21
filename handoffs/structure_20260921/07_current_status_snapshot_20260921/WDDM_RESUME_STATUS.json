@@ -1,0 +1,9 @@
+{
+    "status":  "WDDM_TASKS_INSTALLED_AND_QUEUE_STARTED",
+    "at":  "2026-09-21T18:02:58.8263603+08:00",
+    "old_queue_status":  "D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\flame3_baseline_replay_20260921_v1\\QUEUE_STATUS_PRE_WDDM_HOLD.json",
+    "training_action":  "-B -X utf8 -u \"D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\flame3_baseline_replay_20260921_v1\\launch_replay_wddm.py\"",
+    "latency_action":  "-B -X utf8 -u \"D:\\qianpengcheng\\7.31\\flame3_4090_bundle_v1_20260731\\flame3_baseline_replay_20260921_v1\\benchmark_idle_wddm.py\" --windows-idle-task",
+    "no_training_result_observed":  true,
+    "test107_read":  false
+}

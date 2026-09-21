@@ -1,0 +1,9 @@
+{
+    "status":  "V1_RUNTIME_SAMPLE_FAILED_BEFORE_TASK_CHANGE",
+    "at":  "2026-09-21T18:02:25.2608213+08:00",
+    "reason":  "nvidia-smi process-name output used a Windows legacy code page while Python was forced to UTF-8",
+    "training_started":  false,
+    "task_changed":  false,
+    "contract_tests_passed":  14,
+    "v1_manifest_sha256":  "74585CB0B8C95EFAE0333DAB9424581436F0CED514B0D361AD38787A47158A0E"
+}

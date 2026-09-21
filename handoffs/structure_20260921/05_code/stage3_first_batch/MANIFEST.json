@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "relative": "AUTHORIZATION.md",
+      "sha256": "ADC31E499ED8F6353C56D85AE1CF3C71C9184612C17FBA5214E2FC81CB0DE681",
+      "bytes": 1413
+    },
+    {
+      "relative": "bootstrap_stage3.py",
+      "sha256": "6AB93D45971F8E31DC8A065C934BE65808DE251E08E6DB332CD016D391C2C69C",
+      "bytes": 529
+    },
+    {
+      "relative": "EFFICIENCY_STATIC.json",
+      "sha256": "6234814391ABFE09A83291B7F32AE0AD8CCC89E4D89183339AA1886D4674AB3F",
+      "bytes": 646
+    },
+    {
+      "relative": "inspect_legacy_checkpoints.py",
+      "sha256": "0A709908B5F31BC75ECBD559E8DBAD9CF553C31ACBC163EF9D16C7C0810308DD",
+      "bytes": 2290
+    },
+    {
+      "relative": "launch_stage3.py",
+      "sha256": "C436226078787DE83D979D544369DDD0B88264E6ACEC294C32835C3F97B506D8",
+      "bytes": 1633
+    },
+    {
+      "relative": "launch_stage3_task.cmd",
+      "sha256": "BA520767CDD1BD3477F4996A5A347B0F019989B2207EE8DDF13088CE6B6D3335",
+      "bytes": 135
+    },
+    {
+      "relative": "package_stage3.py",
+      "sha256": "3EB58D6228CFACD5C06582BA0F3375762536DF61B928A8AC10C0FBDEE852FFF4",
+      "bytes": 982
+    },
+    {
+      "relative": "run_stage3.py",
+      "sha256": "5AF0114BE2C06F2CD83C30743857FB2EE3F87445E9850717E1B7816361B51065",
+      "bytes": 16865
+    },
+    {
+      "relative": "run_stage3_task.cmd",
+      "sha256": "EBAD2AFACCBF737CE3EABA691F987BEB059A32312E7D8FC0EB171DF546D2F0D4",
+      "bytes": 131
+    },
+    {
+      "relative": "stage3_protocol.py",
+      "sha256": "AE7776EA281820CE486BF83D705C0A7B6889128FDC9D61DA98DEB2577254CC59",
+      "bytes": 7157
+    },
+    {
+      "relative": "test_stage3.py",
+      "sha256": "F7097AADE39E01BD3F4C8F3FEB13510835784BD9EDEFAFB7A0F441BF47362ED2",
+      "bytes": 2534
+    }
+  ],
+  "authorization_sha256": "ADC31E499ED8F6353C56D85AE1CF3C71C9184612C17FBA5214E2FC81CB0DE681"
+}

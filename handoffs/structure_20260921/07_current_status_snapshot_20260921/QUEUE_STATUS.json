@@ -1,0 +1,16 @@
+{
+  "status": "WAITING_GPU",
+  "pid": 91316,
+  "seeds": [
+    200,
+    201,
+    202
+  ],
+  "completed": [],
+  "started_unix": 1789984978.9478817,
+  "test107_read": false,
+  "other_arm_training": false,
+  "scheduling_amendment_sha256": "1750E8710CF165B9BA121F286EA052B1F69E14254B02553EE37DA909A2E0E0B1",
+  "updated_unix": 1789985092.5735664,
+  "admission_stable_seconds": 0
+}

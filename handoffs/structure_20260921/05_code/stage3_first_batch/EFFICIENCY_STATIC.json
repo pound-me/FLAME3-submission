@@ -1,0 +1,8 @@
+{
+  "S3": {"deploy_parameters": 7465475, "gmacs_proxy": 7.419959808, "gmacs_change_percent": -0.6820348845218036},
+  "S4": {"deploy_parameters": 7361059, "gmacs_proxy": 7.134427648, "gmacs_change_percent": -4.503952231789884},
+  "S6": {"deploy_parameters": 7771651, "gmacs_proxy": 8.225888768, "gmacs_change_percent": 10.105520089634954},
+  "R1": {"deploy_parameters": 7623939, "gmacs_proxy": 7.470914048, "gmacs_change_percent": 0.0},
+  "B1": {"deploy_parameters": 7623939, "gmacs_proxy": 7.470914048, "gmacs_change_percent": 0.0},
+  "E1": {"deploy_parameters": 7549891, "gmacs_proxy": 7.092443648, "gmacs_change_percent": -5.065918274100856}
+}

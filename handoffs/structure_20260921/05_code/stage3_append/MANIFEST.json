@@ -1,0 +1,43 @@
+{
+  "protocol": "flame3_append_stage3_and_2x2_20260919_v1",
+  "authorization_sha256": "C88CDD1C576C8D87E008B1693EC4B412596D1362A5F7DD8E1EC52747BCCE199F",
+  "training_performed": false,
+  "test107_read": false,
+  "files": [
+    {
+      "relative": "AUTHORIZATION.md",
+      "sha256": "C88CDD1C576C8D87E008B1693EC4B412596D1362A5F7DD8E1EC52747BCCE199F",
+      "bytes": 824
+    },
+    {
+      "relative": "EFFICIENCY_STATIC.json",
+      "sha256": "ACC8D06249B81345ED2C205FC7D7DD4DEA802FD392EEFB6B244CE0E590635F9D",
+      "bytes": 548
+    },
+    {
+      "relative": "install_append_stage3_task.py",
+      "sha256": "67E7FC20F6AF02B2D76BF00F49E2FB66353CECD80268CA65734432626D2371D7",
+      "bytes": 1981
+    },
+    {
+      "relative": "launch_append_stage3.py",
+      "sha256": "664484EA824AD739BD49054CA44AA7EDF049342A498BC1D7DF9BD496BE022B00",
+      "bytes": 1940
+    },
+    {
+      "relative": "package_append_stage3.py",
+      "sha256": "E9AF05A5F1EF682CCB1637D8665B12CCFBB1D91B9741A5BAC0F47876371238FC",
+      "bytes": 2542
+    },
+    {
+      "relative": "run_append_stage3.py",
+      "sha256": "96BDCEAC821AE31D3901ED310D86131E4B645ACFA8276900208C9CBCCC4849C7",
+      "bytes": 23281
+    },
+    {
+      "relative": "test_append_stage3.py",
+      "sha256": "0757A5134243525E81009F878D46CE32E733289DF3C277741E133E7355FA05AA",
+      "bytes": 1572
+    }
+  ]
+}

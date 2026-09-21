@@ -1,0 +1,9 @@
+请把这个目录视为截至 2026-09-21 的 FLAME3 最新交接材料。
+
+先阅读仓库根目录 CURRENT_STATUS.md 和本目录 00_READ_ME_FIRST.md，再依次阅读：
+1. 02_reports/FLAME3_STRUCTURE_12_ARM_THREE_AXIS_REPORT_20260919.md
+2. 02_reports/FLAME3_STRUCTURE_STAGE3_AND_REVISED_GATE_REPORT_20260919.md
+3. 01_work_orders/预注册_网络结构改进筛选_修订版v2_20260917.md
+4. 01_work_orders/工单补充3_数值等价门精度模式修订_20260919.md
+
+随后结合 03_evidence、04_arm_designs、05_code、06_baseline_replay_authorized_20260921 和 07_current_status_snapshot_20260921 核验结论。请严格区分“正式判定”和“描述性信号”，不要把 B0 等待队列当成已完成训练，不要把 S2/S5/S7/S8 当成已经运行，也不要把 Fire、S 或 mIoU 用作正向判定。先向我汇报：当前完成范围、各臂结论、B0 状态快照、证据限制、尚未授权事项以及建议的下一步，不要自行启动训练或修改阈值。

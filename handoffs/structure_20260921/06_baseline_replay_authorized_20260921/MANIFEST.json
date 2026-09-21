@@ -1,0 +1,215 @@
+{
+    "training_authorized":  true,
+    "seeds":  [
+                  200,
+                  201,
+                  202
+              ],
+    "new_candidates_authorized":  false,
+    "epochs":  30,
+    "authorization_sha256":  "087146F62AEA50B5F8E9AD841F1F5B133C467B69B7ECCF91F6DE41E44449C6F7",
+    "files":  [
+                  {
+                      "sha256":  "087146F62AEA50B5F8E9AD841F1F5B133C467B69B7ECCF91F6DE41E44449C6F7",
+                      "bytes":  3674,
+                      "relative":  "AUTHORIZATION.md"
+                  },
+                  {
+                      "sha256":  "725AA2777F4AC5E68E169F5AE94D93C1C699EB72757F4F38151C9528A6E1AF82",
+                      "bytes":  7186,
+                      "relative":  "benchmark_idle.py"
+                  },
+                  {
+                      "sha256":  "7F91D291E9187D461B243E9EC677A7B80831F195623B94932A4D58B0D1317791",
+                      "bytes":  5824,
+                      "relative":  "evaluate_baseline.py"
+                  },
+                  {
+                      "sha256":  "3D69E39D3BAF602032F0B96EE883D36ADB211EB99A481C69B0368EB11493BDEC",
+                      "bytes":  73371,
+                      "relative":  "HISTORICAL_APPEND_SUMMARY.json"
+                  },
+                  {
+                      "sha256":  "3E7FF1682AFC0C8C2488B334E69AB0DF35BB8782BD9D8FF5748EB5F42D1E241F",
+                      "bytes":  108328,
+                      "relative":  "HISTORICAL_STAGE3_SUMMARY.json"
+                  },
+                  {
+                      "sha256":  "0D420F9BAB5DC95001DF2A2DB2726E1D5B76066942C35AD6118FD32B443DC88F",
+                      "bytes":  11530,
+                      "relative":  "implementation/engineering_checks.py"
+                  },
+                  {
+                      "sha256":  "AACE2BCE85B0616F2EDCE19E3B10863C231295743C6D9693068D36E460DC3E67",
+                      "bytes":  5168,
+                      "relative":  "implementation/run_engineering.py"
+                  },
+                  {
+                      "sha256":  "1768B175AE8527BD8823B16E901A855C324C768D7D91176120716E1917E7241F",
+                      "bytes":  15365,
+                      "relative":  "implementation/run_two_epoch_smoke.py"
+                  },
+                  {
+                      "sha256":  "0169F9E24646D2D6FA6DA557EDE14B2C44B3FBF9865FC20CF5F0E33E13FE2EE9",
+                      "bytes":  7427,
+                      "relative":  "implementation/structure_arms.py"
+                  },
+                  {
+                      "sha256":  "086BBB812C9E7FC2BE99B5E922A02466ED4D8CD68CBEBDE49095FF664ACC172A",
+                      "bytes":  6847,
+                      "relative":  "implementation/training_adapters.py"
+                  },
+                  {
+                      "sha256":  "4E0D391AA9E1A1D42DFF20BD7680C59D499C43078DBA1385AD5B2D62123CD698",
+                      "bytes":  2403,
+                      "relative":  "install_tasks.ps1"
+                  },
+                  {
+                      "sha256":  "84FC6D9890C754CC13BA952B3403D3F220C7E5CE3DB116B5CAF3787C6E11C67A",
+                      "bytes":  3684,
+                      "relative":  "launch_replay.py"
+                  },
+                  {
+                      "sha256":  "6017B1C2FEF67BAC10FD07638F86C10F142B8AD234FE7FEEFC8430D9D049AC0A",
+                      "bytes":  4783,
+                      "relative":  "preserve.py"
+                  },
+                  {
+                      "sha256":  "1E5BE9267E891B34A91E69BD9D20A32963E692E09802BCC7B70F26A72B8F7B11",
+                      "bytes":  236,
+                      "relative":  "README.md"
+                  },
+                  {
+                      "sha256":  "5AF0114BE2C06F2CD83C30743857FB2EE3F87445E9850717E1B7816361B51065",
+                      "bytes":  16865,
+                      "relative":  "reference_stage3.py"
+                  },
+                  {
+                      "sha256":  "D86D2215B9A68E3B1AF184A7FBAB5144D9AF5A557415D79ADCC1AB7EA99B0CAA",
+                      "bytes":  1634,
+                      "relative":  "replay_policy.py"
+                  },
+                  {
+                      "sha256":  "5EE2E9A5620C33106E6D871C63F040AEDC9034BB924230037DCC05457AB5DA13",
+                      "bytes":  17036,
+                      "relative":  "run_baseline.py"
+                  },
+                  {
+                      "sha256":  "512B032BA5D37DEBBC4CAAAD3D8288FD0ADBC68E65C5B43DBF4DD7716868ED43",
+                      "bytes":  1984,
+                      "relative":  "source/configs/flame3/pidnet_s_fusion_manual_smoke_v11_30e.yaml"
+                  },
+                  {
+                      "sha256":  "D7780AFEE710F03C21D3C4A8C5C2D015F16A1C4D1C5C7F3E5B223A0F5819CD62",
+                      "bytes":  12504,
+                      "relative":  "source/src/active_boundary_loss.py"
+                  },
+                  {
+                      "sha256":  "678273ACC83B298AAD2391B210038BEE7D8AAF8CF229FDFFDAAD8E015C9ADAF4",
+                      "bytes":  11352,
+                      "relative":  "source/src/baseline_runtime.py"
+                  },
+                  {
+                      "sha256":  "DC3C683A9BF27949DAF35311BFE3D7B094B4F4A908962EFB1AFF3FC8C25F7B97",
+                      "bytes":  49368,
+                      "relative":  "source/src/custom_losses.py"
+                  },
+                  {
+                      "sha256":  "5089086A1A362BA34C52F95E48DB602491822AD09687625D9B5463175CB0CA46",
+                      "bytes":  10924,
+                      "relative":  "source/src/flame3_dataset.py"
+                  },
+                  {
+                      "sha256":  "B3DCB8848E2C62D2D23C48D74C8038D450E3F5BD27B5BE55A8F1B73DB408DD47",
+                      "bytes":  13718,
+                      "relative":  "source/src/flame3_manual_smoke_v2_metrics.py"
+                  },
+                  {
+                      "sha256":  "1204D4E97A7EFC0969CF8C35C364CB53E7AFA1BDC55B50D88F793B941F40B1F7",
+                      "bytes":  7390,
+                      "relative":  "source/src/flame3_sampling.py"
+                  },
+                  {
+                      "sha256":  "37DF42DEF79E41E6DBC7233EDB47BC27D52EBEEA9DC5D768A77D67E005A7EED6",
+                      "bytes":  28096,
+                      "relative":  "source/src/prototype_learning.py"
+                  },
+                  {
+                      "sha256":  "4A5DCE48709CBFC514C70B064B520F72804210D3D3F2B3467B556C16A9B0F442",
+                      "bytes":  78915,
+                      "relative":  "source/src/train_baseline_v11.py"
+                  },
+                  {
+                      "sha256":  "073C00DAD7A376EF53859A434A94883FC2A32BD13D4A4FB3E8FC948592D6B214",
+                      "bytes":  287,
+                      "relative":  "source/third_party/RoboFireFuseNet/datasets/__init__.py"
+                  },
+                  {
+                      "sha256":  "FEFAEBB91B5A957FDADFA6E597162D425B557413C49B1F4931A838B94D318CBB",
+                      "bytes":  12582,
+                      "relative":  "source/third_party/RoboFireFuseNet/datasets/base_dataset.py"
+                  },
+                  {
+                      "sha256":  "9736216307508CB6CCEFFB870EA4C7FDA85B7F122880A82DDD040E45506004AB",
+                      "bytes":  1482,
+                      "relative":  "source/third_party/RoboFireFuseNet/datasets/flame2_labels.py"
+                  },
+                  {
+                      "sha256":  "64DCA84E3DD2F8A69D5111D7763B7DCC382EF44598F8A738D7981CABD6225C3B",
+                      "bytes":  12428,
+                      "relative":  "source/third_party/RoboFireFuseNet/datasets/wildfire.py"
+                  },
+                  {
+                      "sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                      "bytes":  0,
+                      "relative":  "source/third_party/RoboFireFuseNet/models/__init__.py"
+                  },
+                  {
+                      "sha256":  "1A8E13A5C26DE6324290D27E40C492D04AEF4EE407B056128F0A369D282FDB84",
+                      "bytes":  9749,
+                      "relative":  "source/third_party/RoboFireFuseNet/models/pidnet.py"
+                  },
+                  {
+                      "sha256":  "4CDF59F6C8DB5AA971A5BA4695D1C1075391D814B13EB81623C71E5E3A649947",
+                      "bytes":  17546,
+                      "relative":  "source/third_party/RoboFireFuseNet/models/pidnet_utils.py"
+                  },
+                  {
+                      "sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                      "bytes":  0,
+                      "relative":  "source/third_party/RoboFireFuseNet/utils/__init__.py"
+                  },
+                  {
+                      "sha256":  "37099A53A631B8DB6BF659BBC1C9A7D714B7921479AF4C9DA4C5FADF56F7AB3D",
+                      "bytes":  12828,
+                      "relative":  "source/third_party/RoboFireFuseNet/utils/total_loss.py"
+                  },
+                  {
+                      "sha256":  "8FF21D11719B9757146EF908641A1B00B22FF7CC3BEF57D953AFFDF9CBBE25A7",
+                      "bytes":  5066,
+                      "relative":  "stage2_protocol.py"
+                  },
+                  {
+                      "sha256":  "AE7776EA281820CE486BF83D705C0A7B6889128FDC9D61DA98DEB2577254CC59",
+                      "bytes":  7157,
+                      "relative":  "stage3_protocol.py"
+                  },
+                  {
+                      "sha256":  "7A27DA1A707C7D1229A2188B8C53DF56B25CC502CBBF90246101308D6622ECFD",
+                      "bytes":  2614,
+                      "relative":  "test_replay.py"
+                  }
+              ],
+    "arms":  [
+                 "B0"
+             ],
+    "window":  [
+                   26,
+                   27,
+                   28,
+                   29,
+                   30
+               ],
+    "protocol":  "flame3_baseline_replay_20260921_v1",
+    "test107_included":  false
+}

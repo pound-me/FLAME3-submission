@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "unit_total": 45,
+  "summary_status": "COMPLETE_S1_R2_R3_9_RUNS_THREE_AXES_REPORTED",
+  "attribution_rows": 75,
+  "finished_unix": 1789812739.1182494,
+  "input_hashes_unchanged": true,
+  "context_hashes_unchanged": true,
+  "test107_read": false,
+  "training_performed": false
+}

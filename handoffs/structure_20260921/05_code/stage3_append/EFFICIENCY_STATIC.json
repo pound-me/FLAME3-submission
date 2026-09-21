@@ -1,0 +1,20 @@
+{
+  "S1": {
+    "deploy_parameters": 7624323,
+    "gmacs_proxy": 7.470914048,
+    "gmacs_change_percent": 0.0,
+    "formal_latency_status": "DEFERRED_BY_AUTHORIZATION"
+  },
+  "R2": {
+    "deploy_parameters": 7624164,
+    "gmacs_proxy": 7.489264128,
+    "gmacs_change_percent": 0.24562027995640515,
+    "formal_latency_status": "DEFERRED_BY_AUTHORIZATION"
+  },
+  "R3": {
+    "deploy_parameters": 7624164,
+    "gmacs_proxy": 7.489264128,
+    "gmacs_change_percent": 0.24562027995640515,
+    "formal_latency_status": "DEFERRED_BY_AUTHORIZATION"
+  }
+}

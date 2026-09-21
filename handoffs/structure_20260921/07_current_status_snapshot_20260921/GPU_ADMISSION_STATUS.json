@@ -1,0 +1,141 @@
+{
+  "observation": {
+    "utilization_percent": 2.0,
+    "memory_used_mib": 2210.0,
+    "processes": {
+      "3972": "dwm.exe",
+      "10988": "explorer.exe",
+      "12232": "SearchHost.exe",
+      "12256": "StartMenuExperienceHost.exe",
+      "14652": "TabTip.exe",
+      "14420": "TextInputHost.exe",
+      "22056": "msedgewebview2.exe",
+      "15416": "ShellExperienceHost.exe",
+      "3980": "msedgewebview2.exe",
+      "25392": "PhoneExperienceHost.exe",
+      "23660": "SnippingTool.exe",
+      "23004": "SnippingTool.exe",
+      "21968": "SnippingTool.exe",
+      "27088": "BaiduNetdiskUnite.exe",
+      "33516": "msedgewebview2.exe",
+      "34236": "idlrt.exe",
+      "47144": "msedge.exe",
+      "59480": "msedge.exe",
+      "40028": "CleverGet.exe",
+      "55004": "promecefpluginhost.exe",
+      "4": "System.exe",
+      "10188": "360se.exe",
+      "41388": "360se.exe",
+      "7440": "GameViewerServer.exe",
+      "52576": "MATLABWebUI.exe",
+      "87036": "MATLAB.exe",
+      "84612": "SunloginClient.exe"
+    },
+    "engines": [
+      {
+        "pid": 22056,
+        "engine": "pid_22056_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 0.04561548709286908
+      },
+      {
+        "pid": 3972,
+        "engine": "pid_3972_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 0.6709944021793834
+      },
+      {
+        "pid": 3980,
+        "engine": "pid_3980_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 0.11886223550151909
+      },
+      {
+        "pid": 84612,
+        "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 25.585123583904085
+      },
+      {
+        "pid": 84612,
+        "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_6_engtype_videoencode",
+        "percent": 1.6231871902906896
+      },
+      {
+        "pid": 84612,
+        "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_7_engtype_videoencode",
+        "percent": 1.6225297774403502
+      },
+      {
+        "pid": 22056,
+        "engine": "pid_22056_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 0.042271725531638944
+      },
+      {
+        "pid": 3972,
+        "engine": "pid_3972_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 0.6803913340003837
+      },
+      {
+        "pid": 3980,
+        "engine": "pid_3980_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 0.11367306873889516
+      },
+      {
+        "pid": 84612,
+        "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 26.155866878584185
+      },
+      {
+        "pid": 84612,
+        "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_6_engtype_videoencode",
+        "percent": 1.6042050800041225
+      },
+      {
+        "pid": 84612,
+        "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_7_engtype_videoencode",
+        "percent": 1.6031300407873823
+      },
+      {
+        "pid": 22056,
+        "engine": "pid_22056_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 0.042041270580180465
+      },
+      {
+        "pid": 3972,
+        "engine": "pid_3972_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 0.6698688366002242
+      },
+      {
+        "pid": 3980,
+        "engine": "pid_3980_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 0.11371607380229815
+      },
+      {
+        "pid": 84612,
+        "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_0_engtype_3d",
+        "percent": 23.352008518721725
+      },
+      {
+        "pid": 84612,
+        "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_6_engtype_videoencode",
+        "percent": 1.6178637252877148
+      },
+      {
+        "pid": 84612,
+        "engine": "pid_84612_luid_0x00000000_0x00017a1a_phys_0_eng_7_engtype_videoencode",
+        "percent": 1.614744406062248
+      }
+    ]
+  },
+  "blockers": [
+    "active external GPU engine: 84612 1.6031%",
+    "active external GPU engine: 84612 1.6042%",
+    "active external GPU engine: 84612 1.6147%",
+    "active external GPU engine: 84612 1.6179%",
+    "active external GPU engine: 84612 1.6225%",
+    "active external GPU engine: 84612 1.6232%",
+    "active external GPU engine: 84612 23.3520%",
+    "active external GPU engine: 84612 25.5851%",
+    "active external GPU engine: 84612 26.1559%"
+  ],
+  "continuous_low_activity_seconds": 0,
+  "required_seconds": 60,
+  "observed_unix": 1789985107.3863297
+}

@@ -1,0 +1,18 @@
+{
+  "protocol_id": "flame3_baseline_replay_20260921_wddm_scheduler_amendment_v2",
+  "created_date": "2026-09-21",
+  "original_manifest_sha256": "2395FB0475A2F0377599C4DD804D57E969A0636A291B548D4CE40760E8082535",
+  "files": {
+    "wddm_admission.py": "DAC3EA428FFC67F0C0EF21CB4ED9EDE4484E72C407A543330AC69D05CEFABF78",
+    "launch_replay_wddm.py": "F7278DD08FAACE5F86030192149A831FFCB1A95C11E2323C84204D503DD652F4",
+    "benchmark_idle_wddm.py": "83067353F65CDE659037275831C3247D1C0E2185E28D8570DB6B0702228D302A",
+    "test_wddm.py": "EB50C816203E600F44B1FDD36BDDB044D1EAE133FF5C56E8F8C1A89A004B05AB",
+    "SCHEDULER_AMENDMENT.md": "5EC2F9617A22F4372B50683EEAE77F241BE8AAD6306E3F773E644FC420E46850",
+    "resume_tasks_wddm.ps1": "3687C652EB000466BE3554DD2DA194B54E7CDEACD272751B8D7489FBE82343A0"
+  },
+  "changes_training_worker": false,
+  "changes_evaluation_worker": false,
+  "changes_data_or_checkpoints": false,
+  "changes_thresholds_or_precision": false,
+  "test107_read": false
+}

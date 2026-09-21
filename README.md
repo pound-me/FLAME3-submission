@@ -2,6 +2,11 @@
 
 This repository contains the frozen FLAME3 submission source, reproducibility records, and audited result packages.
 
+## Current status
+
+- [Current project status (2026-09-21)](CURRENT_STATUS.md)
+- [Network-structure experiment handoff](handoffs/structure_20260921/00_READ_ME_FIRST.md)
+
 ## 2026-08-24 audit update
 
 - [Night-run summary](docs/NIGHT_RUN_SUMMARY_20260824.md)

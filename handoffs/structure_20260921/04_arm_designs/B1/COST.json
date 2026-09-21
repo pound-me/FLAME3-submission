@@ -1,0 +1,18 @@
+{
+  "arm": "B1",
+  "site": "no inference structure change",
+  "status": "DESIGN_ONLY_PENDING_APPROVAL",
+  "old_target_parameters": 0,
+  "new_target_deploy_parameters": 0,
+  "delta_deploy_parameters": 0,
+  "estimated_deploy_parameters": 7623939,
+  "delta_training_parameters": 0,
+  "estimated_training_parameters": 7717095,
+  "delta_conv_matmul_gmacs": 0.0,
+  "estimated_total_gmacs_proxy": 7.470914048,
+  "proxy_change_percent": 0.0,
+  "train_forward_delta_conv_matmul_gmacs": 0.0,
+  "under_rounded_cap_proxy": true,
+  "p95_ms": null,
+  "peak_vram_mb": null
+}
