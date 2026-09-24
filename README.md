@@ -4,6 +4,7 @@ This repository contains the frozen FLAME3 submission source, reproducibility re
 
 ## Current status
 
+- [Latest network experiment handoff (2026-09-24)](handoffs/structure_20260924/00_READ_ME_FIRST.md)
 - [Current project status (2026-09-21)](CURRENT_STATUS.md)
 - [Network-structure experiment handoff](handoffs/structure_20260921/00_READ_ME_FIRST.md)
 

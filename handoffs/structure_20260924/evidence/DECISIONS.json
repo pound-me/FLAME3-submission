@@ -1,0 +1,93 @@
+{
+  "overall": {
+    "status": "PASS_ROBUST_AXIS_ONLY",
+    "precision_axis": false,
+    "robust_axis": true,
+    "all_clean_guards": true,
+    "all_no_fire_absolute_guards": true,
+    "all_no_fire_relative_guards": true,
+    "precision_pass_count": 0,
+    "robust_pass_count": 3,
+    "clean_guard_count": 3,
+    "delta_clean_mean": 0.004654096200386186,
+    "delta_clean_sample_sd": 0.012668336579119638,
+    "delta_noise005_mean": 0.07885127996442848,
+    "delta_noise005_sample_sd": 0.03224302904582645,
+    "robust_gain_mean": 0.07419718376404229,
+    "robust_gain_sample_sd": 0.04481228172637338,
+    "positive_clean_seeds": 2,
+    "positive_noise005_seeds": 3,
+    "positive_robust_seeds": 3,
+    "thresholds": {
+      "clean_guard": -0.01,
+      "no_fire_absolute": 0.005,
+      "no_fire_relative_delta": 0.001,
+      "precision_delta": 0.02,
+      "robust_gain": 0.03
+    }
+  },
+  "precision": {
+    "status": "FAIL",
+    "axis": "precision",
+    "rule": "All three seeds require delta_clean >= 0.020 and both normal-input No-Fire guards.",
+    "rows": [
+      {
+        "seed": 203,
+        "delta_clean": 0.01594404092447399,
+        "no_fire_fp": 0.00017853655133928572,
+        "no_fire_delta": -9.824916294642861e-05,
+        "precision_pass": false
+      },
+      {
+        "seed": 204,
+        "delta_clean": -0.009046285075992366,
+        "no_fire_fp": 1.499720982142857e-06,
+        "no_fire_delta": 5.580357142857143e-07,
+        "precision_pass": false
+      },
+      {
+        "seed": 205,
+        "delta_clean": 0.007064532752676933,
+        "no_fire_fp": 7.847377232142856e-07,
+        "no_fire_delta": -4.411969866071428e-06,
+        "precision_pass": false
+      }
+    ]
+  },
+  "robust": {
+    "status": "PASS",
+    "axis": "robust",
+    "rule": "All three seeds require robust_gain >= 0.030 plus clean and normal-input No-Fire guards.",
+    "rows": [
+      {
+        "seed": 203,
+        "delta_clean": 0.01594404092447399,
+        "robust_gain": 0.031002052311967065,
+        "clean_guard": true,
+        "no_fire_absolute": true,
+        "no_fire_relative": true,
+        "robust_pass": true
+      },
+      {
+        "seed": 204,
+        "delta_clean": -0.009046285075992366,
+        "robust_gain": 0.12046813713045701,
+        "clean_guard": true,
+        "no_fire_absolute": true,
+        "no_fire_relative": true,
+        "robust_pass": true
+      },
+      {
+        "seed": 205,
+        "delta_clean": 0.007064532752676933,
+        "robust_gain": 0.0711213618497028,
+        "clean_guard": true,
+        "no_fire_absolute": true,
+        "no_fire_relative": true,
+        "robust_pass": true
+      }
+    ]
+  },
+  "next_stage_authorized": false,
+  "stagea_stageb_decisions_preserved": true
+}

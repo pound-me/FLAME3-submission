@@ -1,0 +1,88 @@
+﻿{
+    "audited_at":  "2026-09-24T20:19:16.9988827+08:00",
+    "work_order_sha256":  "1651F735040CC30F939EF71F6C1BA26BDCDD4EFAD8F14CF60349FD2E0A14BF64",
+    "status":  "PASS_COMPLETE",
+    "checks":  {
+                   "exact_fixed_schedule":  true,
+                   "formal_started_6":  true,
+                   "formal_completed_6":  true,
+                   "formal_evaluated_6":  true,
+                   "all_runs_100_epochs":  true,
+                   "fixed_eval_window_30_checkpoints":  true,
+                   "required_remote_deliverables_present":  true,
+                   "queue_stopped_at_authorized_boundary":  true,
+                   "no_later_stage_started":  true,
+                   "test107_access_zero":  true,
+                   "input_hashes_unchanged":  true,
+                   "source_manifest_matches":  true,
+                   "resource_failure_preserved":  true,
+                   "report_hash_matches":  true,
+                   "local_pull_hashes_pass":  true,
+                   "lightweight_package_excludes_weights_and_keys":  true,
+                   "precision_axis_failed":  true,
+                   "robust_axis_passed":  true
+               },
+    "failed_checks":  [
+
+                      ],
+    "schedule":  [
+                     "B0-203",
+                     "S7-203",
+                     "B0-204",
+                     "S7-204",
+                     "B0-205",
+                     "S7-205"
+                 ],
+    "formal_counts":  {
+                          "started":  6,
+                          "completed":  6,
+                          "evaluated":  6,
+                          "failure_events":  1,
+                          "resume_events":  2
+                      },
+    "decision":  {
+                     "status":  "PASS_ROBUST_AXIS_ONLY",
+                     "precision_axis":  false,
+                     "robust_axis":  true,
+                     "all_clean_guards":  true,
+                     "all_no_fire_absolute_guards":  true,
+                     "all_no_fire_relative_guards":  true,
+                     "precision_pass_count":  0,
+                     "robust_pass_count":  3,
+                     "clean_guard_count":  3,
+                     "delta_clean_mean":  0.004654096200386186,
+                     "delta_clean_sample_sd":  0.012668336579119638,
+                     "delta_noise005_mean":  0.07885127996442848,
+                     "delta_noise005_sample_sd":  0.03224302904582645,
+                     "robust_gain_mean":  0.07419718376404229,
+                     "robust_gain_sample_sd":  0.04481228172637338,
+                     "positive_clean_seeds":  2,
+                     "positive_noise005_seeds":  3,
+                     "positive_robust_seeds":  3,
+                     "thresholds":  {
+                                        "clean_guard":  -0.01,
+                                        "no_fire_absolute":  0.005,
+                                        "no_fire_relative_delta":  0.001,
+                                        "precision_delta":  0.02,
+                                        "robust_gain":  0.03
+                                    }
+                 },
+    "terminal":  {
+                     "queue_status":  "B0_S7_100E_ENDED_STOP_PENDING_NEW_AUTHORIZATION",
+                     "stop_reason":  "Authorized matched B0-S7 100-epoch confirmation ended. No later stage was started.",
+                     "queue_pid_absent":  true,
+                     "gpu_memory_used_mib":  604,
+                     "gpu_utilization_percent":  1
+                 },
+    "delivery":  {
+                     "required_missing":  [
+
+                                          ],
+                     "fixed_eval_checkpoint_count":  30,
+                     "local_remote_files_verified":  29,
+                     "local_remote_files_failed":  0,
+                     "weights_or_private_keys_in_light_package":  [
+
+                                                                  ]
+                 }
+}
